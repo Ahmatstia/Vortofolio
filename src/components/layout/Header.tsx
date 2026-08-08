@@ -19,15 +19,6 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="text-brand-accent hover:bg-brand-surface transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
-            title="Go to Home"
-            aria-label="Home menu"
-          >
-            <span className="material-symbols-outlined text-2xl">menu</span>
-          </Link>
-          
-          <Link
-            href="/"
             className="font-garamond text-xl sm:text-2xl font-bold tracking-tight text-brand-text hover:text-brand-accent transition-colors cursor-pointer"
           >
             {isProjectsActive ? 'AHMTSTIA' : brandName}

@@ -61,30 +61,6 @@ export const HomeView: React.FC = () => {
               Let's Talk
             </Link>
           </div>
-
-          {/* Quick stats row */}
-          <div className="flex items-center gap-6 sm:gap-10 mt-6 pt-6 border-t border-brand-border/40">
-            <div>
-              <p className="font-garamond text-2xl sm:text-3xl font-bold text-brand-text">{PROJECTS.length}+</p>
-              <p className="font-hanken text-[10px] uppercase tracking-widest text-brand-text-muted font-bold mt-0.5">
-                Projects Shipped
-              </p>
-            </div>
-            <div className="w-px h-8 bg-brand-border/60" />
-            <div>
-              <p className="font-garamond text-2xl sm:text-3xl font-bold text-brand-text">3+</p>
-              <p className="font-hanken text-[10px] uppercase tracking-widest text-brand-text-muted font-bold mt-0.5">
-                Years Experience
-              </p>
-            </div>
-            <div className="w-px h-8 bg-brand-border/60" />
-            <div>
-              <p className="font-garamond text-2xl sm:text-3xl font-bold text-brand-text">100%</p>
-              <p className="font-hanken text-[10px] uppercase tracking-widest text-brand-text-muted font-bold mt-0.5">
-                Client Satisfaction
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Image Column */}
@@ -100,18 +76,6 @@ export const HomeView: React.FC = () => {
               className="w-full h-auto object-cover rounded-[20px] shadow-[0_12px_40px_rgba(15,23,42,0.16)] border border-brand-border/60"
             />
 
-            {/* floating role chip */}
-            <div className="absolute -bottom-5 -left-5 bg-brand-bg border border-brand-border/70 rounded-2xl px-4 py-3 shadow-[0_8px_24px_rgba(15,23,42,0.12)] flex items-center gap-2 backdrop-blur-sm">
-              <span className="material-symbols-outlined text-brand-accent text-xl">code</span>
-              <div>
-                <p className="font-hanken text-[10px] uppercase tracking-widest text-brand-text-muted font-bold leading-none">
-                  Currently building
-                </p>
-                <p className="font-hanken text-xs font-semibold text-brand-text mt-0.5">
-                  Products that ship
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
