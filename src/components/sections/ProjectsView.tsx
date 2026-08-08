@@ -25,11 +25,11 @@ export const ProjectsView: React.FC = () => {
       {/* Page Title & Counter */}
       <section className="pt-2 pb-6">
         <p className="font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold mb-2">
-          PORTFOLIO
+          PORTOFOLIO
         </p>
         <div className="flex justify-between items-end border-b border-brand-border/40 pb-4">
           <h1 className="font-garamond text-3xl sm:text-5xl font-bold text-brand-text tracking-tight">
-            Selected Work
+            Karya Pilihan
           </h1>
           <div className="flex items-center gap-2">
             <span className="font-hanken text-xs sm:text-sm font-bold text-brand-accent">
@@ -56,7 +56,7 @@ export const ProjectsView: React.FC = () => {
                   : 'bg-brand-surface text-brand-text-muted border border-brand-border hover:border-brand-text/20 hover:bg-brand-bg'
               }`}
             >
-              {filter}
+              {filter === 'ALL' ? 'SEMUA' : filter}
               <span
                 className={`text-[10px] px-1.5 py-0.5 rounded-full transition-colors ${
                   activeFilter === filter
@@ -93,7 +93,7 @@ export const ProjectsView: React.FC = () => {
         <div className="flex flex-col items-center justify-center py-24 text-center">
           <span className="material-symbols-outlined text-4xl text-brand-muted-light mb-3">search_off</span>
           <p className="font-hanken text-sm text-brand-text-muted">
-            No projects found in this category yet.
+            Belum ada proyek di kategori ini.
           </p>
         </div>
       )}

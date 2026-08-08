@@ -28,8 +28,8 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
               alt="Personal Brand Logo" 
               className="h-12 sm:h-16 w-auto object-contain" 
             />
-            <span className="font-garamond text-xl sm:text-2xl font-bold tracking-tight text-brand-text group-hover:text-brand-accent transition-colors">
-              Ahmtstia_
+            <span className="font-garamond text-xl sm:text-2xl font-bold tracking-tight text-brand-text group-hover:text-brand-accent transition-colors uppercase">
+              AHMTSTIA_
             </span>
           </Link>
         </div>
@@ -44,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
                 : 'text-brand-text-muted border-transparent hover:text-brand-text'
             }`}
           >
-            Home
+            Beranda
           </Link>
           <Link
             href="/projects"
@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
                 : 'text-brand-text-muted border-transparent hover:text-brand-text'
             }`}
           >
-            Projects
+            Proyek
           </Link>
           <Link
             href="/about"
@@ -64,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
                 : 'text-brand-text-muted border-transparent hover:text-brand-text'
             }`}
           >
-            About
+            Tentang
           </Link>
           <Link
             href="/contact"
@@ -74,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
                 : 'text-brand-text-muted border-transparent hover:text-brand-text'
             }`}
           >
-            Contact
+            Kontak
           </Link>
         </nav>
 

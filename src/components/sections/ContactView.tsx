@@ -32,14 +32,14 @@ export const ContactView: React.FC = () => {
         <div className="inline-flex items-center gap-2 w-fit mb-3">
           <span className="w-8 h-px bg-brand-accent" />
           <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold">
-            GET IN TOUCH
+            HUBUNGI SAYA
           </span>
         </div>
         <h1 className="font-garamond text-4xl sm:text-6xl text-brand-text font-bold mb-4 tracking-tight">
-          Let's Build <span className="italic font-normal text-brand-text-muted-alt">Something</span>
+          Mari Bangun <span className="italic font-normal text-brand-text-muted-alt">Sesuatu</span>
         </h1>
         <p className="font-hanken text-base sm:text-lg text-brand-text-muted leading-relaxed max-w-xl">
-          Whether you have a specific project in mind or just want to explore possibilities, I'm ready to collaborate. Drop a message below and I'll get back to you soon.
+          Baik Anda memiliki proyek spesifik atau sekadar ingin menjajaki kemungkinan, saya siap berkolaborasi. Kirimkan pesan di bawah ini dan saya akan segera membalasnya.
         </p>
       </section>
 
@@ -53,16 +53,16 @@ export const ContactView: React.FC = () => {
               <span className="material-symbols-outlined text-3xl">check_circle</span>
             </div>
             <h3 className="font-garamond text-2xl font-bold text-brand-text mb-2">
-              Message Sent
+              Pesan Terkirim
             </h3>
             <p className="font-hanken text-sm text-brand-text-muted mb-6">
-              Thank you for reaching out! ahmtstia will respond to your email within 24 hours.
+              Terima kasih telah menghubungi! Saya akan membalas email Anda dalam waktu maksimal 24 jam.
             </p>
             <button
               onClick={() => setSubmitted(false)}
               className="bg-brand-accent text-white font-hanken text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:bg-brand-accent-hover transition-all cursor-pointer"
             >
-              Send Another Message
+              Kirim Pesan Lagi
             </button>
           </div>
         ) : (
@@ -76,7 +76,7 @@ export const ContactView: React.FC = () => {
                     : 'top-3 text-base text-brand-text-muted/60'
                 }`}
               >
-                Your Name
+                Nama Anda
               </label>
               <input
                 type="text"
@@ -100,7 +100,7 @@ export const ContactView: React.FC = () => {
                     : 'top-3 text-base text-brand-text-muted/60'
                 }`}
               >
-                Your Email
+                Email Anda
               </label>
               <input
                 type="email"
@@ -124,7 +124,7 @@ export const ContactView: React.FC = () => {
                     : 'top-3 text-base text-brand-text-muted/60'
                 }`}
               >
-                How can we work together?
+                Bagaimana kita bisa bekerja sama?
               </label>
               <textarea
                 id="message"
@@ -144,7 +144,7 @@ export const ContactView: React.FC = () => {
               disabled={isSubmitting}
               className="group relative w-full overflow-hidden bg-brand-accent text-white font-hanken text-sm font-semibold py-4 rounded-full shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer disabled:opacity-70"
             >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
               {!isSubmitting && (
                 <span className="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:translate-x-1">
                   send
@@ -160,7 +160,7 @@ export const ContactView: React.FC = () => {
         <div className="flex items-center gap-3 mb-8">
           <span className="h-px flex-grow bg-brand-border/60" />
           <p className="font-hanken text-xs text-brand-text-muted uppercase tracking-widest font-bold whitespace-nowrap">
-            OR CONNECT DIRECTLY
+            ATAU HUBUNGI LANGSUNG
           </p>
           <span className="h-px flex-grow bg-brand-border/60" />
         </div>
@@ -187,7 +187,7 @@ export const ContactView: React.FC = () => {
 
       <footer className="text-center pt-4">
         <p className="font-garamond italic text-brand-text-muted/80 text-base sm:text-lg">
-          Crafting digital experiences with care.
+          Merancang pengalaman digital dengan sepenuh hati.
         </p>
       </footer>
     </div>

@@ -33,8 +33,8 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
         <button
           onClick={() => router.push('/projects')}
           className="absolute top-6 left-4 sm:left-10 z-10 w-12 h-12 rounded-full bg-brand-bg/90 backdrop-blur-md flex items-center justify-center text-brand-text hover:bg-brand-bg hover:text-brand-accent transition-all shadow-[0_4px_20px_rgba(15,23,42,0.12)] cursor-pointer active:scale-95"
-          title="Go back to projects"
-          aria-label="Go back"
+          title="Kembali ke daftar proyek"
+          aria-label="Kembali"
         >
           <span className="material-symbols-outlined text-2xl">arrow_back</span>
         </button>
@@ -54,7 +54,7 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
         {/* Title Card */}
         <div className="bg-brand-bg p-6 sm:p-10 rounded-[24px] shadow-[0_12px_36px_rgba(15,23,42,0.14)] mb-12 border border-brand-border">
           <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold block mb-2">
-            PROJECT OVERVIEW
+            RINGKASAN PROYEK
           </span>
           <h1 className="font-garamond text-3xl sm:text-5xl md:text-6xl text-brand-text font-bold mb-8 leading-tight tracking-tight">
             {project.title}
@@ -62,9 +62,9 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
 
           <div className="grid grid-cols-3 gap-4 border-t border-brand-border pt-6">
             {[
-              { label: 'Client', value: project.client, icon: 'business_center' },
-              { label: 'Role', value: project.role, icon: 'badge' },
-              { label: 'Year', value: project.year, icon: 'calendar_today' },
+              { label: 'Klien', value: project.client, icon: 'business_center' },
+              { label: 'Peran', value: project.role, icon: 'badge' },
+              { label: 'Tahun', value: project.year, icon: 'calendar_today' },
             ].map(({ label, value, icon }) => (
               <div key={label}>
                 <span className="flex items-center gap-1.5 font-hanken text-[11px] sm:text-xs uppercase tracking-wider text-brand-text-muted font-bold mb-1.5">
@@ -90,7 +90,7 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
         <div className="mb-12 sm:mb-16">
           <h3 className="font-hanken text-xs text-brand-text-muted font-bold mb-4 uppercase tracking-widest flex items-center gap-2">
             <span className="w-4 h-px bg-brand-accent" />
-            Tech Stack
+            Teknologi
           </h3>
           <div className="flex overflow-x-auto hide-scrollbar space-x-3 pb-2">
             {project.techStack.map((tech) => (
@@ -105,7 +105,7 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
         <div className="mb-16">
           <h3 className="font-hanken text-xs text-brand-text-muted font-bold mb-6 uppercase tracking-widest flex items-center gap-2">
             <span className="w-4 h-px bg-brand-accent" />
-            Key Highlights
+            Sorotan Utama
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {project.highlights.map((highlight, idx) => (
@@ -135,13 +135,13 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
             onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}
             className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-brand-bg text-brand-text border border-brand-border font-hanken text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
           >
-            View Case Study
+            Lihat Studi Kasus
           </button>
           <button
             onClick={() => setLiveModal({ isOpen: true, mode: 'live' })}
             className="group w-full sm:w-auto px-8 py-3.5 rounded-full bg-brand-accent text-white font-hanken text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] active:scale-95 cursor-pointer text-center flex items-center justify-center gap-2"
           >
-            View Live Site
+            Kunjungi Situs
             <span className="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">
               arrow_outward
             </span>

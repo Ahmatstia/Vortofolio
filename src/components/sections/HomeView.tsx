@@ -10,21 +10,21 @@ export const HomeView: React.FC = () => {
   const featuredProjects = PROJECTS.filter((p) => p.featured).slice(0, 3);
 
   return (
-    <div className="flex-grow flex flex-col justify-between px-4 sm:px-10 py-8 sm:py-16 max-w-7xl mx-auto w-full">
+    <div className="flex-grow flex flex-col justify-between px-4 sm:px-10 pt-2 pb-8 sm:pt-6 sm:pb-16 max-w-7xl mx-auto w-full">
       {/* Main Hero Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center my-auto min-h-[500px] md:min-h-[580px] relative">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-[500px] md:min-h-[580px] relative">
 
         {/* Text Column */}
         <div className="col-span-1 md:col-span-7 flex flex-col gap-6 z-10">
 
           <p className="font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold">
-            FULLSTACK DEVELOPER
+            PENGEMBANG FULLSTACK
           </p>
 
           <h1 className="font-garamond text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-brand-text tracking-tight">
             ahmtstia —<br />
             <span className="relative inline-block text-brand-text-muted-alt italic font-normal">
-              Crafting Digital Experiences
+              Merancang Pengalaman Digital
               <svg
                 className="absolute left-0 -bottom-2 w-full h-3 text-brand-accent/40"
                 viewBox="0 0 300 12"
@@ -42,15 +42,15 @@ export const HomeView: React.FC = () => {
           </h1>
 
           <p className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-lg leading-relaxed mt-1">
-            Building high-performance applications with an editorial design focus.
+            Membangun aplikasi berkinerja tinggi dengan fokus pada desain editorial.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <Button variant="primary" href="/projects" icon="arrow_forward">
-              View My Work
+              Lihat Karya Saya
             </Button>
             <Button variant="outline" href="/contact">
-              Let's Talk
+              Mari Berdiskusi
             </Button>
           </div>
         </div>
@@ -95,17 +95,17 @@ export const HomeView: React.FC = () => {
         <div className="flex justify-between items-end mb-8">
           <div>
             <p className="font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold">
-              FEATURED WORK
+              KARYA PILIHAN
             </p>
             <h2 className="font-garamond text-2xl sm:text-3xl text-brand-text font-bold mt-1">
-              Recent Case Studies
+              Studi Kasus Terbaru
             </h2>
           </div>
           <Link
             href="/projects"
             className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold hover:underline flex items-center gap-1 cursor-pointer"
           >
-            See All ({PROJECTS.length})
+            Lihat Semua ({PROJECTS.length})
             <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </Link>
         </div>
@@ -128,7 +128,7 @@ export const HomeView: React.FC = () => {
         <Link
           href="/projects"
           className="text-brand-muted-light hover:text-brand-accent transition-all hover:translate-y-1 cursor-pointer"
-          aria-label="Scroll down to projects"
+          aria-label="Gulir ke bawah untuk melihat proyek"
         >
           <span className="material-symbols-outlined text-3xl">arrow_downward</span>
         </Link>
