@@ -10,8 +10,6 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
   const pathname = usePathname();
-
-  // If we're on projects or a specific project, consider 'projects' active
   const isProjectsActive = pathname?.startsWith('/projects');
 
   return (

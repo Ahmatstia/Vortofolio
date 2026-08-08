@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { EB_Garamond, Hanken_Grotesk } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/components/Header';
-import { BottomNav } from '@/components/BottomNav';
+import { Header } from '@/components/layout/Header';
+import { BottomNav } from '@/components/layout/BottomNav';
 
 const garamond = EB_Garamond({
   subsets: ['latin'],

@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { ABOUT_IMAGE, EXPERIENCES, SKILLS } from '../data/portfolioData';
-import { CvModal } from './CvModal';
-import { ProcessModal } from './ProcessModal';
+import { ABOUT_IMAGE, EXPERIENCES, SKILLS } from '@/data/portfolio';
+import { CvModal } from '@/components/modals/CvModal';
+import { ProcessModal } from '@/components/modals/ProcessModal';
 
 export const AboutView: React.FC = () => {
   const router = useRouter();
@@ -46,7 +46,7 @@ export const AboutView: React.FC = () => {
 
         {/* Image Column */}
         <div className="col-span-1 md:col-span-5 order-1 md:order-2 relative mb-6 md:mb-0">
-          <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] border border-brand-border">
+          <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(15,23,42,0.12)] border border-brand-border">
             <img
               src={ABOUT_IMAGE}
               alt="ahmtstia"
@@ -55,13 +55,11 @@ export const AboutView: React.FC = () => {
             />
           </div>
 
-          {/* Terracotta Accent Elements */}
           <div className="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-brand-accent rounded-full opacity-50 -z-10 pointer-events-none" />
           <div className="absolute -top-4 -left-4 w-16 h-16 bg-brand-accent opacity-20 rounded-full blur-xl -z-10 pointer-events-none" />
         </div>
       </section>
 
-      {/* Divider */}
       <hr className="border-brand-border mb-16 sm:mb-20 w-full" />
 
       {/* Timeline & Skills Section */}
@@ -73,7 +71,7 @@ export const AboutView: React.FC = () => {
           </h2>
 
           <div className="relative timeline-line pl-4">
-            {EXPERIENCES.map((exp, index) => (
+            {EXPERIENCES.map((exp) => (
               <div key={exp.id} className="relative mb-12 pl-12 group last:mb-0">
                 <div className="absolute left-[3px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-bg border-2 border-brand-accent z-10 group-hover:bg-brand-accent transition-colors duration-300" />
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-2">
@@ -98,7 +96,7 @@ export const AboutView: React.FC = () => {
             Toolkit
           </h2>
 
-          <div className="bg-brand-surface rounded-2xl p-6 sm:p-8 border border-brand-border shadow-[0_4px_20px_rgba(15, 23, 42,0.06)]">
+          <div className="bg-brand-surface rounded-2xl p-6 sm:p-8 border border-brand-border shadow-[0_4px_20px_rgba(15,23,42,0.06)]">
             <p className="font-hanken text-sm text-brand-text-muted mb-6 italic font-medium">
               Proficiencies graded by visual weight.
             </p>
@@ -107,29 +105,20 @@ export const AboutView: React.FC = () => {
               {SKILLS.map((skill) => {
                 if (skill.level === 'expert') {
                   return (
-                    <span
-                      key={skill.name}
-                      className="font-hanken text-sm sm:text-base text-brand-accent bg-brand-accent/10 px-4 py-2 rounded-full font-bold border border-brand-accent/30 hover:bg-brand-accent hover:text-white transition-all cursor-default"
-                    >
+                    <span key={skill.name} className="font-hanken text-sm sm:text-base text-brand-accent bg-brand-accent/10 px-4 py-2 rounded-full font-bold border border-brand-accent/30 hover:bg-brand-accent hover:text-white transition-all cursor-default">
                       {skill.name}
                     </span>
                   );
                 }
                 if (skill.level === 'advanced') {
                   return (
-                    <span
-                      key={skill.name}
-                      className="font-hanken text-xs sm:text-sm text-brand-text bg-brand-text/10 px-3.5 py-1.5 rounded-full font-semibold border border-brand-text/20 hover:bg-brand-text hover:text-white transition-all cursor-default"
-                    >
+                    <span key={skill.name} className="font-hanken text-xs sm:text-sm text-brand-text bg-brand-text/10 px-3.5 py-1.5 rounded-full font-semibold border border-brand-text/20 hover:bg-brand-text hover:text-white transition-all cursor-default">
                       {skill.name}
                     </span>
                   );
                 }
                 return (
-                  <span
-                    key={skill.name}
-                    className="font-hanken text-xs text-brand-text-muted-alt bg-brand-text-muted-alt/10 px-3 py-1 rounded-full font-medium border border-brand-text-muted-alt/20 hover:bg-brand-text-muted-alt hover:text-white transition-all cursor-default"
-                  >
+                  <span key={skill.name} className="font-hanken text-xs text-brand-text-muted-alt bg-brand-text-muted-alt/10 px-3 py-1 rounded-full font-medium border border-brand-text-muted-alt/20 hover:bg-brand-text-muted-alt hover:text-white transition-all cursor-default">
                     {skill.name}
                   </span>
                 );

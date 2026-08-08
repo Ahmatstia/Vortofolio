@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ContactFormData } from '../types';
+import { ContactFormData } from '@/types';
 
 export const ContactView: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -61,7 +61,6 @@ export const ContactView: React.FC = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-8">
-            {/* Name Field */}
             <div className="relative">
               <input
                 type="text"
@@ -73,12 +72,9 @@ export const ContactView: React.FC = () => {
                 placeholder="Your Name"
                 className="minimal-input block w-full bg-transparent border-0 border-b border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 transition-colors duration-300 placeholder:text-brand-text-muted/60"
               />
-              <label htmlFor="name" className="sr-only">
-                Your Name
-              </label>
+              <label htmlFor="name" className="sr-only">Your Name</label>
             </div>
 
-            {/* Email Field */}
             <div className="relative">
               <input
                 type="email"
@@ -90,12 +86,9 @@ export const ContactView: React.FC = () => {
                 placeholder="Your Email"
                 className="minimal-input block w-full bg-transparent border-0 border-b border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 transition-colors duration-300 placeholder:text-brand-text-muted/60"
               />
-              <label htmlFor="email" className="sr-only">
-                Your Email
-              </label>
+              <label htmlFor="email" className="sr-only">Your Email</label>
             </div>
 
-            {/* Message Field */}
             <div className="relative">
               <textarea
                 id="message"
@@ -107,12 +100,9 @@ export const ContactView: React.FC = () => {
                 placeholder="How can we work together?"
                 className="minimal-input block w-full bg-transparent border-0 border-b border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 transition-colors duration-300 placeholder:text-brand-text-muted/60 resize-none"
               />
-              <label htmlFor="message" className="sr-only">
-                Message
-              </label>
+              <label htmlFor="message" className="sr-only">Message</label>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={isSubmitting}
@@ -125,50 +115,32 @@ export const ContactView: React.FC = () => {
         )}
       </section>
 
-      {/* Social Links Section */}
+      {/* Social Links */}
       <section className="mb-14 text-center">
         <p className="font-hanken text-xs text-brand-text-muted mb-6 uppercase tracking-widest font-bold">
           OR CONNECT DIRECTLY
         </p>
         <div className="flex justify-center gap-4">
-          <a
-            href="mailto:ahmtstia@example.com"
-            title="Email ahmtstia"
-            className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-brand-accent hover:bg-brand-surface transition-all duration-300 active:scale-90 shadow-sm"
-          >
-            <span className="material-symbols-outlined text-xl">mail</span>
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn Profile"
-            className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-brand-accent hover:bg-brand-surface transition-all duration-300 active:scale-90 shadow-sm"
-          >
-            <span className="material-symbols-outlined text-xl">work</span>
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub Repositories"
-            className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-brand-accent hover:bg-brand-surface transition-all duration-300 active:scale-90 shadow-sm"
-          >
-            <span className="material-symbols-outlined text-xl">code</span>
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Chat & Socials"
-            className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-brand-accent hover:bg-brand-surface transition-all duration-300 active:scale-90 shadow-sm"
-          >
-            <span className="material-symbols-outlined text-xl">chat</span>
-          </a>
+          {[
+            { href: 'mailto:ahmtstia@example.com', icon: 'mail', title: 'Email ahmtstia' },
+            { href: 'https://linkedin.com', icon: 'work', title: 'LinkedIn Profile' },
+            { href: 'https://github.com', icon: 'code', title: 'GitHub Repositories' },
+            { href: 'https://twitter.com', icon: 'chat', title: 'Chat & Socials' },
+          ].map(({ href, icon, title }) => (
+            <a
+              key={icon}
+              href={href}
+              title={title}
+              target={href.startsWith('http') ? '_blank' : undefined}
+              rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-brand-accent hover:bg-brand-surface transition-all duration-300 active:scale-90 shadow-sm"
+            >
+              <span className="material-symbols-outlined text-xl">{icon}</span>
+            </a>
+          ))}
         </div>
       </section>
 
-      {/* Footer Tagline */}
       <footer className="text-center pt-4">
         <p className="font-garamond italic text-brand-text-muted/80 text-base sm:text-lg">
           Crafting digital experiences with care.

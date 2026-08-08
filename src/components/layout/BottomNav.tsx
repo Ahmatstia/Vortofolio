@@ -9,7 +9,7 @@ export const BottomNav: React.FC = () => {
   const isProjectsActive = pathname?.startsWith('/projects');
 
   return (
-    <nav className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 w-[calc(100%-32px)] max-w-md rounded-full bg-brand-bg/95 backdrop-blur-md border border-brand-border shadow-[0_4px_25px_rgba(15, 23, 42,0.12)] z-50">
+    <nav className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 w-[calc(100%-32px)] max-w-md rounded-full bg-brand-bg/95 backdrop-blur-md border border-brand-border shadow-[0_4px_25px_rgba(15,23,42,0.12)] z-50">
       <ul className="flex justify-around items-center px-3 py-2">
         {/* Home */}
         <li>

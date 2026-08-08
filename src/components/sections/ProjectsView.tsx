@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { PROJECTS } from '../data/portfolioData';
+import { PROJECTS } from '@/data/portfolio';
 
 export const ProjectsView: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'ALL' | 'WEB' | 'MOBILE' | 'UI'>('ALL');
@@ -26,7 +26,7 @@ export const ProjectsView: React.FC = () => {
         </div>
       </section>
 
-      {/* Filters (Horizontal Scrollable) */}
+      {/* Filters */}
       <section className="pb-8 overflow-x-auto hide-scrollbar">
         <div className="flex gap-3 whitespace-nowrap min-w-max pb-2">
           {(['ALL', 'WEB', 'MOBILE', 'UI'] as const).map((filter) => (
@@ -35,7 +35,7 @@ export const ProjectsView: React.FC = () => {
               onClick={() => setActiveFilter(filter)}
               className={`px-5 py-2.5 rounded-full font-hanken text-xs font-bold uppercase tracking-wider transition-all duration-200 active:scale-95 cursor-pointer ${
                 activeFilter === filter
-                  ? 'bg-brand-accent text-white shadow-[0_4px_12px_rgba(37, 99, 235,0.25)]'
+                  ? 'bg-brand-accent text-white shadow-[0_4px_12px_rgba(37,99,235,0.25)]'
                   : 'bg-brand-surface text-brand-text-muted border border-brand-border hover:bg-brand-bg'
               }`}
             >
@@ -45,22 +45,18 @@ export const ProjectsView: React.FC = () => {
         </div>
       </section>
 
-      {/* Project Cards (Grid / Asymmetric Stack) */}
+      {/* Project Cards Grid */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 pb-16">
         {filteredProjects.map((project, index) => {
-          // Add asymmetric layout variation for desktop
           const isOffsetRight = index % 3 === 1;
-          const isWideCard = index % 3 === 2;
 
           return (
             <Link
               href={`/projects/${project.id}`}
               key={project.id}
-              className={`group cursor-pointer block ${
-                isOffsetRight ? 'md:translate-y-4' : ''
-              } ${isWideCard ? 'lg:col-span-1' : ''}`}
+              className={`group cursor-pointer block ${isOffsetRight ? 'md:translate-y-4' : ''}`}
             >
-              <div className="rounded-2xl bg-brand-surface p-3 border border-brand-border shadow-[0_4px_20px_rgba(15, 23, 42,0.06)] hover:shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] transition-all duration-300">
+              <div className="rounded-2xl bg-brand-surface p-3 border border-brand-border shadow-[0_4px_20px_rgba(15,23,42,0.06)] hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] transition-all duration-300">
                 <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-brand-bg">
                   <img
                     src={project.image}

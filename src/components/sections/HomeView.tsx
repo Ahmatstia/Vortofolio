@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { HERO_IMAGE, PROJECTS } from '../data/portfolioData';
+import { HERO_IMAGE, PROJECTS } from '@/data/portfolio';
 
 export const HomeView: React.FC = () => {
   const featuredProjects = PROJECTS.filter((p) => p.featured).slice(0, 3);
@@ -13,33 +13,29 @@ export const HomeView: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center my-auto min-h-[500px] md:min-h-[580px]">
         {/* Text Column */}
         <div className="col-span-1 md:col-span-7 flex flex-col gap-6 z-10">
-          {/* Eyebrow */}
           <p className="font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold">
             FULLSTACK DEVELOPER
           </p>
 
-          {/* Headline */}
           <h1 className="font-garamond text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-brand-text tracking-tight">
             ahmtstia —<br />
             <span className="text-brand-text-muted-alt italic font-normal">Crafting Digital Experiences</span>
           </h1>
 
-          {/* Bio */}
           <p className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-lg leading-relaxed mt-1">
             Building high-performance applications with an editorial design focus.
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <Link
               href="/projects"
-              className="bg-brand-accent text-white font-hanken text-sm font-semibold px-8 py-4 rounded-full shadow-[0_4px_20px_rgba(15, 23, 42,0.12)] hover:bg-brand-accent-hover transition-all duration-300 active:scale-95 text-center cursor-pointer inline-block"
+              className="bg-brand-accent text-white font-hanken text-sm font-semibold px-8 py-4 rounded-full shadow-[0_4px_20px_rgba(15,23,42,0.12)] hover:bg-brand-accent-hover transition-all duration-300 active:scale-95 text-center cursor-pointer inline-block"
             >
               View My Work
             </Link>
             <Link
               href="/contact"
-              className="bg-brand-bg text-brand-text font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-brand-border hover:bg-brand-surface transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(15, 23, 42,0.02)] cursor-pointer inline-block"
+              className="bg-brand-bg text-brand-text font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-brand-border hover:bg-brand-surface transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(15,23,42,0.02)] cursor-pointer inline-block"
             >
               Let's Talk
             </Link>
@@ -52,7 +48,7 @@ export const HomeView: React.FC = () => {
             <img
               src={HERO_IMAGE}
               alt="ahmtstia portrait"
-              className="w-full h-auto object-cover rounded-[16px] shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] border border-brand-border/60"
+              className="w-full h-auto object-cover rounded-[16px] shadow-[0_8px_30px_rgba(15,23,42,0.12)] border border-brand-border/60"
             />
           </div>
         </div>
@@ -83,7 +79,7 @@ export const HomeView: React.FC = () => {
             <Link
               href={`/projects/${project.id}`}
               key={project.id}
-              className="group bg-brand-surface rounded-[16px] p-3 border border-brand-border/50 shadow-[0_4px_20px_rgba(15, 23, 42,0.04)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block"
+              className="group bg-brand-surface rounded-[16px] p-3 border border-brand-border/50 shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block"
             >
               <div className="relative w-full aspect-[4/3] rounded-[12px] overflow-hidden mb-3">
                 <img

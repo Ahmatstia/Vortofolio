@@ -1,4 +1,4 @@
-import { AboutView } from '@/components/AboutView';
+import { AboutView } from '@/components/sections/AboutView';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

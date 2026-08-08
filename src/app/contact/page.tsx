@@ -1,4 +1,4 @@
-import { ContactView } from '@/components/ContactView';
+import { ContactView } from '@/components/sections/ContactView';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
