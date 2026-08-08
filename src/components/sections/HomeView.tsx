@@ -3,6 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { HERO_IMAGE, PROJECTS } from '@/data/portfolio';
+import { Button } from '@/components/ui/Button';
+import { ProjectCard } from '@/components/ui/ProjectCard';
 
 export const HomeView: React.FC = () => {
   const featuredProjects = PROJECTS.filter((p) => p.featured).slice(0, 3);
@@ -44,22 +46,12 @@ export const HomeView: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Link
-              href="/projects"
-              className="group relative overflow-hidden bg-brand-accent text-white font-hanken text-sm font-semibold px-8 py-4 rounded-full shadow-[0_4px_20px_rgba(15,23,42,0.12)] hover:shadow-[0_8px_28px_rgba(181,87,59,0.35)] transition-all duration-300 active:scale-95 text-center cursor-pointer inline-flex items-center justify-center gap-2"
-            >
-              <span className="relative z-10">View My Work</span>
-              <span className="material-symbols-outlined text-base relative z-10 transition-transform duration-300 group-hover:translate-x-1">
-                arrow_forward
-              </span>
-              <span className="absolute inset-0 bg-brand-accent-hover translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-brand-bg text-brand-text font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-brand-border hover:bg-brand-surface hover:border-brand-text/20 transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(15,23,42,0.02)] cursor-pointer inline-block"
-            >
+            <Button variant="primary" href="/projects" icon="arrow_forward">
+              View My Work
+            </Button>
+            <Button variant="outline" href="/contact">
               Let's Talk
-            </Link>
+            </Button>
           </div>
         </div>
 
@@ -120,37 +112,13 @@ export const HomeView: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {featuredProjects.map((project, idx) => (
-            <Link
-              href={`/projects/${project.id}`}
+            <ProjectCard 
               key={project.id}
-              className={`group bg-brand-surface rounded-[18px] p-3 border border-brand-border/50 shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_32px_rgba(15,23,42,0.1)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer block ${
-                idx === 1 ? 'md:mt-6' : ''
-              }`}
-            >
-              <div className="relative w-full aspect-[4/3] rounded-[14px] overflow-hidden mb-3">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-text/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="absolute top-3 left-3 bg-brand-bg/90 backdrop-blur-sm rounded-full px-2.5 py-1 font-hanken text-[10px] uppercase tracking-wider font-bold text-brand-text-muted">
-                  0{idx + 1}
-                </span>
-                <div className="absolute top-3 right-3 bg-brand-bg/90 backdrop-blur-sm rounded-full p-2 text-brand-accent shadow-sm scale-90 group-hover:scale-100 transition-transform duration-300">
-                  <span className="material-symbols-outlined text-lg">arrow_outward</span>
-                </div>
-              </div>
-              <div className="p-1">
-                <span className="font-hanken text-[10px] uppercase tracking-wider text-brand-text-muted font-bold block mb-1">
-                  {project.client} — {project.year}
-                </span>
-                <h3 className="font-garamond text-xl font-bold text-brand-text group-hover:text-brand-accent transition-colors">
-                  {project.title}
-                </h3>
-              </div>
-            </Link>
+              project={project}
+              index={idx}
+              variant="simple"
+              className={idx === 1 ? 'md:mt-6' : ''}
+            />
           ))}
         </div>
       </div>
