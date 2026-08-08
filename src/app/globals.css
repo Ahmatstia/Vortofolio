@@ -1,9 +1,25 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-bg: #F1F5F9; /* ← Background utama halaman */
+  --color-brand-surface: #FFFFFF; /* ← Kartu, modal, navbar */
+  --color-brand-border: #E2E8F0; /* ← Garis batas */
+  --color-brand-text: #0F172A; /* ← Teks utama */
+  --color-brand-text-muted: #475569; /* ← Teks sekunder */
+  --color-brand-text-muted-alt: #64748B; /* ← Teks sekunder alt */
+  --color-brand-accent: #2563EB; /* ← Warna aksen (tombol, link) */
+  --color-brand-accent-hover: #1D4ED8; /* ← Hover aksen */
+  --color-brand-muted-light: #94A3B8; /* ← Teks sekunder alt */
+  --color-brand-slate-100: #F1F5F9; /* ← Teks sekunder alt */
+  
+  --color-brand-shadow-base: rgba(15, 23, 42, 0.08);
+  --color-brand-shadow-hover: rgba(15, 23, 42, 0.12);
+}
+
 @layer base {
   body {
-    background-color: #F8FAFC;
-    color: #0F172A;
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
     font-family: 'Hanken Grotesk', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -34,7 +50,7 @@
   right: -16px;
   width: 80%;
   height: 80%;
-  background-color: #2563EB;
+  background-color: var(--color-brand-accent);
   border-radius: 16px;
   z-index: 0;
   transition: transform 0.3s ease;
@@ -74,7 +90,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background-color: #E2E8F0;
+  background-color: var(--color-brand-border);
   z-index: 0;
 }
 
@@ -91,14 +107,14 @@
 .minimal-input:focus {
   outline: none;
   box-shadow: none;
-  border-bottom-color: #2563EB;
+  border-bottom-color: var(--color-brand-accent);
 }
 
 .ambient-shadow {
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 20px var(--color-brand-shadow-base);
 }
 
 .ambient-shadow-hover:hover {
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 8px 30px var(--color-brand-shadow-hover);
   transform: translateY(-2px);
 }

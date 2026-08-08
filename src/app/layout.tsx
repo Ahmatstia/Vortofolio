@@ -57,7 +57,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#F8FAFC] text-[#0F172A] antialiased min-h-screen flex flex-col selection:bg-[#2563EB]/20 selection:text-[#2563EB]">
+      <body className="bg-brand-bg text-brand-text antialiased min-h-screen flex flex-col selection:bg-brand-accent/20 selection:text-brand-accent">
         <Header />
         <main className="flex-1 flex flex-col w-full">
           {children}

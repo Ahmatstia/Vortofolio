@@ -1,8 +1,24 @@
+# Dependencies
 node_modules/
+
+# Next.js build output
+.next/
+out/
 build/
 dist/
-coverage/
+
+# Misc
 .DS_Store
 *.log
+coverage/
+
+# Env files
 .env*
 !.env.example
+
+# Helper scripts (one-off migration tools)
+replace-colors.js
+replace-colors.cjs
+replace-shadows.cjs
+swap-bg.cjs
+refactor-theme.cjs
