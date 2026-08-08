@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
 
   return (
     <header className="sticky top-0 w-full z-40 bg-brand-bg/90 backdrop-blur-md border-b border-brand-border/40 transition-all duration-300">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 py-2">
         {/* Left icon / Menu button */}
         <div className="flex items-center gap-3">
           <Link
@@ -26,9 +26,9 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
             <img 
               src={logo.src} 
               alt="Personal Brand Logo" 
-              className="h-12 sm:h-16 w-auto object-contain" 
+              className="h-8 sm:h-12 w-auto object-contain" 
             />
-            <span className="font-garamond text-xl sm:text-2xl font-bold tracking-tight text-brand-text group-hover:text-brand-accent transition-colors uppercase">
+            <span className="font-garamond text-lg sm:text-xl font-bold tracking-tight text-brand-text group-hover:text-brand-accent transition-colors uppercase">
               AHMTSTIA_
             </span>
           </Link>

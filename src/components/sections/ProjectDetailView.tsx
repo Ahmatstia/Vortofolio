@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Project } from '@/types';
 import { LiveSiteModal } from '@/components/modals/LiveSiteModal';
@@ -8,6 +8,138 @@ import { LiveSiteModal } from '@/components/modals/LiveSiteModal';
 interface ProjectDetailViewProps {
   project: Project;
 }
+
+/* ---------------------------------------------------------------------- */
+/* Stacked / Fanned Swipeable Gallery                                     */
+/* ---------------------------------------------------------------------- */
+/* Expects `images` to be an array of exactly 5 urls. If your Project      */
+/* type only has a single `image` field, add a `gallery: string[]` field   */
+/* to your data (see /data/portfolio). Falls back to repeating the single  */
+/* image so nothing breaks in the meantime.                                */
+
+interface StackedGalleryProps {
+  images: string[];
+  alt: string;
+}
+
+const StackedGallery: React.FC<StackedGalleryProps> = ({ images, alt }) => {
+  const [active, setActive] = useState(0);
+  const dragState = useRef<{ startX: number; dragging: boolean }>({ startX: 0, dragging: false });
+  const [dragOffset, setDragOffset] = useState(0);
+
+  const count = images.length;
+
+  const goTo = (idx: number) => {
+    setActive(((idx % count) + count) % count);
+  };
+  const next = () => goTo(active + 1);
+  const prev = () => goTo(active - 1);
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    dragState.current = { startX: e.clientX, dragging: true };
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (!dragState.current.dragging) return;
+    setDragOffset(e.clientX - dragState.current.startX);
+  };
+  const endDrag = () => {
+    if (!dragState.current.dragging) return;
+    dragState.current.dragging = false;
+    if (dragOffset > 60) prev();
+    else if (dragOffset < -60) next();
+    setDragOffset(0);
+  };
+
+  /* Position of each card relative to the active one, fanned like petals */
+  const getCardStyle = (idx: number): React.CSSProperties => {
+    let offset = idx - active;
+    // wrap offset to the shortest path around the circle (-2..2 for 5 items)
+    if (offset > count / 2) offset -= count;
+    if (offset < -count / 2) offset += count;
+
+    const dragInfluence = dragState.current.dragging ? dragOffset / 6 : 0;
+    const absOffset = Math.abs(offset);
+
+    const translateX = offset * 78 + dragInfluence;
+    const translateY = absOffset * 14;
+    const rotate = offset * 9;
+    const scale = offset === 0 ? 1 : 1 - absOffset * 0.12;
+    const zIndex = 10 - absOffset;
+    const opacity = absOffset > 2 ? 0 : 1 - absOffset * 0.18;
+
+    return {
+      transform: `translate(-50%, -50%) translateX(${translateX}%) translateY(${translateY}px) rotate(${rotate}deg) scale(${scale})`,
+      zIndex,
+      opacity,
+      transition: dragState.current.dragging ? 'none' : 'transform 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease',
+    };
+  };
+
+  return (
+    <div className="relative w-full h-[420px] sm:h-[520px] md:h-[618px] select-none">
+      <div
+        className="relative w-full h-full overflow-hidden rounded-b-[28px] cursor-grab active:cursor-grabbing touch-pan-y"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerLeave={endDrag}
+      >
+        {images.map((src, idx) => (
+          <div
+            key={idx}
+            className="absolute top-1/2 left-1/2 w-[78%] sm:w-[62%] md:w-[54%] aspect-[4/5] rounded-[22px] overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.28)] border-4 border-brand-bg"
+            style={getCardStyle(idx)}
+            onClick={() => idx !== active && goTo(idx)}
+          >
+            <img
+              src={src}
+              alt={`${alt} — ${idx + 1}`}
+              draggable={false}
+              className="w-full h-full object-cover pointer-events-none"
+            />
+            {idx === active && (
+              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Prev / Next arrows */}
+      <button
+        onClick={prev}
+        aria-label="Previous image"
+        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-brand-bg/90 backdrop-blur-md border border-brand-border/70 flex items-center justify-center text-brand-text hover:bg-brand-accent hover:text-white hover:border-brand-accent transition-all shadow-[0_4px_16px_rgba(15,23,42,0.12)] cursor-pointer active:scale-90"
+      >
+        <span className="material-symbols-outlined text-xl">chevron_left</span>
+      </button>
+      <button
+        onClick={next}
+        aria-label="Next image"
+        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-brand-bg/90 backdrop-blur-md border border-brand-border/70 flex items-center justify-center text-brand-text hover:bg-brand-accent hover:text-white hover:border-brand-accent transition-all shadow-[0_4px_16px_rgba(15,23,42,0.12)] cursor-pointer active:scale-90"
+      >
+        <span className="material-symbols-outlined text-xl">chevron_right</span>
+      </button>
+
+      {/* Dot indicators */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-brand-bg/80 backdrop-blur-md rounded-full px-3 py-2 border border-brand-border/60 shadow-sm">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            aria-label={`Go to image ${idx + 1}`}
+            onClick={() => goTo(idx)}
+            className={`rounded-full transition-all duration-300 cursor-pointer ${
+              idx === active ? 'w-6 h-2 bg-brand-accent' : 'w-2 h-2 bg-brand-border hover:bg-brand-text-muted'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+/* ---------------------------------------------------------------------- */
+/* Project Detail View                                                    */
+/* ---------------------------------------------------------------------- */
 
 export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project }) => {
   const router = useRouter();
@@ -19,38 +151,23 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
     mode: 'live'
   });
 
+  // Prefer a `gallery` array on the project (5 images). Fall back to
+  // repeating the single `image` so the layout never breaks.
+  const galleryImages: string[] =
+    (project as any).gallery && (project as any).gallery.length >= 2
+      ? (project as any).gallery.slice(0, 5)
+      : Array(5).fill(project.image);
+
   return (
     <div className="pb-32 md:pb-24 w-full">
-      {/* Hero Image Section */}
-      <div className="relative w-full h-[400px] sm:h-[520px] md:h-[618px] rounded-b-[28px] overflow-hidden bg-brand-slate-100 shadow-[0_4px_20px_rgba(15,23,42,0.08)]">
-        <div
-          className="absolute inset-0 bg-cover bg-center w-full h-full transform hover:scale-105 transition-transform duration-700 ease-out"
-          style={{ backgroundImage: `url('${project.image}')` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-black/20" />
+      {/* Hero Gallery Section */}
+      <div className="relative w-full bg-brand-slate-100">
+        <StackedGallery images={galleryImages} alt={project.title} />
 
-        {/* Floating Back Button */}
-        <button
-          onClick={() => router.push('/projects')}
-          className="absolute top-6 left-4 sm:left-10 z-10 w-12 h-12 rounded-full bg-brand-bg/90 backdrop-blur-md flex items-center justify-center text-brand-text hover:bg-brand-bg hover:text-brand-accent transition-all shadow-[0_4px_20px_rgba(15,23,42,0.12)] cursor-pointer active:scale-95"
-          title="Kembali ke daftar proyek"
-          aria-label="Kembali"
-        >
-          <span className="material-symbols-outlined text-2xl">arrow_back</span>
-        </button>
-
-        {/* Category badge floating top-right */}
-        {project.category && (
-          <div className="absolute top-6 right-4 sm:right-10 z-10 bg-brand-bg/90 backdrop-blur-md rounded-full px-4 py-2.5 shadow-[0_4px_20px_rgba(15,23,42,0.12)]">
-            <span className="font-hanken text-[11px] uppercase tracking-widest font-bold text-brand-text">
-              {project.category}
-            </span>
-          </div>
-        )}
       </div>
 
       {/* Main Content */}
-      <main className="px-4 sm:px-8 max-w-4xl mx-auto -mt-16 sm:-mt-20 relative z-10">
+      <main className="px-4 sm:px-8 max-w-4xl mx-auto mt-10 sm:mt-14 relative z-10">
         {/* Title Card */}
         <div className="bg-brand-bg p-6 sm:p-10 rounded-[24px] shadow-[0_12px_36px_rgba(15,23,42,0.14)] mb-12 border border-brand-border">
           <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold block mb-2">
