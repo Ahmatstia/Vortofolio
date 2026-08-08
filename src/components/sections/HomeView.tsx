@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { HERO_IMAGE, PROJECTS } from '@/data/portfolio';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/ui/ProjectCard';
+import Lottie from 'lottie-react';
+import animationData from '../../../assets/lottie/astronot.json';
 
 export const HomeView: React.FC = () => {
   const featuredProjects = PROJECTS.filter((p) => p.featured).slice(0, 3);
@@ -55,19 +57,18 @@ export const HomeView: React.FC = () => {
           </div>
         </div>
 
-        {/* Image Column */}
+        {/* Animation Column */}
         <div className="col-span-1 md:col-span-5 flex justify-center md:justify-end mt-6 md:mt-0 relative">
-          {/* decorative blob accent behind image */}
+          {/* decorative blob accent behind animation */}
           <div className="absolute -top-6 -right-4 w-40 h-40 sm:w-56 sm:h-56 rounded-full bg-brand-accent/10 blur-2xl -z-10" />
           <div className="absolute bottom-4 -left-4 w-24 h-24 rounded-full border border-brand-border/60 -z-10" />
 
-          <div className="image-accent w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] relative">
-            <img
-              src={HERO_IMAGE}
-              alt="ahmtstia portrait"
-              className="w-full h-auto object-cover rounded-[20px] shadow-[0_12px_40px_rgba(15,23,42,0.16)] border border-brand-border/60"
+          <div className="w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] relative z-10 flex items-center justify-center">
+            <Lottie 
+              animationData={animationData} 
+              loop={true} 
+              className="w-full h-auto drop-shadow-[0_12px_40px_rgba(15,23,42,0.16)]" 
             />
-
           </div>
         </div>
       </div>
