@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
-import { EB_Garamond, Hanken_Grotesk } from 'next/font/google';
+import { EB_Garamond, Hanken_Grotesk, Geist } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const garamond = EB_Garamond({
   subsets: ['latin'],
@@ -47,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`light ${garamond.variable} ${hanken.variable}`}>
+    <html lang="en" className={cn("light", garamond.variable, hanken.variable, "font-sans", geist.variable)}>
       <head>
         {/* Material Symbols Outlined icon font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
