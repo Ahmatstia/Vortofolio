@@ -159,11 +159,10 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
       : Array(5).fill(project.image);
 
   return (
-    <div className="pb-32 md:pb-24 w-full">
+    <div className="pb-48 sm:pb-32 w-full">
       {/* Hero Gallery Section */}
       <div className="relative w-full bg-brand-slate-100">
         <StackedGallery images={galleryImages} alt={project.title} />
-
       </div>
 
       {/* Main Content */}
@@ -245,21 +244,22 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
         </div>
       </main>
 
-      {/* Sticky Bottom CTA Bar */}
-      <div className="fixed bottom-0 left-0 w-full bg-brand-bg/95 backdrop-blur-lg border-t border-brand-border px-4 sm:px-8 py-4 z-40 shadow-[0_-8px_28px_rgba(15,23,42,0.1)]">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center sm:justify-end items-center">
+      {/* Sticky Bottom CTA Bar — lifted above the mobile bottom nav bar
+          (adjust the bottom-[76px] value to match your navbar's actual height) */}
+      <div className="fixed bottom-[76px] sm:bottom-0 left-0 w-full bg-brand-bg/95 backdrop-blur-lg border-t border-brand-border px-4 sm:px-8 py-4 z-40 shadow-[0_-8px_28px_rgba(15,23,42,0.1)]">
+        <div className="max-w-4xl mx-auto flex flex-row gap-2 sm:gap-4 justify-center sm:justify-end items-center">
           <button
             onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-brand-bg text-brand-text border border-brand-border font-hanken text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+            className="flex-1 sm:flex-none px-3 sm:px-8 py-3 sm:py-3.5 rounded-full bg-brand-bg text-brand-text border border-brand-border font-hanken text-[11px] sm:text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
           >
             Lihat Studi Kasus
           </button>
           <button
             onClick={() => setLiveModal({ isOpen: true, mode: 'live' })}
-            className="group w-full sm:w-auto px-8 py-3.5 rounded-full bg-brand-accent text-white font-hanken text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] active:scale-95 cursor-pointer text-center flex items-center justify-center gap-2"
+            className="group flex-1 sm:flex-none px-3 sm:px-8 py-3 sm:py-3.5 rounded-full bg-brand-accent text-white font-hanken text-[11px] sm:text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] active:scale-95 cursor-pointer text-center flex items-center justify-center gap-1 sm:gap-2"
           >
             Kunjungi Situs
-            <span className="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">
+            <span className="material-symbols-outlined text-[16px] sm:text-lg transition-transform duration-300 group-hover:translate-x-1">
               arrow_outward
             </span>
           </button>

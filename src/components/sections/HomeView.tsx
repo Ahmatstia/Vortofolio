@@ -18,13 +18,13 @@ export const HomeView: React.FC = () => {
         <div className="col-span-1 md:col-span-7 flex flex-col gap-6 z-10">
 
           <p className="font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold">
-            PENGEMBANG FULLSTACK
+            INFORMATICS STUDENT & AI ENTHUSIAST
           </p>
 
-          <h1 className="font-garamond text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-brand-text tracking-tight">
-            ahmtstia —<br />
+          <h1 className="font-garamond text-4xl sm:text-5xl md:text-6xl lg:text5xl font-bold leading-[1.05] text-brand-text tracking-tight">
+            ahmtstia_<br />
             <span className="relative inline-block text-brand-text-muted-alt italic font-normal">
-              Merancang Pengalaman Digital
+              Mengembangkan Web, Mobile & Solusi Sistem Cerdas
               <svg
                 className="absolute left-0 -bottom-2 w-full h-3 text-brand-accent/40"
                 viewBox="0 0 300 12"
@@ -42,7 +42,7 @@ export const HomeView: React.FC = () => {
           </h1>
 
           <p className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-lg leading-relaxed mt-1">
-            Membangun aplikasi berkinerja tinggi dengan fokus pada desain editorial.
+            Mahasiswa Teknik Informatika yang berfokus pada pengembangan aplikasi Web & Mobile, serta penerapan Deep Learning dan Computer Vision untuk solusi nyata.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">

@@ -25,39 +25,39 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose, onContactClic
           <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold block mb-1">
             CURRICULUM VITAE
           </span>
-          <h2 className="font-garamond text-3xl font-bold text-brand-text">ahmtstia</h2>
+          <h2 className="font-garamond text-3xl font-bold text-brand-text">Ahmat Setiadi</h2>
           <p className="font-hanken text-sm text-brand-text-muted">
-            Fullstack Developer & Creative Technologist • San Francisco, CA
+            Informatics Engineering Student • Intelligent Systems / AI
           </p>
         </div>
 
         {/* Summary */}
         <div className="mb-6">
           <h3 className="font-hanken text-xs uppercase tracking-wider text-brand-accent font-bold mb-2">
-            Executive Summary
+            Ringkasan Profil
           </h3>
           <p className="font-hanken text-sm text-brand-text-muted leading-relaxed">
-            Fullstack engineer with 8+ years of experience engineering high-throughput React/Next.js and WebGL web applications. Specialized in editorial design systems, micro-interactions, and mobile architecture.
+            Mahasiswa Teknik Informatika yang berfokus pada peminatan Sistem Cerdas (Artificial Intelligence). Memilki pengalaman praktis dalam pengembangan aplikasi Web dan Mobile, serta ketertarikan mendalam pada penerapannya dengan model Deep Learning dan Computer Vision.
           </p>
         </div>
 
-        {/* Key Achievements */}
+        {/* Key Achievements / Projects */}
         <div className="mb-6">
           <h3 className="font-hanken text-xs uppercase tracking-wider text-brand-accent font-bold mb-3">
-            Key Accomplishments
+            Fokus & Pencapaian Utama
           </h3>
           <ul className="space-y-2 text-sm text-brand-text-muted font-hanken">
             <li className="flex items-start gap-2">
               <span className="material-symbols-outlined text-brand-accent text-base mt-0.5">check_circle</span>
-              Architected MOMA web application redesign boosting visitor engagement by 42%.
+              Mengembangkan penelitian/skripsi klasifikasi citra medis untuk deteksi katarak dan mata normal menggunakan algoritma Convolutional Neural Network (CNN).
             </li>
             <li className="flex items-start gap-2">
               <span className="material-symbols-outlined text-brand-accent text-base mt-0.5">check_circle</span>
-              Built FinTech React Native banking suite serving 120,000+ active daily users.
+              Memahami dan mengeksplorasi arsitektur AI seperti Artificial Neural Networks (ANN), Natural Language Processing (NLP), serta Deep Learning.
             </li>
             <li className="flex items-start gap-2">
               <span className="material-symbols-outlined text-brand-accent text-base mt-0.5">check_circle</span>
-              Maintained 100/100 Lighthouse performance scores across all client production deployments.
+              Pengalaman membangun antarmuka dan logika aplikasi berbasis Web dan Mobile yang fungsional dan responsif.
             </li>
           </ul>
         </div>
@@ -65,23 +65,26 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose, onContactClic
         {/* Education */}
         <div className="mb-8">
           <h3 className="font-hanken text-xs uppercase tracking-wider text-brand-accent font-bold mb-2">
-            Education
+            Pendidikan
           </h3>
-          <div className="flex justify-between items-baseline font-hanken text-sm">
-            <span className="font-bold text-brand-text">B.S. in Computer Science & Interaction Design</span>
-            <span className="text-xs text-brand-text-muted-alt">UC Berkeley • 2011 — 2015</span>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline font-hanken text-sm gap-1 sm:gap-0">
+            <div>
+              <span className="font-bold text-brand-text block">S1 Teknik Informatika</span>
+              <span className="text-xs text-brand-text-muted">Peminatan Sistem Cerdas (AI)</span>
+            </div>
+            <span className="text-xs text-brand-text-muted-alt">Aktif</span>
           </div>
         </div>
 
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-brand-border">
           <a
-            href="data:text/plain;charset=utf-8,ahmtstia%20-%20Fullstack%20Developer%20CV"
-            download="ahmtstia_CV.txt"
+            href="/cv.pdf"
+            download="CV_Ahmat_Setiadi.pdf"
             className="flex-1 bg-brand-accent text-white font-hanken text-sm font-semibold py-3 rounded-full flex items-center justify-center gap-2 hover:bg-brand-accent-hover transition-all text-center cursor-pointer"
           >
             <span className="material-symbols-outlined text-lg">download</span>
-            Download Full PDF/CV
+            Unduh CV (PDF)
           </a>
           <button
             onClick={() => {
@@ -90,7 +93,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose, onContactClic
             }}
             className="flex-1 bg-brand-surface text-brand-text font-hanken text-sm font-semibold py-3 rounded-full border border-brand-border hover:bg-brand-border transition-all text-center cursor-pointer"
           >
-            Hire ahmtstia
+            Hubungi Ahmat
           </button>
         </div>
       </div>

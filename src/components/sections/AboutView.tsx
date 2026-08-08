@@ -29,9 +29,14 @@ export const AboutView: React.FC = () => {
             <span className="italic font-normal text-brand-text-muted-alt">di Balik Kode</span>
           </h1>
 
-          <p className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-2xl mb-8 leading-relaxed">
-            Saya percaya bahwa pengalaman digital yang luar biasa lahir dari pemahaman mendalam tentang perilaku manusia, dipadukan dengan eksekusi teknis yang ketat. Pendekatan saya berakar pada minimalisme, mengutamakan kejelasan dan umpan balik taktil dibandingkan dekorasi yang berlebihan.
-          </p>
+          <div className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-2xl mb-8 leading-relaxed space-y-4">
+            <p>
+              Saya seorang mahasiswa Teknik Informatika dengan fokus peminatan pada <strong>Sistem Cerdas (Artificial Intelligence)</strong>. Saya memiliki pengalaman dalam membangun aplikasi Web dan Mobile, sekaligus mengeksplorasi implementasi model AI.
+            </p>
+            <p>
+              Fokus dan ketertarikan utama saya terletak pada <strong>Deep Learning</strong>, khususnya <i>Computer Vision</i> (seperti klasifikasi citra medis menggunakan CNN) serta pemahaman dasar pada model ANN dan NLP. Saya selalu tertarik untuk terus belajar dan menerapkan teknologi cerdas ke dalam aplikasi digital yang bermanfaat.
+            </p>
+          </div>
 
           <div className="flex flex-wrap gap-4">
             <button
@@ -66,14 +71,14 @@ export const AboutView: React.FC = () => {
           {/* floating role card */}
           <div className="absolute -bottom-5 -left-5 sm:-left-8 bg-brand-bg border border-brand-border/70 rounded-2xl px-4 py-3 shadow-[0_10px_28px_rgba(15,23,42,0.14)] flex items-center gap-3">
             <div className="w-9 h-9 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent">
-              <span className="material-symbols-outlined text-lg">verified</span>
+              <span className="material-symbols-outlined text-lg">school</span>
             </div>
             <div>
               <p className="font-hanken text-[10px] uppercase tracking-widest text-brand-text-muted font-bold leading-none">
-                Pengembang Fullstack
+                Teknik Informatika
               </p>
               <p className="font-hanken text-xs font-semibold text-brand-text mt-1">
-                3+ tahun pengalaman
+                Peminatan Sistem Cerdas
               </p>
             </div>
           </div>
@@ -94,7 +99,7 @@ export const AboutView: React.FC = () => {
         {/* Experience Timeline */}
         <div className="col-span-1 md:col-span-7">
           <h2 className="font-garamond text-3xl sm:text-4xl text-brand-text font-bold mb-10">
-            Pengalaman
+            Pengalaman & Pendidikan
           </h2>
 
           <div className="relative pl-4">
@@ -126,7 +131,7 @@ export const AboutView: React.FC = () => {
 
           <div className="bg-brand-surface rounded-[20px] p-6 sm:p-8 border border-brand-border shadow-[0_8px_28px_rgba(15,23,42,0.06)]">
             <p className="font-hanken text-sm text-brand-text-muted mb-6 italic font-medium">
-              Keahlian diurutkan berdasarkan bobot visual.
+              Keahlian diurutkan berdasarkan tingkat penguasaan.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -156,7 +161,7 @@ export const AboutView: React.FC = () => {
             <div className="flex items-center gap-4 mt-6 pt-6 border-t border-brand-border/50">
               <div className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-accent" />
-                <span className="font-hanken text-[10px] text-brand-text-muted font-bold">Ahli</span>
+                <span className="font-hanken text-[10px] text-brand-text-muted font-bold">Fokus Utama</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-text/40" />
@@ -164,7 +169,7 @@ export const AboutView: React.FC = () => {
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-text-muted-alt/40" />
-                <span className="font-hanken text-[10px] text-brand-text-muted font-bold">Familiar</span>
+                <span className="font-hanken text-[10px] text-brand-text-muted font-bold">Dasar / Eksplorasi</span>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ export interface Project {
   client: string;
   role: string;
   year: string;
-  category: 'WEB' | 'MOBILE' | 'UI';
+  category: 'WEB' | 'MOBILE' | 'UI' | 'AI / ML' ;
   tags: string[];
   image: string;
   shortDescription: string;

@@ -11,23 +11,23 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
   const steps = [
     {
       number: '01',
-      title: 'Architectural Discovery',
-      description: 'Understanding core business motives, target audience ergonomics, and defining precise technical boundaries.'
+      title: 'Analisis & Riset Kebutuhan',
+      description: 'Memahami batasan masalah, mengumpulkan data (dataset citra/teks jika memakai AI), serta merencanakan arsitektur sistem web/mobile.'
     },
     {
       number: '02',
-      title: 'Editorial Typography & Design',
-      description: 'Crafting bespoke visual hierarchies using high-contrast serif headlines, tactile warm neutrals, and crisp spacing.'
+      title: 'Perancangan Sistem & UI/UX',
+      description: 'Membuat alur pengguna (user flow), wireframe, serta merancang struktur basis data dan skema API yang responsif.'
     },
     {
       number: '03',
-      title: 'Tactile Engineering',
-      description: 'Building robust React & Next.js architectures with fluid WebGL graphics, micro-interactions, and instant state handling.'
+      title: 'Eksperimen & Pelatihan Model AI',
+      description: 'Melakukan pra-pemrosesan data, membangun arsitektur model (seperti CNN untuk klasifikasi citra), dan melakukan evaluasi performa model.'
     },
     {
       number: '04',
-      title: 'Performance & Delivery',
-      description: 'Conducting Lighthouse audits, sub-second cold starts, accessibility checks, and automated Cloud Run deployments.'
+      title: 'Pengembangan & Integrasi',
+      description: 'Mengimplementasikan antarmuka Web/Mobile dan menghubungkannya dengan backend serta model AI agar dapat diakses pengguna dengan lancar.'
     }
   ];
 
@@ -42,10 +42,10 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
         </button>
 
         <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold block mb-1">
-          METHODOLOGY
+          METODOLOGI
         </span>
         <h2 className="font-garamond text-3xl font-bold text-brand-text mb-6">
-          Development Process
+          Alur Pengembangan Sistem
         </h2>
 
         <div className="space-y-6 mb-8">
@@ -61,7 +61,7 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
                 <h3 className="font-garamond text-xl font-bold text-brand-text mb-1">
                   {step.title}
                 </h3>
-                <p className="font-hanken text-sm text-brand-text-muted">
+                <p className="font-hanken text-sm text-brand-text-muted leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -73,7 +73,7 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
           onClick={onClose}
           className="w-full bg-brand-accent text-white font-hanken text-sm font-semibold py-3 rounded-full hover:bg-brand-accent-hover transition-all cursor-pointer"
         >
-          Close Process Overview
+          Tutup Ringkasan
         </button>
       </div>
     </div>
