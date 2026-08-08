@@ -33,18 +33,18 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
-      <div className="bg-[#F5F1EA] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#D9D3C7] shadow-[0_12px_40px_rgba(43,33,26,0.2)] relative">
+      <div className="bg-[#FFFFFF] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative">
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#E8E3DB] hover:bg-[#B5573B] hover:text-white transition-colors flex items-center justify-center text-[#2B211A] cursor-pointer"
+          className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#F8FAFC] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer"
         >
           <span className="material-symbols-outlined text-xl">close</span>
         </button>
 
-        <span className="font-hanken text-xs uppercase tracking-widest text-[#B5573B] font-bold block mb-1">
+        <span className="font-hanken text-xs uppercase tracking-widest text-[#2563EB] font-bold block mb-1">
           METHODOLOGY
         </span>
-        <h2 className="font-garamond text-3xl font-bold text-[#2B211A] mb-6">
+        <h2 className="font-garamond text-3xl font-bold text-[#0F172A] mb-6">
           Development Process
         </h2>
 
@@ -52,16 +52,16 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
           {steps.map((step) => (
             <div
               key={step.number}
-              className="bg-[#E8E3DB] p-5 rounded-xl border border-[#D9D3C7] flex gap-4 items-start"
+              className="bg-[#F8FAFC] p-5 rounded-xl border border-[#E2E8F0] flex gap-4 items-start"
             >
-              <span className="font-garamond text-3xl font-bold text-[#B5573B]">
+              <span className="font-garamond text-3xl font-bold text-[#2563EB]">
                 {step.number}
               </span>
               <div>
-                <h3 className="font-garamond text-xl font-bold text-[#2B211A] mb-1">
+                <h3 className="font-garamond text-xl font-bold text-[#0F172A] mb-1">
                   {step.title}
                 </h3>
-                <p className="font-hanken text-sm text-[#55423d]">
+                <p className="font-hanken text-sm text-[#475569]">
                   {step.description}
                 </p>
               </div>
@@ -71,7 +71,7 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
 
         <button
           onClick={onClose}
-          className="w-full bg-[#B5573B] text-white font-hanken text-sm font-semibold py-3 rounded-full hover:bg-[#963f26] transition-all cursor-pointer"
+          className="w-full bg-[#2563EB] text-white font-hanken text-sm font-semibold py-3 rounded-full hover:bg-[#1D4ED8] transition-all cursor-pointer"
         >
           Close Process Overview
         </button>

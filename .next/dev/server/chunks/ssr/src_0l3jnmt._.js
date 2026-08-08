@@ -25,7 +25,7 @@ const HomeView = ()=>{
                         className: "col-span-1 md:col-span-7 flex flex-col gap-6 z-10",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "font-hanken text-xs uppercase tracking-widest text-[#55423d] font-bold",
+                                className: "font-hanken text-xs uppercase tracking-widest text-[#475569] font-bold",
                                 children: "FULLSTACK DEVELOPER"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HomeView.tsx",
@@ -33,7 +33,7 @@ const HomeView = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "font-garamond text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-[#2B211A] tracking-tight",
+                                className: "font-garamond text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-[#0F172A] tracking-tight",
                                 children: [
                                     "ahmtstia —",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -42,7 +42,7 @@ const HomeView = ()=>{
                                         columnNumber: 23
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-[#625e52] italic font-normal",
+                                        className: "text-[#64748B] italic font-normal",
                                         children: "Crafting Digital Experiences"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HomeView.tsx",
@@ -56,7 +56,7 @@ const HomeView = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "font-hanken text-base sm:text-lg text-[#55423d] max-w-lg leading-relaxed mt-1",
+                                className: "font-hanken text-base sm:text-lg text-[#475569] max-w-lg leading-relaxed mt-1",
                                 children: "Building high-performance applications with an editorial design focus."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HomeView.tsx",
@@ -68,7 +68,7 @@ const HomeView = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/projects",
-                                        className: "bg-[#B5573B] text-white font-hanken text-sm font-semibold px-8 py-4 rounded-full shadow-[0_4px_20px_rgba(43,33,26,0.12)] hover:bg-[#963f26] transition-all duration-300 active:scale-95 text-center cursor-pointer inline-block",
+                                        className: "bg-[#2563EB] text-white font-hanken text-sm font-semibold px-8 py-4 rounded-full shadow-[0_4px_20px_rgba(15, 23, 42,0.12)] hover:bg-[#1D4ED8] transition-all duration-300 active:scale-95 text-center cursor-pointer inline-block",
                                         children: "View My Work"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HomeView.tsx",
@@ -77,7 +77,7 @@ const HomeView = ()=>{
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/contact",
-                                        className: "bg-[#F5F1EA] text-[#2B211A] font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-[#D9D3C7] hover:bg-[#E8E3DB] transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(43,33,26,0.02)] cursor-pointer inline-block",
+                                        className: "bg-[#FFFFFF] text-[#0F172A] font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-[#E2E8F0] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(15, 23, 42,0.02)] cursor-pointer inline-block",
                                         children: "Let's Talk"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HomeView.tsx",
@@ -103,7 +103,7 @@ const HomeView = ()=>{
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolioData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["HERO_IMAGE"],
                                 alt: "ahmtstia portrait",
-                                className: "w-full h-auto object-cover rounded-[16px] shadow-[0_8px_30px_rgba(43,33,26,0.12)] border border-[#D9D3C7]/60"
+                                className: "w-full h-auto object-cover rounded-[16px] shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] border border-[#E2E8F0]/60"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/HomeView.tsx",
                                 lineNumber: 52,
@@ -126,7 +126,7 @@ const HomeView = ()=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-16 sm:mt-24 pt-12 border-t border-[#D9D3C7]/40",
+                className: "mt-16 sm:mt-24 pt-12 border-t border-[#E2E8F0]/40",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex justify-between items-end mb-8",
@@ -134,7 +134,7 @@ const HomeView = ()=>{
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-hanken text-xs uppercase tracking-widest text-[#55423d] font-bold",
+                                        className: "font-hanken text-xs uppercase tracking-widest text-[#475569] font-bold",
                                         children: "FEATURED WORK"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HomeView.tsx",
@@ -142,7 +142,7 @@ const HomeView = ()=>{
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "font-garamond text-2xl sm:text-3xl text-[#2B211A] font-bold mt-1",
+                                        className: "font-garamond text-2xl sm:text-3xl text-[#0F172A] font-bold mt-1",
                                         children: "Recent Case Studies"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HomeView.tsx",
@@ -157,7 +157,7 @@ const HomeView = ()=>{
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/projects",
-                                className: "font-hanken text-xs uppercase tracking-widest text-[#B5573B] font-bold hover:underline flex items-center gap-1 cursor-pointer",
+                                className: "font-hanken text-xs uppercase tracking-widest text-[#2563EB] font-bold hover:underline flex items-center gap-1 cursor-pointer",
                                 children: [
                                     "See All (",
                                     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolioData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PROJECTS"].length,
@@ -186,7 +186,7 @@ const HomeView = ()=>{
                         className: "grid grid-cols-1 md:grid-cols-3 gap-6",
                         children: featuredProjects.map((project)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: `/projects/${project.id}`,
-                                className: "group bg-[#E8E3DB] rounded-[16px] p-3 border border-[#D9D3C7]/50 shadow-[0_4px_20px_rgba(43,33,26,0.04)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block",
+                                className: "group bg-[#F8FAFC] rounded-[16px] p-3 border border-[#E2E8F0]/50 shadow-[0_4px_20px_rgba(15, 23, 42,0.04)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "relative w-full aspect-[4/3] rounded-[12px] overflow-hidden mb-3",
@@ -202,7 +202,7 @@ const HomeView = ()=>{
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute top-3 right-3 bg-[#F5F1EA]/90 backdrop-blur-sm rounded-full p-2 text-[#B5573B] shadow-sm",
+                                                className: "absolute top-3 right-3 bg-[#FFFFFF]/90 backdrop-blur-sm rounded-full p-2 text-[#2563EB] shadow-sm",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "material-symbols-outlined text-lg",
                                                     children: "arrow_outward"
@@ -226,7 +226,7 @@ const HomeView = ()=>{
                                         className: "p-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "font-hanken text-[10px] uppercase tracking-wider text-[#55423d] font-bold block mb-1",
+                                                className: "font-hanken text-[10px] uppercase tracking-wider text-[#475569] font-bold block mb-1",
                                                 children: [
                                                     project.client,
                                                     " — ",
@@ -238,7 +238,7 @@ const HomeView = ()=>{
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "font-garamond text-xl font-bold text-[#2B211A] group-hover:text-[#B5573B] transition-colors",
+                                                className: "font-garamond text-xl font-bold text-[#0F172A] group-hover:text-[#2563EB] transition-colors",
                                                 children: project.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/HomeView.tsx",
@@ -272,7 +272,7 @@ const HomeView = ()=>{
                 className: "hidden md:flex justify-center w-full mt-12 scroll-indicator",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     href: "/projects",
-                    className: "text-[#89726c] hover:text-[#B5573B] transition-colors cursor-pointer",
+                    className: "text-[#94A3B8] hover:text-[#2563EB] transition-colors cursor-pointer",
                     "aria-label": "Scroll down to projects",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "material-symbols-outlined text-3xl",

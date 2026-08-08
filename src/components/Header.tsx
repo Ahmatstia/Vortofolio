@@ -15,13 +15,13 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
   const isProjectsActive = pathname?.startsWith('/projects');
 
   return (
-    <header className="sticky top-0 w-full z-40 bg-[#F5F1EA]/90 backdrop-blur-md border-b border-[#D9D3C7]/40 transition-all duration-300">
+    <header className="sticky top-0 w-full z-40 bg-[#FFFFFF]/90 backdrop-blur-md border-b border-[#E2E8F0]/40 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4">
         {/* Left icon / Menu button */}
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="text-[#B5573B] hover:bg-[#E8E3DB] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
+            className="text-[#2563EB] hover:bg-[#F8FAFC] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
             title="Go to Home"
             aria-label="Home menu"
           >
@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
           
           <Link
             href="/"
-            className="font-garamond text-xl sm:text-2xl font-bold tracking-tight text-[#2B211A] hover:text-[#B5573B] transition-colors cursor-pointer"
+            className="font-garamond text-xl sm:text-2xl font-bold tracking-tight text-[#0F172A] hover:text-[#2563EB] transition-colors cursor-pointer"
           >
             {isProjectsActive ? 'AHMTSTIA' : brandName}
           </Link>
@@ -42,8 +42,8 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
             href="/"
             className={`font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${
               pathname === '/'
-                ? 'text-[#B5573B] border-[#B5573B]'
-                : 'text-[#55423d] border-transparent hover:text-[#2B211A]'
+                ? 'text-[#2563EB] border-[#2563EB]'
+                : 'text-[#475569] border-transparent hover:text-[#0F172A]'
             }`}
           >
             Home
@@ -52,8 +52,8 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
             href="/projects"
             className={`font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${
               isProjectsActive
-                ? 'text-[#B5573B] border-[#B5573B]'
-                : 'text-[#55423d] border-transparent hover:text-[#2B211A]'
+                ? 'text-[#2563EB] border-[#2563EB]'
+                : 'text-[#475569] border-transparent hover:text-[#0F172A]'
             }`}
           >
             Projects
@@ -62,8 +62,8 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
             href="/about"
             className={`font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${
               pathname === '/about'
-                ? 'text-[#B5573B] border-[#B5573B]'
-                : 'text-[#55423d] border-transparent hover:text-[#2B211A]'
+                ? 'text-[#2563EB] border-[#2563EB]'
+                : 'text-[#475569] border-transparent hover:text-[#0F172A]'
             }`}
           >
             About
@@ -72,8 +72,8 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
             href="/contact"
             className={`font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${
               pathname === '/contact'
-                ? 'text-[#B5573B] border-[#B5573B]'
-                : 'text-[#55423d] border-transparent hover:text-[#2B211A]'
+                ? 'text-[#2563EB] border-[#2563EB]'
+                : 'text-[#475569] border-transparent hover:text-[#0F172A]'
             }`}
           >
             Contact
@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="text-[#B5573B] hover:bg-[#E8E3DB] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
+            className="text-[#2563EB] hover:bg-[#F8FAFC] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
             title="Profile & Contact"
             aria-label="Profile and Contact"
           >

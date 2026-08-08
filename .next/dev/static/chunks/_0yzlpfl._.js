@@ -2626,14 +2626,14 @@ const BottomNav = ()=>{
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     const isProjectsActive = pathname?.startsWith('/projects');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-        className: "md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 w-[calc(100%-32px)] max-w-md rounded-full bg-[#F5F1EA]/95 backdrop-blur-md border border-[#D9D3C7] shadow-[0_4px_25px_rgba(43,33,26,0.12)] z-50",
+        className: "md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 w-[calc(100%-32px)] max-w-md rounded-full bg-[#FFFFFF]/95 backdrop-blur-md border border-[#E2E8F0] shadow-[0_4px_25px_rgba(15, 23, 42,0.12)] z-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             className: "flex justify-around items-center px-3 py-2",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/",
-                        className: `flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 active:scale-90 ${pathname === '/' ? 'bg-[#B5573B] text-white shadow-sm' : 'text-[#55423d] hover:text-[#B5573B]'}`,
+                        className: `flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 active:scale-90 ${pathname === '/' ? 'bg-[#2563EB] text-white shadow-sm' : 'text-[#475569] hover:text-[#2563EB]'}`,
                         "aria-label": "Home",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2669,7 +2669,7 @@ const BottomNav = ()=>{
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/projects",
-                        className: `flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 active:scale-90 ${isProjectsActive ? 'bg-[#B5573B] text-white shadow-sm' : 'text-[#55423d] hover:text-[#B5573B]'}`,
+                        className: `flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 active:scale-90 ${isProjectsActive ? 'bg-[#2563EB] text-white shadow-sm' : 'text-[#475569] hover:text-[#2563EB]'}`,
                         "aria-label": "Projects",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2705,7 +2705,7 @@ const BottomNav = ()=>{
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/about",
-                        className: `flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 active:scale-90 ${pathname === '/about' ? 'bg-[#B5573B] text-white shadow-sm' : 'text-[#55423d] hover:text-[#B5573B]'}`,
+                        className: `flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 active:scale-90 ${pathname === '/about' ? 'bg-[#2563EB] text-white shadow-sm' : 'text-[#475569] hover:text-[#2563EB]'}`,
                         "aria-label": "About",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2741,7 +2741,7 @@ const BottomNav = ()=>{
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/contact",
-                        className: `flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 active:scale-90 ${pathname === '/contact' ? 'bg-[#B5573B] text-white shadow-sm' : 'text-[#55423d] hover:text-[#B5573B]'}`,
+                        className: `flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 active:scale-90 ${pathname === '/contact' ? 'bg-[#2563EB] text-white shadow-sm' : 'text-[#475569] hover:text-[#2563EB]'}`,
                         "aria-label": "Contact",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2819,7 +2819,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
     // If we're on projects or a specific project, consider 'projects' active
     const isProjectsActive = pathname?.startsWith('/projects');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: "sticky top-0 w-full z-40 bg-[#F5F1EA]/90 backdrop-blur-md border-b border-[#D9D3C7]/40 transition-all duration-300",
+        className: "sticky top-0 w-full z-40 bg-[#FFFFFF]/90 backdrop-blur-md border-b border-[#E2E8F0]/40 transition-all duration-300",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4",
             children: [
@@ -2828,7 +2828,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/",
-                            className: "text-[#B5573B] hover:bg-[#E8E3DB] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer",
+                            className: "text-[#2563EB] hover:bg-[#F8FAFC] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer",
                             title: "Go to Home",
                             "aria-label": "Home menu",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2846,7 +2846,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/",
-                            className: "font-garamond text-xl sm:text-2xl font-bold tracking-tight text-[#2B211A] hover:text-[#B5573B] transition-colors cursor-pointer",
+                            className: "font-garamond text-xl sm:text-2xl font-bold tracking-tight text-[#0F172A] hover:text-[#2563EB] transition-colors cursor-pointer",
                             children: isProjectsActive ? 'AHMTSTIA' : brandName
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header.tsx",
@@ -2864,7 +2864,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/",
-                            className: `font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${pathname === '/' ? 'text-[#B5573B] border-[#B5573B]' : 'text-[#55423d] border-transparent hover:text-[#2B211A]'}`,
+                            className: `font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${pathname === '/' ? 'text-[#2563EB] border-[#2563EB]' : 'text-[#475569] border-transparent hover:text-[#0F172A]'}`,
                             children: "Home"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header.tsx",
@@ -2873,7 +2873,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/projects",
-                            className: `font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${isProjectsActive ? 'text-[#B5573B] border-[#B5573B]' : 'text-[#55423d] border-transparent hover:text-[#2B211A]'}`,
+                            className: `font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${isProjectsActive ? 'text-[#2563EB] border-[#2563EB]' : 'text-[#475569] border-transparent hover:text-[#0F172A]'}`,
                             children: "Projects"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header.tsx",
@@ -2882,7 +2882,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/about",
-                            className: `font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${pathname === '/about' ? 'text-[#B5573B] border-[#B5573B]' : 'text-[#55423d] border-transparent hover:text-[#2B211A]'}`,
+                            className: `font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${pathname === '/about' ? 'text-[#2563EB] border-[#2563EB]' : 'text-[#475569] border-transparent hover:text-[#0F172A]'}`,
                             children: "About"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header.tsx",
@@ -2891,7 +2891,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/contact",
-                            className: `font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${pathname === '/contact' ? 'text-[#B5573B] border-[#B5573B]' : 'text-[#55423d] border-transparent hover:text-[#2B211A]'}`,
+                            className: `font-hanken text-xs uppercase tracking-widest font-bold transition-all py-1 border-b-2 ${pathname === '/contact' ? 'text-[#2563EB] border-[#2563EB]' : 'text-[#475569] border-transparent hover:text-[#0F172A]'}`,
                             children: "Contact"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header.tsx",
@@ -2908,7 +2908,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                     className: "flex items-center gap-3",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/contact",
-                        className: "text-[#B5573B] hover:bg-[#E8E3DB] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer",
+                        className: "text-[#2563EB] hover:bg-[#F8FAFC] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer",
                         title: "Profile & Contact",
                         "aria-label": "Profile and Contact",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {

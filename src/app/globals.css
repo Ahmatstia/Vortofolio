@@ -2,8 +2,8 @@
 
 @layer base {
   body {
-    background-color: #F5F1EA;
-    color: #2B211A;
+    background-color: #FFFFFF;
+    color: #0F172A;
     font-family: 'Hanken Grotesk', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -34,7 +34,7 @@
   right: -16px;
   width: 80%;
   height: 80%;
-  background-color: #B5573B;
+  background-color: #2563EB;
   border-radius: 16px;
   z-index: 0;
   transition: transform 0.3s ease;
@@ -74,7 +74,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background-color: #D9D3C7;
+  background-color: #E2E8F0;
   z-index: 0;
 }
 
@@ -91,14 +91,14 @@
 .minimal-input:focus {
   outline: none;
   box-shadow: none;
-  border-bottom-color: #B5573B;
+  border-bottom-color: #2563EB;
 }
 
 .ambient-shadow {
-  box-shadow: 0 4px 20px rgba(43, 33, 26, 0.08);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
 }
 
 .ambient-shadow-hover:hover {
-  box-shadow: 0 8px 30px rgba(43, 33, 26, 0.12);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
   transform: translateY(-2px);
 }

@@ -33,7 +33,7 @@ const AboutView = ()=>{
                         className: "col-span-1 md:col-span-7 order-2 md:order-1 flex flex-col justify-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-hanken text-xs uppercase tracking-widest text-[#B5573B] font-bold block mb-3",
+                                className: "font-hanken text-xs uppercase tracking-widest text-[#2563EB] font-bold block mb-3",
                                 children: "BIOGRAPHY"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AboutView.tsx",
@@ -41,7 +41,7 @@ const AboutView = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "font-garamond text-4xl sm:text-6xl lg:text-7xl text-[#2B211A] font-bold mb-6 leading-[1.1]",
+                                className: "font-garamond text-4xl sm:text-6xl lg:text-7xl text-[#0F172A] font-bold mb-6 leading-[1.1]",
                                 children: [
                                     "The Person",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -57,7 +57,7 @@ const AboutView = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "font-hanken text-base sm:text-lg text-[#55423d] max-w-2xl mb-8 leading-relaxed",
+                                className: "font-hanken text-base sm:text-lg text-[#475569] max-w-2xl mb-8 leading-relaxed",
                                 children: "I believe that exceptional digital experiences are born from a deep understanding of human behavior, married with rigorous technical execution. My approach is rooted in minimalism, prioritizing clarity and tactile feedback over superficial decoration."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AboutView.tsx",
@@ -69,7 +69,7 @@ const AboutView = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>setIsCvOpen(true),
-                                        className: "bg-[#B5573B] text-white font-hanken text-sm font-semibold px-7 py-3.5 rounded-md hover:bg-[#963f26] transition-all active:scale-95 cursor-pointer shadow-sm",
+                                        className: "bg-[#2563EB] text-white font-hanken text-sm font-semibold px-7 py-3.5 rounded-md hover:bg-[#1D4ED8] transition-all active:scale-95 cursor-pointer shadow-sm",
                                         children: "Download CV"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AboutView.tsx",
@@ -78,7 +78,7 @@ const AboutView = ()=>{
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>setIsProcessOpen(true),
-                                        className: "bg-[#F5F1EA] text-[#2B211A] border border-[#D9D3C7] font-hanken text-sm font-semibold px-7 py-3.5 rounded-md hover:bg-[#E8E3DB] transition-all active:scale-95 cursor-pointer",
+                                        className: "bg-[#FFFFFF] text-[#0F172A] border border-[#E2E8F0] font-hanken text-sm font-semibold px-7 py-3.5 rounded-md hover:bg-[#F8FAFC] transition-all active:scale-95 cursor-pointer",
                                         children: "View Process"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AboutView.tsx",
@@ -101,7 +101,7 @@ const AboutView = ()=>{
                         className: "col-span-1 md:col-span-5 order-1 md:order-2 relative mb-6 md:mb-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(43,33,26,0.12)] border border-[#D9D3C7]",
+                                className: "relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] border border-[#E2E8F0]",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolioData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ABOUT_IMAGE"],
                                     alt: "ahmtstia",
@@ -118,14 +118,14 @@ const AboutView = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute -bottom-6 -right-6 w-32 h-32 border-4 border-[#B5573B] rounded-full opacity-50 -z-10 pointer-events-none"
+                                className: "absolute -bottom-6 -right-6 w-32 h-32 border-4 border-[#2563EB] rounded-full opacity-50 -z-10 pointer-events-none"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AboutView.tsx",
                                 lineNumber: 59,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute -top-4 -left-4 w-16 h-16 bg-[#B5573B] opacity-20 rounded-full blur-xl -z-10 pointer-events-none"
+                                className: "absolute -top-4 -left-4 w-16 h-16 bg-[#2563EB] opacity-20 rounded-full blur-xl -z-10 pointer-events-none"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AboutView.tsx",
                                 lineNumber: 60,
@@ -144,7 +144,7 @@ const AboutView = ()=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
-                className: "border-[#D9D3C7] mb-16 sm:mb-20 w-full"
+                className: "border-[#E2E8F0] mb-16 sm:mb-20 w-full"
             }, void 0, false, {
                 fileName: "[project]/src/components/AboutView.tsx",
                 lineNumber: 65,
@@ -157,7 +157,7 @@ const AboutView = ()=>{
                         className: "col-span-1 md:col-span-7",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "font-garamond text-3xl sm:text-4xl text-[#2B211A] font-bold mb-10",
+                                className: "font-garamond text-3xl sm:text-4xl text-[#0F172A] font-bold mb-10",
                                 children: "Experience"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AboutView.tsx",
@@ -170,7 +170,7 @@ const AboutView = ()=>{
                                         className: "relative mb-12 pl-12 group last:mb-0",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute left-[3px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#F5F1EA] border-2 border-[#B5573B] z-10 group-hover:bg-[#B5573B] transition-colors duration-300"
+                                                className: "absolute left-[3px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#FFFFFF] border-2 border-[#2563EB] z-10 group-hover:bg-[#2563EB] transition-colors duration-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/AboutView.tsx",
                                                 lineNumber: 78,
@@ -180,7 +180,7 @@ const AboutView = ()=>{
                                                 className: "flex flex-col sm:flex-row sm:items-baseline gap-2 mb-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                        className: "font-hanken text-lg font-bold text-[#2B211A]",
+                                                        className: "font-hanken text-lg font-bold text-[#0F172A]",
                                                         children: exp.role
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/AboutView.tsx",
@@ -188,7 +188,7 @@ const AboutView = ()=>{
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "font-hanken text-[11px] font-bold tracking-widest text-[#55423d] bg-[#E8E3DB] px-3 py-1 rounded-full w-fit border border-[#D9D3C7]/60",
+                                                        className: "font-hanken text-[11px] font-bold tracking-widest text-[#475569] bg-[#F8FAFC] px-3 py-1 rounded-full w-fit border border-[#E2E8F0]/60",
                                                         children: exp.period
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/AboutView.tsx",
@@ -202,7 +202,7 @@ const AboutView = ()=>{
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "font-hanken text-sm sm:text-base text-[#55423d] leading-relaxed",
+                                                className: "font-hanken text-sm sm:text-base text-[#475569] leading-relaxed",
                                                 children: exp.description
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/AboutView.tsx",
@@ -230,7 +230,7 @@ const AboutView = ()=>{
                         className: "col-span-1 md:col-span-5 mt-6 md:mt-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "font-garamond text-3xl sm:text-4xl text-[#2B211A] font-bold mb-10",
+                                className: "font-garamond text-3xl sm:text-4xl text-[#0F172A] font-bold mb-10",
                                 children: "Toolkit"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AboutView.tsx",
@@ -238,10 +238,10 @@ const AboutView = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-[#E8E3DB] rounded-2xl p-6 sm:p-8 border border-[#D9D3C7] shadow-[0_4px_20px_rgba(43,33,26,0.06)]",
+                                className: "bg-[#F8FAFC] rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)]",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-hanken text-sm text-[#55423d] mb-6 italic font-medium",
+                                        className: "font-hanken text-sm text-[#475569] mb-6 italic font-medium",
                                         children: "Proficiencies graded by visual weight."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AboutView.tsx",
@@ -253,7 +253,7 @@ const AboutView = ()=>{
                                         children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolioData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SKILLS"].map((skill)=>{
                                             if (skill.level === 'expert') {
                                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-hanken text-sm sm:text-base text-[#B5573B] bg-[#B5573B]/10 px-4 py-2 rounded-full font-bold border border-[#B5573B]/30 hover:bg-[#B5573B] hover:text-white transition-all cursor-default",
+                                                    className: "font-hanken text-sm sm:text-base text-[#2563EB] bg-[#2563EB]/10 px-4 py-2 rounded-full font-bold border border-[#2563EB]/30 hover:bg-[#2563EB] hover:text-white transition-all cursor-default",
                                                     children: skill.name
                                                 }, skill.name, false, {
                                                     fileName: "[project]/src/components/AboutView.tsx",
@@ -263,7 +263,7 @@ const AboutView = ()=>{
                                             }
                                             if (skill.level === 'advanced') {
                                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-hanken text-xs sm:text-sm text-[#2B211A] bg-[#2B211A]/10 px-3.5 py-1.5 rounded-full font-semibold border border-[#2B211A]/20 hover:bg-[#2B211A] hover:text-white transition-all cursor-default",
+                                                    className: "font-hanken text-xs sm:text-sm text-[#0F172A] bg-[#0F172A]/10 px-3.5 py-1.5 rounded-full font-semibold border border-[#0F172A]/20 hover:bg-[#0F172A] hover:text-white transition-all cursor-default",
                                                     children: skill.name
                                                 }, skill.name, false, {
                                                     fileName: "[project]/src/components/AboutView.tsx",
@@ -272,7 +272,7 @@ const AboutView = ()=>{
                                                 }, ("TURBOPACK compile-time value", void 0));
                                             }
                                             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "font-hanken text-xs text-[#65584f] bg-[#65584f]/10 px-3 py-1 rounded-full font-medium border border-[#65584f]/20 hover:bg-[#65584f] hover:text-white transition-all cursor-default",
+                                                className: "font-hanken text-xs text-[#64748B] bg-[#64748B]/10 px-3 py-1 rounded-full font-medium border border-[#64748B]/20 hover:bg-[#64748B] hover:text-white transition-all cursor-default",
                                                 children: skill.name
                                             }, skill.name, false, {
                                                 fileName: "[project]/src/components/AboutView.tsx",
@@ -342,11 +342,11 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "bg-[#F5F1EA] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#D9D3C7] shadow-[0_12px_40px_rgba(43,33,26,0.2)] relative",
+            className: "bg-[#FFFFFF] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: onClose,
-                    className: "absolute top-5 right-5 w-10 h-10 rounded-full bg-[#E8E3DB] hover:bg-[#B5573B] hover:text-white transition-colors flex items-center justify-center text-[#2B211A] cursor-pointer",
+                    className: "absolute top-5 right-5 w-10 h-10 rounded-full bg-[#F8FAFC] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "material-symbols-outlined text-xl",
                         children: "close"
@@ -361,10 +361,10 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "border-b border-[#D9D3C7] pb-6 mb-6",
+                    className: "border-b border-[#E2E8F0] pb-6 mb-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "font-hanken text-xs uppercase tracking-widest text-[#B5573B] font-bold block mb-1",
+                            className: "font-hanken text-xs uppercase tracking-widest text-[#2563EB] font-bold block mb-1",
                             children: "CURRICULUM VITAE"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -372,7 +372,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "font-garamond text-3xl font-bold text-[#2B211A]",
+                            className: "font-garamond text-3xl font-bold text-[#0F172A]",
                             children: "ahmtstia"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -380,7 +380,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "font-hanken text-sm text-[#55423d]",
+                            className: "font-hanken text-sm text-[#475569]",
                             children: "Fullstack Developer & Creative Technologist • San Francisco, CA"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -397,7 +397,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                     className: "mb-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                            className: "font-hanken text-xs uppercase tracking-wider text-[#B5573B] font-bold mb-2",
+                            className: "font-hanken text-xs uppercase tracking-wider text-[#2563EB] font-bold mb-2",
                             children: "Executive Summary"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -405,7 +405,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "font-hanken text-sm text-[#55423d] leading-relaxed",
+                            className: "font-hanken text-sm text-[#475569] leading-relaxed",
                             children: "Fullstack engineer with 8+ years of experience engineering high-throughput React/Next.js and WebGL web applications. Specialized in editorial design systems, micro-interactions, and mobile architecture."
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -422,7 +422,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                     className: "mb-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                            className: "font-hanken text-xs uppercase tracking-wider text-[#B5573B] font-bold mb-3",
+                            className: "font-hanken text-xs uppercase tracking-wider text-[#2563EB] font-bold mb-3",
                             children: "Key Accomplishments"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -430,13 +430,13 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                            className: "space-y-2 text-sm text-[#55423d] font-hanken",
+                            className: "space-y-2 text-sm text-[#475569] font-hanken",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     className: "flex items-start gap-2",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "material-symbols-outlined text-[#B5573B] text-base mt-0.5",
+                                            className: "material-symbols-outlined text-[#2563EB] text-base mt-0.5",
                                             children: "check_circle"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/CvModal.tsx",
@@ -454,7 +454,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                                     className: "flex items-start gap-2",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "material-symbols-outlined text-[#B5573B] text-base mt-0.5",
+                                            className: "material-symbols-outlined text-[#2563EB] text-base mt-0.5",
                                             children: "check_circle"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/CvModal.tsx",
@@ -472,7 +472,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                                     className: "flex items-start gap-2",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "material-symbols-outlined text-[#B5573B] text-base mt-0.5",
+                                            className: "material-symbols-outlined text-[#2563EB] text-base mt-0.5",
                                             children: "check_circle"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/CvModal.tsx",
@@ -502,7 +502,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                     className: "mb-8",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                            className: "font-hanken text-xs uppercase tracking-wider text-[#B5573B] font-bold mb-2",
+                            className: "font-hanken text-xs uppercase tracking-wider text-[#2563EB] font-bold mb-2",
                             children: "Education"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -513,7 +513,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                             className: "flex justify-between items-baseline font-hanken text-sm",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "font-bold text-[#2B211A]",
+                                    className: "font-bold text-[#0F172A]",
                                     children: "B.S. in Computer Science & Interaction Design"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/CvModal.tsx",
@@ -521,7 +521,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-xs text-[#65584f]",
+                                    className: "text-xs text-[#64748B]",
                                     children: "UC Berkeley • 2011 — 2015"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/CvModal.tsx",
@@ -541,12 +541,12 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex flex-col sm:flex-row gap-3 pt-4 border-t border-[#D9D3C7]",
+                    className: "flex flex-col sm:flex-row gap-3 pt-4 border-t border-[#E2E8F0]",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "data:text/plain;charset=utf-8,ahmtstia%20-%20Fullstack%20Developer%20CV",
                             download: "ahmtstia_CV.txt",
-                            className: "flex-1 bg-[#B5573B] text-white font-hanken text-sm font-semibold py-3 rounded-full flex items-center justify-center gap-2 hover:bg-[#963f26] transition-all text-center cursor-pointer",
+                            className: "flex-1 bg-[#2563EB] text-white font-hanken text-sm font-semibold py-3 rounded-full flex items-center justify-center gap-2 hover:bg-[#1D4ED8] transition-all text-center cursor-pointer",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "material-symbols-outlined text-lg",
@@ -568,7 +568,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                                 onClose();
                                 onContactClick();
                             },
-                            className: "flex-1 bg-[#E8E3DB] text-[#2B211A] font-hanken text-sm font-semibold py-3 rounded-full border border-[#D9D3C7] hover:bg-[#D9D3C7] transition-all text-center cursor-pointer",
+                            className: "flex-1 bg-[#F8FAFC] text-[#0F172A] font-hanken text-sm font-semibold py-3 rounded-full border border-[#E2E8F0] hover:bg-[#E2E8F0] transition-all text-center cursor-pointer",
                             children: "Hire ahmtstia"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -630,11 +630,11 @@ const ProcessModal = ({ isOpen, onClose })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "bg-[#F5F1EA] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#D9D3C7] shadow-[0_12px_40px_rgba(43,33,26,0.2)] relative",
+            className: "bg-[#FFFFFF] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: onClose,
-                    className: "absolute top-5 right-5 w-10 h-10 rounded-full bg-[#E8E3DB] hover:bg-[#B5573B] hover:text-white transition-colors flex items-center justify-center text-[#2B211A] cursor-pointer",
+                    className: "absolute top-5 right-5 w-10 h-10 rounded-full bg-[#F8FAFC] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "material-symbols-outlined text-xl",
                         children: "close"
@@ -649,7 +649,7 @@ const ProcessModal = ({ isOpen, onClose })=>{
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "font-hanken text-xs uppercase tracking-widest text-[#B5573B] font-bold block mb-1",
+                    className: "font-hanken text-xs uppercase tracking-widest text-[#2563EB] font-bold block mb-1",
                     children: "METHODOLOGY"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ProcessModal.tsx",
@@ -657,7 +657,7 @@ const ProcessModal = ({ isOpen, onClose })=>{
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "font-garamond text-3xl font-bold text-[#2B211A] mb-6",
+                    className: "font-garamond text-3xl font-bold text-[#0F172A] mb-6",
                     children: "Development Process"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ProcessModal.tsx",
@@ -667,10 +667,10 @@ const ProcessModal = ({ isOpen, onClose })=>{
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "space-y-6 mb-8",
                     children: steps.map((step)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-[#E8E3DB] p-5 rounded-xl border border-[#D9D3C7] flex gap-4 items-start",
+                            className: "bg-[#F8FAFC] p-5 rounded-xl border border-[#E2E8F0] flex gap-4 items-start",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "font-garamond text-3xl font-bold text-[#B5573B]",
+                                    className: "font-garamond text-3xl font-bold text-[#2563EB]",
                                     children: step.number
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ProcessModal.tsx",
@@ -680,7 +680,7 @@ const ProcessModal = ({ isOpen, onClose })=>{
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "font-garamond text-xl font-bold text-[#2B211A] mb-1",
+                                            className: "font-garamond text-xl font-bold text-[#0F172A] mb-1",
                                             children: step.title
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ProcessModal.tsx",
@@ -688,7 +688,7 @@ const ProcessModal = ({ isOpen, onClose })=>{
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "font-hanken text-sm text-[#55423d]",
+                                            className: "font-hanken text-sm text-[#475569]",
                                             children: step.description
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ProcessModal.tsx",
@@ -714,7 +714,7 @@ const ProcessModal = ({ isOpen, onClose })=>{
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: onClose,
-                    className: "w-full bg-[#B5573B] text-white font-hanken text-sm font-semibold py-3 rounded-full hover:bg-[#963f26] transition-all cursor-pointer",
+                    className: "w-full bg-[#2563EB] text-white font-hanken text-sm font-semibold py-3 rounded-full hover:bg-[#1D4ED8] transition-all cursor-pointer",
                     children: "Close Process Overview"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ProcessModal.tsx",
