@@ -6,6 +6,8 @@ import { ABOUT_IMAGE, EXPERIENCES, SKILLS } from '@/data/portfolio';
 import { CvModal } from '@/components/modals/CvModal';
 import { ProcessModal } from '@/components/modals/ProcessModal';
 
+import profileImg from '../../../assets/img/profile.png';
+
 export const AboutView: React.FC = () => {
   const router = useRouter();
   const [isCvOpen, setIsCvOpen] = useState(false);
@@ -60,7 +62,7 @@ export const AboutView: React.FC = () => {
         <div className="col-span-1 md:col-span-5 order-1 md:order-2 relative mb-6 md:mb-0">
           <div className="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden shadow-[0_16px_40px_rgba(15,23,42,0.16)] border border-brand-border">
             <img
-              src={ABOUT_IMAGE}
+              src={profileImg.src}
               alt="ahmtstia"
               loading="eager"
               className="w-full h-full object-cover"
