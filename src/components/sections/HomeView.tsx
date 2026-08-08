@@ -79,38 +79,35 @@ export const HomeView: React.FC = () => {
   const featuredProjects = PROJECTS.filter((p) => p.featured).slice(0, 3);
 
   return (
-    <div className="flex-grow flex flex-col justify-between px-4 sm:px-10 pt-2 pb-28 sm:pt-6 sm:pb-16 max-w-7xl mx-auto w-full">
+    <div className="flex-grow flex flex-col justify-between px-4 sm:px-10 pt-2 pb-28 sm:pt-6 sm:pb-16 max-w-7xl mx-auto w-full relative">
+      {/* Background Watermark */}
+      <div className="absolute top-10 sm:top-0 left-1/2 -translate-x-1/2 w-full overflow-hidden flex justify-center pointer-events-none select-none -z-20 opacity-[0.03]">
+        <h1 className="text-[6rem] sm:text-[14rem] md:text-[20rem] font-garamond font-bold whitespace-nowrap leading-none tracking-tighter">
+          AHMTSTIA
+        </h1>
+      </div>
+
       {/* Main Hero Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-[500px] md:min-h-[580px] relative">
 
         {/* Text Column */}
-        <div className="col-span-1 md:col-span-7 flex flex-col gap-6 z-10">
+        <div className="col-span-1 md:col-span-7 flex flex-col gap-5 sm:gap-6 z-10">
 
-          <p className="font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold">
+          <p className="font-hanken mt-1 text-xs uppercase tracking-widest text-brand-text-muted font-bold">
             INFORMATICS STUDENT & AI ENTHUSIAST
           </p>
 
-          <h1 className="font-garamond text-4xl sm:text-5xl md:text-6xl lg:text5xl font-bold leading-[1.05] text-brand-text tracking-tight">
-            ahmtstia_<br />
-            <span className="relative inline-block text-brand-text-muted-alt italic font-normal">
-              Mengembangkan Web, Mobile & Solusi Sistem Cerdas
-              <svg
-                className="absolute left-0 -bottom-2 w-full h-3 text-brand-accent/40"
-                viewBox="0 0 300 12"
-                preserveAspectRatio="none"
-                fill="none"
-              >
-                <path
-                  d="M2 9C60 3 240 3 298 9"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-              </svg>
+          <h1 className="font-garamond text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[1.05] tracking-tight">
+            <span className="text-brand-text">ahmtstia_</span><br />
+            <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-text-muted-alt italic font-normal mt-1 sm:mt-2">
+              Solusi Cerdas
+            </span><br/>
+            <span className="text-brand-bg relative" style={{ WebkitTextStroke: '1px var(--color-brand-text-muted-alt)' }}>
+              Web & Mobile
             </span>
           </h1>
 
-          <p className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-lg leading-relaxed mt-1">
+          <p className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-lg leading-relaxed mt-2">
             Mahasiswa Teknik Informatika yang berfokus pada pengembangan aplikasi Web & Mobile, serta penerapan Deep Learning dan Computer Vision untuk solusi nyata.
           </p>
 
@@ -126,16 +123,17 @@ export const HomeView: React.FC = () => {
         </div>
 
         {/* Animation Column */}
-        <div className="col-span-1 md:col-span-5 flex justify-center md:justify-end mt-6 md:mt-0 relative">
-          {/* decorative blob accent behind animation */}
-          <div className="absolute -top-6 -right-4 w-40 h-40 sm:w-56 sm:h-56 rounded-full bg-brand-accent/10 blur-2xl -z-10" />
-          <div className="absolute bottom-4 -left-4 w-24 h-24 rounded-full border border-brand-border/60 -z-10" />
+        <div className="col-span-1 md:col-span-5 flex justify-center md:justify-end mt-0 md:mt-0 relative z-10">
+          {/* Ambient pulsing glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-72 sm:h-72 bg-brand-accent/20 rounded-full blur-[80px] animate-pulse -z-20" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-500/10 rounded-full blur-[60px] animate-pulse delay-1000 -z-20" />
 
-          <div className="w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] relative z-10 flex items-center justify-center">
+          {/* Clean Lottie Container */}
+          <div className="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[420px] relative flex items-center justify-center group">
             <Lottie 
               animationData={animationData} 
               loop={true} 
-              className="w-full h-auto drop-shadow-[0_12px_40px_rgba(15,23,42,0.16)]" 
+              className="w-full h-auto drop-shadow-[0_12px_32px_rgba(37,99,235,0.15)] transition-transform duration-700 group-hover:scale-105" 
             />
           </div>
         </div>
@@ -154,7 +152,7 @@ export const HomeView: React.FC = () => {
       {/* Tech marquee strip */}
       <div className="mt-16 sm:mt-20 py-4 border-y border-brand-border/40 overflow-hidden relative">
         <div className="flex gap-10 whitespace-nowrap animate-[marquee_24s_linear_infinite] font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold">
-          {Array(2).fill(['Next.js', 'TypeScript', 'React Native', 'Flutter', 'Tailwind CSS', 'Node.js', 'Flask']).flat().map((tech, i) => (
+          {Array(2).fill(['Next.js', 'TypeScript', 'React Native', 'Flutter', 'Tailwind CSS', 'Node.js', 'Flask', 'Python','Firebase', 'Expo']).flat().map((tech, i) => (
             <span key={i} className="flex items-center gap-10">
               {tech}
               <span className="text-brand-accent/50">•</span>

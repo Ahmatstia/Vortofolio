@@ -20,27 +20,31 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'ahmtstia — Fullstack Developer Portfolio',
-  description: 'Fullstack Developer Portfolio by ahmtstia',
+  title: 'Ahmat Setiadi — Portofolio',
+  description: 'Mahasiswa Teknik Informatika (Peminatan Sistem Cerdas/AI) — Portofolio Web, Mobile & AI oleh Ahmat Setiadi',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
-    title: 'ahmtstia — Fullstack Developer Portfolio',
-    description: 'Fullstack Developer Portfolio by ahmtstia',
+    title: 'Ahmat Setiadi — Portofolio',
+    description: 'Mahasiswa Teknik Informatika (Peminatan Sistem Cerdas/AI) — Portofolio Web, Mobile & AI oleh Ahmat Setiadi',
     url: 'https://ahmtstia.dev',
     siteName: 'ahmtstia',
     images: [
       {
-        url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuALIPCHTCqix-hDNIBgBaIaISeQKUFf_bzVn3xBzwDzZU7-9NfgmkIn860SMWtVeZC9Iz99DiP2YNElGDqeJEk3EK4yaZtYYrqRGrSV8_Qt9Ep7qo9X_7MFRKEXR4b3vuaBDX1z_sirG8JGcKqrmF996iZ4_0-Yj6GWwiZgTHdK2PcremNj5ipgfW3204LDoW3LQ96yIBEsCDFaroVhIDHJWSuCNGI9EXKsdDyENpd7zcfBKvsV2-4OHg', // HERO IMAGE
+        url: '/favicon.png',
         width: 1200,
         height: 630,
       },
     ],
-    locale: 'en_US',
+    locale: 'id_ID',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ahmtstia — Fullstack Developer Portfolio',
-    description: 'Fullstack Developer Portfolio by ahmtstia',
+    title: 'Ahmat Setiadi — Portofolio',
+    description: 'Mahasiswa Teknik Informatika (Peminatan Sistem Cerdas/AI) — Portofolio Web, Mobile & AI',
   },
 };
 
