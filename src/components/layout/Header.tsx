@@ -8,6 +8,8 @@ interface HeaderProps {
   brandName?: string;
 }
 
+import logo from '../../../assets/img/logo3.png';
+
 export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
   const pathname = usePathname();
   const isProjectsActive = pathname?.startsWith('/projects');
@@ -19,9 +21,16 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="font-garamond text-xl sm:text-2xl font-bold tracking-tight text-brand-text hover:text-brand-accent transition-colors cursor-pointer"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer group"
           >
-            {isProjectsActive ? 'AHMTSTIA' : brandName}
+            <img 
+              src={logo.src} 
+              alt="Personal Brand Logo" 
+              className="h-12 sm:h-16 w-auto object-contain" 
+            />
+            <span className="font-garamond text-xl sm:text-2xl font-bold tracking-tight text-brand-text group-hover:text-brand-accent transition-colors">
+              Ahmtstia_
+            </span>
           </Link>
         </div>
 
