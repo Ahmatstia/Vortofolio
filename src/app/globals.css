@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #F5F1EA;
+    color: #2B211A;
+    font-family: 'Hanken Grotesk', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: 'EB Garamond', serif;
+  }
+}
+
+.font-garamond {
+  font-family: 'EB Garamond', serif;
+}
+
+.font-hanken {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Image accent block from mockups */
+.image-accent {
+  position: relative;
+}
+
+.image-accent::before {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 80%;
+  height: 80%;
+  background-color: #B5573B;
+  border-radius: 16px;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+.image-accent:hover::before {
+  transform: translate(4px, 4px);
+}
+
+.image-accent img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll indicator animation */
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Timeline vertical line */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #D9D3C7;
+  z-index: 0;
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Minimal input style */
+.minimal-input:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom-color: #B5573B;
+}
+
+.ambient-shadow {
+  box-shadow: 0 4px 20px rgba(43, 33, 26, 0.08);
+}
+
+.ambient-shadow-hover:hover {
+  box-shadow: 0 8px 30px rgba(43, 33, 26, 0.12);
+  transform: translateY(-2px);
+}
