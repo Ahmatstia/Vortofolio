@@ -1,83 +1,117 @@
-<div align="center">
-  <img width="1200" height="400" alt="AHMTSTIA Portfolio Banner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALIPCHTCqix-hDNIBgBaIaISeQKUFf_bzVn3xBzwDzZU7-9NfgmkIn860SMWtVeZC9Iz99DiP2YNElGDqeJEk3EK4yaZtYYrqRGrSV8_Qt9Ep7qo9X_7MFRKEXR4b3vuaBDX1z_sirG8JGcKqrmF996iZ4_0-Yj6GWwiZgTHdK2PcremNj5ipgfW3204LDoW3LQ96yIBEsCDFaroVhIDHJWSuCNGI9EXKsdDyENpd7zcfBKvsV2-4OHg" style="border-radius: 16px; object-fit: cover;" />
+# AHMTSTIA_ — Portofolio Ahmat Setiadi
+
+> **Mahasiswa Teknik Informatika** · Peminatan Sistem Cerdas (AI) · Web & Mobile Developer
+
+🔗 **[Kunjungi Live Website → vortofolio.vercel.app](https://vortofolio.vercel.app/)**
 
 ---
 
-## 👋 Hello, I'm ahmtstia
+## Tentang Proyek Ini
 
-I am a Fullstack Engineer with a passion for engineering high-throughput web applications with deep attention to typography, micro-interactions, and mobile-first architecture. I believe that exceptional digital experiences are born from a deep understanding of human behavior, married with rigorous technical execution.
+Ini adalah situs portofolio pribadi saya yang dibangun dari nol menggunakan **Next.js 15 + TypeScript**, dirancang untuk menampilkan kemampuan pengembangan Web, Mobile, dan riset AI/Deep Learning saya kepada rekruter dan calon klien.
 
-I am actively seeking new opportunities to collaborate with ambitious teams. If you are a recruiter or engineering manager looking for a dedicated developer who bridges the gap between robust backend systems and beautiful, pixel-perfect frontends, let's connect!
+Situs ini bukan sekadar template — setiap komponen, animasi, dan desain saya kerjakan sendiri untuk mencerminkan identitas dan gaya kerja saya.
 
-## 🚀 About This Repository
+---
 
-This repository contains the source code for my personal portfolio. It serves as a living demonstration of my skills in modern web development, UI/UX design, and system architecture.
+## ✨ Fitur Unggulan
 
-Recently migrated to a **Next.js App Router** architecture, this portfolio is optimized for:
+| Fitur | Deskripsi |
+|---|---|
+| **Animasi Halaman** | Transisi halus antar halaman menggunakan **Framer Motion** |
+| **Scroll-Triggered Animations** | Setiap section muncul secara elegan saat di-scroll |
+| **Lottie Animation** | Animasi astronot interaktif di halaman utama |
+| **Formulir Kontak Fungsional** | Terintegrasi dengan **Web3Forms** — pesan langsung masuk email |
+| **Swipe-to-Navigate** | Kontrol geser unik di halaman utama versi Mobile |
+| **Unduh CV** | Tombol unduh CV langsung dari halaman Tentang |
+| **Desain Responsif** | Tampilan optimal di Desktop dan Mobile |
+| **Filter Proyek** | Filter portofolio berdasarkan kategori (Web, Mobile, AI/ML) dengan animasi |
 
-* **Peak Performance:** Sub-second cold starts and perfect Lighthouse scores.
-* **SEO Excellence:** Server-side rendering (SSR) ensures full visibility to search engines.
-* **Tactile Design:** A bespoke design system utilizing warm neutrals, high-contrast serif typography, and fluid micro-animations.
+---
 
-## 🛠 Tech Stack
+## 🚀 Proyek yang Ditampilkan
 
-* **Framework:** [Next.js (App Router)](https://nextjs.org/)
-* **Language:** [TypeScript](https://www.typescriptlang.org/)
-* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
-* **Typography:** Google Fonts (EB Garamond & Hanken Grotesk)
-* **Icons:** Material Symbols Outlined
+### 🧠 AI / Machine Learning
+**[Deteksi Katarak & Mata Normal — CNN](https://vortofolio.vercel.app/)**
+- Riset dan implementasi model **Convolutional Neural Network (CNN)** untuk klasifikasi citra medis mata
+- Teknologi: `Python` · `TensorFlow/Keras` · `OpenCV` · `NumPy`
+- Mengevaluasi performa model menggunakan confusion matrix dan metrik presisi/recall
 
-## 🏗 Getting Started (Local Development)
+---
 
-If you'd like to run this project locally to explore the codebase:
+### 📱 Mobile Development
+**[MyMoney — Aplikasi Manajemen Keuangan](https://vortofolio.vercel.app/)**
+- Aplikasi mobile pencatat keuangan pribadi dengan sinkronisasi data real-time
+- Teknologi: `React Native` · `Expo` · `Firebase Firestore` · `TypeScript`
 
-**Prerequisites:**
+**[Point of Sale (POS) Mobile System](https://vortofolio.vercel.app/)**
+- Sistem kasir berbasis mobile yang berjalan di Android & iOS
+- Teknologi: `Flutter` · `Dart` · `SQLite` · `REST API`
 
-* Node.js (v18 or newer recommended)
+---
 
-**Installation Steps:**
+### 🌐 Web / Automation
+**[Automated Data Scraping Engine](https://vortofolio.vercel.app/)**
+- Bot ekstraksi data terstruktur dari situs web secara otomatis
+- Teknologi: `Python` · `BeautifulSoup` · `Selenium` · `Pandas`
 
-1. Clone the repository:
+---
 
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
-   ```
-2. Install dependencies:
+## 🛠️ Tech Stack Portofolio Ini
 
-   ```bash
-   npm install
-   ```
-3. Start the development server:
+```
+Framework   : Next.js 15 (App Router) + TypeScript
+Styling     : Tailwind CSS + Custom Design Tokens
+Animasi     : Framer Motion + Lottie React
+Form        : Web3Forms (serverless email integration)
+Deployment  : Vercel
+Font        : EB Garamond + Hanken Grotesk (Google Fonts)
+```
 
-   ```bash
-   npm run dev
-   ```
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+---
 
-## 🎯 My Expertise
+## 🧑‍💻 Cara Menjalankan Lokal
 
-### Core Competencies
+```bash
+# Clone repo
+git clone https://github.com/ahmtstia/vortofolio.git
+cd vortofolio
 
-* **Frontend:** React, Next.js, TypeScript, Tailwind CSS, WebGL
-* **Backend:** Node.js, Express, RESTful APIs, GraphQL
-* **Databases:** PostgreSQL, MongoDB, Redis
-* **DevOps & Deployment:** Docker, Google Cloud (Cloud Run), Vercel, CI/CD Pipelines
+# Install dependencies
+npm install
 
-### What I Bring to the Table
+# Buat file .env dan isi Access Key Web3Forms
+cp .env.example .env
 
-1. **Architectural Discovery:** I understand core business motives and translate them into precise technical boundaries.
-2. **Editorial Typography & Design:** I craft bespoke visual hierarchies that enhance readability and engagement.
-3. **Tactile Engineering:** I build robust architectures with fluid graphics and instant state handling.
-4. **Performance Focus:** I prioritize Lighthouse audits, accessibility, and automated deployments.
+# Jalankan dev server
+npm run dev
+```
+
+Buka di browser: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 📌 Variabel Environment
+
+Buat file `.env` di root project:
+
+```env
+NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=isi_dengan_access_key_dari_web3forms
+```
+
+Daftar access key gratis di [web3forms.com](https://web3forms.com/).
+
+---
+
+## 📬 Kontak
+
+Tertarik berkolaborasi atau punya pertanyaan?
+
+- 🌐 **Portofolio**: [vortofolio.vercel.app](https://vortofolio.vercel.app/)
+- 📧 **Email**: Lewat [halaman kontak](https://vortofolio.vercel.app/contact)
 
 ---
 
 <div align="center">
-  <i>Open to opportunities • San Francisco, CA (or Remote)</i>
-  <br>
-  <br>
-  <a href="https://linkedin.com">LinkedIn</a> • 
-  <a href="https://github.com">GitHub</a> • 
-  <a href="https://twitter.com">Twitter</a>
+  <sub>Dibuat dengan ❤️ oleh <strong>Ahmat Setiadi (AHMTSTIA_)</strong></sub>
 </div>
