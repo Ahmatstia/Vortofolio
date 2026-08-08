@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { HERO_IMAGE, PROJECTS } from '@/data/portfolio';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/ui/ProjectCard';
 
 export const HomeView: React.FC = () => {
