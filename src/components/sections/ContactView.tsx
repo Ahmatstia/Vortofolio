@@ -11,6 +11,7 @@ export const ContactView: React.FC = () => {
   });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,21 +29,26 @@ export const ContactView: React.FC = () => {
     <div className="flex-grow px-4 sm:px-8 mt-6 sm:mt-12 max-w-3xl mx-auto w-full pb-28">
       {/* Header Section */}
       <section className="mb-10 sm:mb-14">
-        <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold block mb-2">
-          GET IN TOUCH
-        </span>
-        <h1 className="font-garamond text-4xl sm:text-6xl text-brand-text font-bold mb-4">
-          Let's Build Something
+        <div className="inline-flex items-center gap-2 w-fit mb-3">
+          <span className="w-8 h-px bg-brand-accent" />
+          <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold">
+            GET IN TOUCH
+          </span>
+        </div>
+        <h1 className="font-garamond text-4xl sm:text-6xl text-brand-text font-bold mb-4 tracking-tight">
+          Let's Build <span className="italic font-normal text-brand-text-muted-alt">Something</span>
         </h1>
-        <p className="font-hanken text-base sm:text-lg text-brand-text-muted leading-relaxed">
+        <p className="font-hanken text-base sm:text-lg text-brand-text-muted leading-relaxed max-w-xl">
           Whether you have a specific project in mind or just want to explore possibilities, I'm ready to collaborate. Drop a message below and I'll get back to you soon.
         </p>
       </section>
 
       {/* Form Section */}
-      <section className="mb-14 bg-brand-surface rounded-xl p-6 sm:p-10 ambient-shadow border border-brand-border/60">
+      <section className="mb-14 bg-brand-surface rounded-[24px] p-6 sm:p-10 border border-brand-border/60 shadow-[0_12px_36px_rgba(15,23,42,0.08)] relative overflow-hidden">
+        <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand-accent/8 rounded-full blur-2xl pointer-events-none" />
+
         {submitted ? (
-          <div className="text-center py-8">
+          <div className="text-center py-8 relative z-10">
             <div className="w-16 h-16 rounded-full bg-brand-accent/10 text-brand-accent mx-auto flex items-center justify-center mb-4">
               <span className="material-symbols-outlined text-3xl">check_circle</span>
             </div>
@@ -60,56 +66,90 @@ export const ContactView: React.FC = () => {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
             <div className="relative">
+              <label
+                htmlFor="name"
+                className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
+                  focusedField === 'name' || formData.name
+                    ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
+                    : 'top-3 text-base text-brand-text-muted/60'
+                }`}
+              >
+                Your Name
+              </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onFocus={() => setFocusedField('name')}
+                onBlur={() => setFocusedField(null)}
                 required
-                placeholder="Your Name"
-                className="minimal-input block w-full bg-transparent border-0 border-b border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 transition-colors duration-300 placeholder:text-brand-text-muted/60"
+                className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none"
               />
-              <label htmlFor="name" className="sr-only">Your Name</label>
             </div>
 
             <div className="relative">
+              <label
+                htmlFor="email"
+                className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
+                  focusedField === 'email' || formData.email
+                    ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
+                    : 'top-3 text-base text-brand-text-muted/60'
+                }`}
+              >
+                Your Email
+              </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onFocus={() => setFocusedField('email')}
+                onBlur={() => setFocusedField(null)}
                 required
-                placeholder="Your Email"
-                className="minimal-input block w-full bg-transparent border-0 border-b border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 transition-colors duration-300 placeholder:text-brand-text-muted/60"
+                className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none"
               />
-              <label htmlFor="email" className="sr-only">Your Email</label>
             </div>
 
             <div className="relative">
+              <label
+                htmlFor="message"
+                className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
+                  focusedField === 'message' || formData.message
+                    ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
+                    : 'top-3 text-base text-brand-text-muted/60'
+                }`}
+              >
+                How can we work together?
+              </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                onFocus={() => setFocusedField('message')}
+                onBlur={() => setFocusedField(null)}
                 required
-                placeholder="How can we work together?"
-                className="minimal-input block w-full bg-transparent border-0 border-b border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 transition-colors duration-300 placeholder:text-brand-text-muted/60 resize-none"
+                className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none resize-none"
               />
-              <label htmlFor="message" className="sr-only">Message</label>
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-brand-accent text-white font-hanken text-sm font-semibold py-4 rounded-full ambient-shadow-hover transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer hover:bg-brand-accent-hover"
+              className="group relative w-full overflow-hidden bg-brand-accent text-white font-hanken text-sm font-semibold py-4 rounded-full shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer disabled:opacity-70"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
-              <span className="material-symbols-outlined text-[20px]">send</span>
+              {!isSubmitting && (
+                <span className="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:translate-x-1">
+                  send
+                </span>
+              )}
             </button>
           </form>
         )}
@@ -117,9 +157,13 @@ export const ContactView: React.FC = () => {
 
       {/* Social Links */}
       <section className="mb-14 text-center">
-        <p className="font-hanken text-xs text-brand-text-muted mb-6 uppercase tracking-widest font-bold">
-          OR CONNECT DIRECTLY
-        </p>
+        <div className="flex items-center gap-3 mb-8">
+          <span className="h-px flex-grow bg-brand-border/60" />
+          <p className="font-hanken text-xs text-brand-text-muted uppercase tracking-widest font-bold whitespace-nowrap">
+            OR CONNECT DIRECTLY
+          </p>
+          <span className="h-px flex-grow bg-brand-border/60" />
+        </div>
         <div className="flex justify-center gap-4">
           {[
             { href: 'mailto:ahmtstia@example.com', icon: 'mail', title: 'Email ahmtstia' },
@@ -133,7 +177,7 @@ export const ContactView: React.FC = () => {
               title={title}
               target={href.startsWith('http') ? '_blank' : undefined}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-brand-accent hover:bg-brand-surface transition-all duration-300 active:scale-90 shadow-sm"
+              className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-white hover:bg-brand-accent transition-all duration-300 active:scale-90 shadow-sm hover:shadow-[0_6px_16px_rgba(181,87,59,0.3)]"
             >
               <span className="material-symbols-outlined text-xl">{icon}</span>
             </a>
