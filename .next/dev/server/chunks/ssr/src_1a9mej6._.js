@@ -78,7 +78,7 @@ const AboutView = ()=>{
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>setIsProcessOpen(true),
-                                        className: "bg-[#FFFFFF] text-[#0F172A] border border-[#E2E8F0] font-hanken text-sm font-semibold px-7 py-3.5 rounded-md hover:bg-[#F8FAFC] transition-all active:scale-95 cursor-pointer",
+                                        className: "bg-[#F8FAFC] text-[#0F172A] border border-[#E2E8F0] font-hanken text-sm font-semibold px-7 py-3.5 rounded-md hover:bg-[#FFFFFF] transition-all active:scale-95 cursor-pointer",
                                         children: "View Process"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AboutView.tsx",
@@ -170,7 +170,7 @@ const AboutView = ()=>{
                                         className: "relative mb-12 pl-12 group last:mb-0",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute left-[3px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#FFFFFF] border-2 border-[#2563EB] z-10 group-hover:bg-[#2563EB] transition-colors duration-300"
+                                                className: "absolute left-[3px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#F8FAFC] border-2 border-[#2563EB] z-10 group-hover:bg-[#2563EB] transition-colors duration-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/AboutView.tsx",
                                                 lineNumber: 78,
@@ -188,7 +188,7 @@ const AboutView = ()=>{
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "font-hanken text-[11px] font-bold tracking-widest text-[#475569] bg-[#F8FAFC] px-3 py-1 rounded-full w-fit border border-[#E2E8F0]/60",
+                                                        className: "font-hanken text-[11px] font-bold tracking-widest text-[#475569] bg-[#FFFFFF] px-3 py-1 rounded-full w-fit border border-[#E2E8F0]/60",
                                                         children: exp.period
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/AboutView.tsx",
@@ -238,7 +238,7 @@ const AboutView = ()=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-[#F8FAFC] rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)]",
+                                className: "bg-[#FFFFFF] rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)]",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "font-hanken text-sm text-[#475569] mb-6 italic font-medium",
@@ -342,11 +342,11 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "bg-[#FFFFFF] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative",
+            className: "bg-[#F8FAFC] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: onClose,
-                    className: "absolute top-5 right-5 w-10 h-10 rounded-full bg-[#F8FAFC] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer",
+                    className: "absolute top-5 right-5 w-10 h-10 rounded-full bg-[#FFFFFF] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "material-symbols-outlined text-xl",
                         children: "close"
@@ -568,7 +568,7 @@ const CvModal = ({ isOpen, onClose, onContactClick })=>{
                                 onClose();
                                 onContactClick();
                             },
-                            className: "flex-1 bg-[#F8FAFC] text-[#0F172A] font-hanken text-sm font-semibold py-3 rounded-full border border-[#E2E8F0] hover:bg-[#E2E8F0] transition-all text-center cursor-pointer",
+                            className: "flex-1 bg-[#FFFFFF] text-[#0F172A] font-hanken text-sm font-semibold py-3 rounded-full border border-[#E2E8F0] hover:bg-[#E2E8F0] transition-all text-center cursor-pointer",
                             children: "Hire ahmtstia"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CvModal.tsx",
@@ -630,11 +630,11 @@ const ProcessModal = ({ isOpen, onClose })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "bg-[#FFFFFF] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative",
+            className: "bg-[#F8FAFC] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: onClose,
-                    className: "absolute top-5 right-5 w-10 h-10 rounded-full bg-[#F8FAFC] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer",
+                    className: "absolute top-5 right-5 w-10 h-10 rounded-full bg-[#FFFFFF] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "material-symbols-outlined text-xl",
                         children: "close"
@@ -667,7 +667,7 @@ const ProcessModal = ({ isOpen, onClose })=>{
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "space-y-6 mb-8",
                     children: steps.map((step)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-[#F8FAFC] p-5 rounded-xl border border-[#E2E8F0] flex gap-4 items-start",
+                            className: "bg-[#FFFFFF] p-5 rounded-xl border border-[#E2E8F0] flex gap-4 items-start",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "font-garamond text-3xl font-bold text-[#2563EB]",

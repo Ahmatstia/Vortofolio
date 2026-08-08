@@ -114,7 +114,7 @@ const ProjectsView = ()=>{
                         'UI'
                     ].map((filter)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>setActiveFilter(filter),
-                            className: `px-5 py-2.5 rounded-full font-hanken text-xs font-bold uppercase tracking-wider transition-all duration-200 active:scale-95 cursor-pointer ${activeFilter === filter ? 'bg-[#2563EB] text-white shadow-[0_4px_12px_rgba(37, 99, 235,0.25)]' : 'bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] hover:bg-[#FFFFFF]'}`,
+                            className: `px-5 py-2.5 rounded-full font-hanken text-xs font-bold uppercase tracking-wider transition-all duration-200 active:scale-95 cursor-pointer ${activeFilter === filter ? 'bg-[#2563EB] text-white shadow-[0_4px_12px_rgba(37, 99, 235,0.25)]' : 'bg-[#FFFFFF] text-[#475569] border border-[#E2E8F0] hover:bg-[#F8FAFC]'}`,
                             children: filter
                         }, filter, false, {
                             fileName: "[project]/src/components/ProjectsView.tsx",
@@ -141,10 +141,10 @@ const ProjectsView = ()=>{
                         href: `/projects/${project.id}`,
                         className: `group cursor-pointer block ${isOffsetRight ? 'md:translate-y-4' : ''} ${isWideCard ? 'lg:col-span-1' : ''}`,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "rounded-2xl bg-[#F8FAFC] p-3 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)] hover:shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] transition-all duration-300",
+                            className: "rounded-2xl bg-[#FFFFFF] p-3 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)] hover:shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] transition-all duration-300",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-[#FFFFFF]",
+                                    className: "relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-[#F8FAFC]",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                             src: project.image,
@@ -157,7 +157,7 @@ const ProjectsView = ()=>{
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute top-4 right-4 bg-[#FFFFFF]/90 backdrop-blur-sm rounded-full p-2.5 text-[#2563EB] shadow-sm group-hover:bg-[#2563EB] group-hover:text-white transition-all",
+                                            className: "absolute top-4 right-4 bg-[#F8FAFC]/90 backdrop-blur-sm rounded-full p-2.5 text-[#2563EB] shadow-sm group-hover:bg-[#2563EB] group-hover:text-white transition-all",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "material-symbols-outlined text-lg",
                                                 children: "arrow_outward"

@@ -37,7 +37,7 @@ export const AboutView: React.FC = () => {
             </button>
             <button
               onClick={() => setIsProcessOpen(true)}
-              className="bg-[#FFFFFF] text-[#0F172A] border border-[#E2E8F0] font-hanken text-sm font-semibold px-7 py-3.5 rounded-md hover:bg-[#F8FAFC] transition-all active:scale-95 cursor-pointer"
+              className="bg-[#F8FAFC] text-[#0F172A] border border-[#E2E8F0] font-hanken text-sm font-semibold px-7 py-3.5 rounded-md hover:bg-[#FFFFFF] transition-all active:scale-95 cursor-pointer"
             >
               View Process
             </button>
@@ -75,12 +75,12 @@ export const AboutView: React.FC = () => {
           <div className="relative timeline-line pl-4">
             {EXPERIENCES.map((exp, index) => (
               <div key={exp.id} className="relative mb-12 pl-12 group last:mb-0">
-                <div className="absolute left-[3px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#FFFFFF] border-2 border-[#2563EB] z-10 group-hover:bg-[#2563EB] transition-colors duration-300" />
+                <div className="absolute left-[3px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#F8FAFC] border-2 border-[#2563EB] z-10 group-hover:bg-[#2563EB] transition-colors duration-300" />
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-2">
                   <h3 className="font-hanken text-lg font-bold text-[#0F172A]">
                     {exp.role}
                   </h3>
-                  <span className="font-hanken text-[11px] font-bold tracking-widest text-[#475569] bg-[#F8FAFC] px-3 py-1 rounded-full w-fit border border-[#E2E8F0]/60">
+                  <span className="font-hanken text-[11px] font-bold tracking-widest text-[#475569] bg-[#FFFFFF] px-3 py-1 rounded-full w-fit border border-[#E2E8F0]/60">
                     {exp.period}
                   </span>
                 </div>
@@ -98,7 +98,7 @@ export const AboutView: React.FC = () => {
             Toolkit
           </h2>
 
-          <div className="bg-[#F8FAFC] rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)]">
+          <div className="bg-[#FFFFFF] rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)]">
             <p className="font-hanken text-sm text-[#475569] mb-6 italic font-medium">
               Proficiencies graded by visual weight.
             </p>

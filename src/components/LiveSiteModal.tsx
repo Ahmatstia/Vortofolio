@@ -18,9 +18,9 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="bg-[#FFFFFF] w-full max-w-4xl max-h-[90vh] flex flex-col rounded-2xl border border-[#E2E8F0] shadow-[0_16px_50px_rgba(15, 23, 42,0.25)] overflow-hidden relative">
+      <div className="bg-[#F8FAFC] w-full max-w-4xl max-h-[90vh] flex flex-col rounded-2xl border border-[#E2E8F0] shadow-[0_16px_50px_rgba(15, 23, 42,0.25)] overflow-hidden relative">
         {/* Modal Header */}
-        <div className="p-4 sm:p-6 bg-[#F8FAFC] border-b border-[#E2E8F0] flex justify-between items-center">
+        <div className="p-4 sm:p-6 bg-[#FFFFFF] border-b border-[#E2E8F0] flex justify-between items-center">
           <div>
             <span className="font-hanken text-[10px] uppercase tracking-widest text-[#2563EB] font-bold block">
               {mode === 'live' ? 'INTERACTIVE PREVIEW' : 'FULL CASE STUDY'}
@@ -31,7 +31,7 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="w-10 h-10 rounded-full bg-[#FFFFFF] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer"
+            className="w-10 h-10 rounded-full bg-[#F8FAFC] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer"
           >
             <span className="material-symbols-outlined text-xl">close</span>
           </button>
@@ -48,7 +48,7 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <div className="bg-[#FFFFFF] p-6 rounded-2xl max-w-md text-center border border-[#E2E8F0] shadow-lg">
+                  <div className="bg-[#F8FAFC] p-6 rounded-2xl max-w-md text-center border border-[#E2E8F0] shadow-lg">
                     <span className="material-symbols-outlined text-4xl text-[#2563EB] mb-2">
                       devices
                     </span>
@@ -71,7 +71,7 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
                 </div>
               </div>
 
-              <div className="bg-[#F8FAFC] p-6 rounded-xl border border-[#E2E8F0]">
+              <div className="bg-[#FFFFFF] p-6 rounded-xl border border-[#E2E8F0]">
                 <h4 className="font-hanken text-xs uppercase tracking-widest text-[#2563EB] font-bold mb-2">
                   System Architecture
                 </h4>
@@ -79,7 +79,7 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-[#FFFFFF] text-[#0F172A] font-hanken text-xs px-3 py-1 rounded-full border border-[#E2E8F0]"
+                      className="bg-[#F8FAFC] text-[#0F172A] font-hanken text-xs px-3 py-1 rounded-full border border-[#E2E8F0]"
                     >
                       {tech}
                     </span>
@@ -100,7 +100,7 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {project.highlights.map((h, i) => (
-                  <div key={i} className="bg-[#F8FAFC] p-5 rounded-xl border border-[#E2E8F0]">
+                  <div key={i} className="bg-[#FFFFFF] p-5 rounded-xl border border-[#E2E8F0]">
                     <div className="flex items-center gap-2 text-[#2563EB] mb-2">
                       <span className="material-symbols-outlined">{h.icon}</span>
                       <h4 className="font-garamond text-xl font-bold text-[#0F172A]">
@@ -114,7 +114,7 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
                 ))}
               </div>
 
-              <div className="bg-[#F8FAFC] p-6 rounded-xl border border-[#E2E8F0]">
+              <div className="bg-[#FFFFFF] p-6 rounded-xl border border-[#E2E8F0]">
                 <h3 className="font-garamond text-xl font-bold text-[#0F172A] mb-2">
                   Results & Impact
                 </h3>
@@ -127,7 +127,7 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 bg-[#F8FAFC] border-t border-[#E2E8F0] flex justify-end">
+        <div className="p-4 bg-[#FFFFFF] border-t border-[#E2E8F0] flex justify-end">
           <button
             onClick={onClose}
             className="px-6 py-2.5 rounded-full bg-[#2563EB] text-white font-hanken text-xs font-bold uppercase tracking-wider hover:bg-[#1D4ED8] transition-all cursor-pointer"

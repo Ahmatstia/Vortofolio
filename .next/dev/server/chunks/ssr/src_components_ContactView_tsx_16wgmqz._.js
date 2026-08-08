@@ -70,7 +70,7 @@ const ContactView = ()=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "mb-14 bg-[#F8FAFC] rounded-xl p-6 sm:p-10 ambient-shadow border border-[#E2E8F0]/60",
+                className: "mb-14 bg-[#FFFFFF] rounded-xl p-6 sm:p-10 ambient-shadow border border-[#E2E8F0]/60",
                 children: submitted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "text-center py-8",
                     children: [
@@ -276,7 +276,7 @@ const ContactView = ()=>{
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                 href: "mailto:ahmtstia@example.com",
                                 title: "Email ahmtstia",
-                                className: "w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#FFFFFF] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-90 shadow-sm",
+                                className: "w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-90 shadow-sm",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "material-symbols-outlined text-xl",
                                     children: "mail"
@@ -295,7 +295,7 @@ const ContactView = ()=>{
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 title: "LinkedIn Profile",
-                                className: "w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#FFFFFF] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-90 shadow-sm",
+                                className: "w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-90 shadow-sm",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "material-symbols-outlined text-xl",
                                     children: "work"
@@ -314,7 +314,7 @@ const ContactView = ()=>{
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 title: "GitHub Repositories",
-                                className: "w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#FFFFFF] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-90 shadow-sm",
+                                className: "w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-90 shadow-sm",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "material-symbols-outlined text-xl",
                                     children: "code"
@@ -333,7 +333,7 @@ const ContactView = ()=>{
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 title: "Chat & Socials",
-                                className: "w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#FFFFFF] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-90 shadow-sm",
+                                className: "w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-90 shadow-sm",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "material-symbols-outlined text-xl",
                                     children: "chat"

@@ -15,13 +15,13 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
   const isProjectsActive = pathname?.startsWith('/projects');
 
   return (
-    <header className="sticky top-0 w-full z-40 bg-[#FFFFFF]/90 backdrop-blur-md border-b border-[#E2E8F0]/40 transition-all duration-300">
+    <header className="sticky top-0 w-full z-40 bg-[#F8FAFC]/90 backdrop-blur-md border-b border-[#E2E8F0]/40 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4">
         {/* Left icon / Menu button */}
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="text-[#2563EB] hover:bg-[#F8FAFC] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
+            className="text-[#2563EB] hover:bg-[#FFFFFF] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
             title="Go to Home"
             aria-label="Home menu"
           >
@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({ brandName = 'PORTFOLIO' }) => {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="text-[#2563EB] hover:bg-[#F8FAFC] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
+            className="text-[#2563EB] hover:bg-[#FFFFFF] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer"
             title="Profile & Contact"
             aria-label="Profile and Contact"
           >

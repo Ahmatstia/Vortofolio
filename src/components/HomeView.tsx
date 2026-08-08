@@ -39,7 +39,7 @@ export const HomeView: React.FC = () => {
             </Link>
             <Link
               href="/contact"
-              className="bg-[#FFFFFF] text-[#0F172A] font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-[#E2E8F0] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(15, 23, 42,0.02)] cursor-pointer inline-block"
+              className="bg-[#F8FAFC] text-[#0F172A] font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-[#E2E8F0] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(15, 23, 42,0.02)] cursor-pointer inline-block"
             >
               Let's Talk
             </Link>
@@ -83,7 +83,7 @@ export const HomeView: React.FC = () => {
             <Link
               href={`/projects/${project.id}`}
               key={project.id}
-              className="group bg-[#F8FAFC] rounded-[16px] p-3 border border-[#E2E8F0]/50 shadow-[0_4px_20px_rgba(15, 23, 42,0.04)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block"
+              className="group bg-[#FFFFFF] rounded-[16px] p-3 border border-[#E2E8F0]/50 shadow-[0_4px_20px_rgba(15, 23, 42,0.04)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block"
             >
               <div className="relative w-full aspect-[4/3] rounded-[12px] overflow-hidden mb-3">
                 <img
@@ -92,7 +92,7 @@ export const HomeView: React.FC = () => {
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 right-3 bg-[#FFFFFF]/90 backdrop-blur-sm rounded-full p-2 text-[#2563EB] shadow-sm">
+                <div className="absolute top-3 right-3 bg-[#F8FAFC]/90 backdrop-blur-sm rounded-full p-2 text-[#2563EB] shadow-sm">
                   <span className="material-symbols-outlined text-lg">arrow_outward</span>
                 </div>
               </div>

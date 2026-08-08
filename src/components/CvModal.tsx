@@ -11,11 +11,11 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose, onContactClic
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
-      <div className="bg-[#FFFFFF] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative">
+      <div className="bg-[#F8FAFC] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#F8FAFC] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer"
+          className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#FFFFFF] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer"
         >
           <span className="material-symbols-outlined text-xl">close</span>
         </button>
@@ -88,7 +88,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose, onContactClic
               onClose();
               onContactClick();
             }}
-            className="flex-1 bg-[#F8FAFC] text-[#0F172A] font-hanken text-sm font-semibold py-3 rounded-full border border-[#E2E8F0] hover:bg-[#E2E8F0] transition-all text-center cursor-pointer"
+            className="flex-1 bg-[#FFFFFF] text-[#0F172A] font-hanken text-sm font-semibold py-3 rounded-full border border-[#E2E8F0] hover:bg-[#E2E8F0] transition-all text-center cursor-pointer"
           >
             Hire ahmtstia
           </button>

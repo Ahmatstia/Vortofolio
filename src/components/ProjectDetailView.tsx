@@ -32,7 +32,7 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
         {/* Floating Back Button */}
         <button
           onClick={() => router.push('/projects')}
-          className="absolute top-6 left-4 sm:left-10 z-10 w-12 h-12 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md flex items-center justify-center text-[#0F172A] hover:bg-[#FFFFFF] hover:text-[#2563EB] transition-all shadow-[0_4px_20px_rgba(15, 23, 42,0.12)] cursor-pointer active:scale-95"
+          className="absolute top-6 left-4 sm:left-10 z-10 w-12 h-12 rounded-full bg-[#F8FAFC]/90 backdrop-blur-md flex items-center justify-center text-[#0F172A] hover:bg-[#F8FAFC] hover:text-[#2563EB] transition-all shadow-[0_4px_20px_rgba(15, 23, 42,0.12)] cursor-pointer active:scale-95"
           title="Go back to projects"
           aria-label="Go back"
         >
@@ -43,7 +43,7 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
       {/* Main Content Container */}
       <main className="px-4 sm:px-8 max-w-4xl mx-auto -mt-16 sm:-mt-20 relative z-10">
         {/* Title and Metadata */}
-        <div className="bg-[#FFFFFF] p-6 sm:p-10 rounded-[20px] shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] mb-12 border border-[#E2E8F0]">
+        <div className="bg-[#F8FAFC] p-6 sm:p-10 rounded-[20px] shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] mb-12 border border-[#E2E8F0]">
           <span className="font-hanken text-xs uppercase tracking-widest text-[#2563EB] font-bold block mb-2">
             PROJECT OVERVIEW
           </span>
@@ -112,9 +112,9 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
             {project.highlights.map((highlight, idx) => (
               <div
                 key={idx}
-                className="bg-[#F8FAFC] p-6 sm:p-8 rounded-[18px] border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.04)] hover:-translate-y-1 transition-transform duration-300"
+                className="bg-[#FFFFFF] p-6 sm:p-8 rounded-[18px] border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.04)] hover:-translate-y-1 transition-transform duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-[#FFFFFF] flex items-center justify-center mb-5 text-[#2563EB] shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-[#F8FAFC] flex items-center justify-center mb-5 text-[#2563EB] shadow-sm">
                   <span className="material-symbols-outlined text-2xl">{highlight.icon}</span>
                 </div>
                 <h4 className="font-garamond text-2xl font-bold text-[#0F172A] mb-2">
@@ -130,11 +130,11 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
       </main>
 
       {/* Sticky Bottom CTA Bar */}
-      <div className="fixed bottom-0 left-0 w-full bg-[#FFFFFF]/95 backdrop-blur-lg border-t border-[#E2E8F0] px-4 sm:px-8 py-4 z-40 shadow-[0_-4px_25px_rgba(15, 23, 42,0.08)]">
+      <div className="fixed bottom-0 left-0 w-full bg-[#F8FAFC]/95 backdrop-blur-lg border-t border-[#E2E8F0] px-4 sm:px-8 py-4 z-40 shadow-[0_-4px_25px_rgba(15, 23, 42,0.08)]">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center sm:justify-end items-center">
           <button
             onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#FFFFFF] text-[#0F172A] border border-[#E2E8F0] font-hanken text-sm font-semibold hover:bg-[#F8FAFC] transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#F8FAFC] text-[#0F172A] border border-[#E2E8F0] font-hanken text-sm font-semibold hover:bg-[#FFFFFF] transition-all shadow-sm active:scale-95 cursor-pointer text-center"
           >
             View Case Study
           </button>

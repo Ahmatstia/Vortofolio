@@ -77,7 +77,7 @@ const HomeView = ()=>{
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/contact",
-                                        className: "bg-[#FFFFFF] text-[#0F172A] font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-[#E2E8F0] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(15, 23, 42,0.02)] cursor-pointer inline-block",
+                                        className: "bg-[#F8FAFC] text-[#0F172A] font-hanken text-sm font-semibold px-8 py-4 rounded-full border border-[#E2E8F0] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-95 text-center shadow-[0_4px_20px_rgba(15, 23, 42,0.02)] cursor-pointer inline-block",
                                         children: "Let's Talk"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/HomeView.tsx",
@@ -186,7 +186,7 @@ const HomeView = ()=>{
                         className: "grid grid-cols-1 md:grid-cols-3 gap-6",
                         children: featuredProjects.map((project)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: `/projects/${project.id}`,
-                                className: "group bg-[#F8FAFC] rounded-[16px] p-3 border border-[#E2E8F0]/50 shadow-[0_4px_20px_rgba(15, 23, 42,0.04)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block",
+                                className: "group bg-[#FFFFFF] rounded-[16px] p-3 border border-[#E2E8F0]/50 shadow-[0_4px_20px_rgba(15, 23, 42,0.04)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "relative w-full aspect-[4/3] rounded-[12px] overflow-hidden mb-3",
@@ -202,7 +202,7 @@ const HomeView = ()=>{
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute top-3 right-3 bg-[#FFFFFF]/90 backdrop-blur-sm rounded-full p-2 text-[#2563EB] shadow-sm",
+                                                className: "absolute top-3 right-3 bg-[#F8FAFC]/90 backdrop-blur-sm rounded-full p-2 text-[#2563EB] shadow-sm",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "material-symbols-outlined text-lg",
                                                     children: "arrow_outward"

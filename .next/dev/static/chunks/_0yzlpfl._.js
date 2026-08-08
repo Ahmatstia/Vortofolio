@@ -2626,7 +2626,7 @@ const BottomNav = ()=>{
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     const isProjectsActive = pathname?.startsWith('/projects');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-        className: "md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 w-[calc(100%-32px)] max-w-md rounded-full bg-[#FFFFFF]/95 backdrop-blur-md border border-[#E2E8F0] shadow-[0_4px_25px_rgba(15, 23, 42,0.12)] z-50",
+        className: "md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 w-[calc(100%-32px)] max-w-md rounded-full bg-[#F8FAFC]/95 backdrop-blur-md border border-[#E2E8F0] shadow-[0_4px_25px_rgba(15, 23, 42,0.12)] z-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             className: "flex justify-around items-center px-3 py-2",
             children: [
@@ -2819,7 +2819,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
     // If we're on projects or a specific project, consider 'projects' active
     const isProjectsActive = pathname?.startsWith('/projects');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: "sticky top-0 w-full z-40 bg-[#FFFFFF]/90 backdrop-blur-md border-b border-[#E2E8F0]/40 transition-all duration-300",
+        className: "sticky top-0 w-full z-40 bg-[#F8FAFC]/90 backdrop-blur-md border-b border-[#E2E8F0]/40 transition-all duration-300",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4",
             children: [
@@ -2828,7 +2828,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/",
-                            className: "text-[#2563EB] hover:bg-[#F8FAFC] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer",
+                            className: "text-[#2563EB] hover:bg-[#FFFFFF] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer",
                             title: "Go to Home",
                             "aria-label": "Home menu",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2908,7 +2908,7 @@ const Header = ({ brandName = 'PORTFOLIO' })=>{
                     className: "flex items-center gap-3",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/contact",
-                        className: "text-[#2563EB] hover:bg-[#F8FAFC] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer",
+                        className: "text-[#2563EB] hover:bg-[#FFFFFF] transition-colors p-2 rounded-full active:scale-95 flex items-center justify-center cursor-pointer",
                         title: "Profile & Contact",
                         "aria-label": "Profile and Contact",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {

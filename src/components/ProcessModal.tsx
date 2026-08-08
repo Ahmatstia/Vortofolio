@@ -33,10 +33,10 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
-      <div className="bg-[#FFFFFF] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative">
+      <div className="bg-[#F8FAFC] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-[0_12px_40px_rgba(15, 23, 42,0.2)] relative">
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#F8FAFC] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer"
+          className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#FFFFFF] hover:bg-[#2563EB] hover:text-white transition-colors flex items-center justify-center text-[#0F172A] cursor-pointer"
         >
           <span className="material-symbols-outlined text-xl">close</span>
         </button>
@@ -52,7 +52,7 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
           {steps.map((step) => (
             <div
               key={step.number}
-              className="bg-[#F8FAFC] p-5 rounded-xl border border-[#E2E8F0] flex gap-4 items-start"
+              className="bg-[#FFFFFF] p-5 rounded-xl border border-[#E2E8F0] flex gap-4 items-start"
             >
               <span className="font-garamond text-3xl font-bold text-[#2563EB]">
                 {step.number}

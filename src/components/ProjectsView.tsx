@@ -49,7 +49,7 @@ export const ProjectsView: React.FC = () => {
               className={`px-5 py-2.5 rounded-full font-hanken text-xs font-bold uppercase tracking-wider transition-all duration-200 active:scale-95 cursor-pointer ${
                 activeFilter === filter
                   ? 'bg-[#2563EB] text-white shadow-[0_4px_12px_rgba(37, 99, 235,0.25)]'
-                  : 'bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] hover:bg-[#FFFFFF]'
+                  : 'bg-[#FFFFFF] text-[#475569] border border-[#E2E8F0] hover:bg-[#F8FAFC]'
               }`}
             >
               {filter}
@@ -73,15 +73,15 @@ export const ProjectsView: React.FC = () => {
                 isOffsetRight ? 'md:translate-y-4' : ''
               } ${isWideCard ? 'lg:col-span-1' : ''}`}
             >
-              <div className="rounded-2xl bg-[#F8FAFC] p-3 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)] hover:shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] transition-all duration-300">
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-[#FFFFFF]">
+              <div className="rounded-2xl bg-[#FFFFFF] p-3 border border-[#E2E8F0] shadow-[0_4px_20px_rgba(15, 23, 42,0.06)] hover:shadow-[0_8px_30px_rgba(15, 23, 42,0.12)] transition-all duration-300">
+                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-[#F8FAFC]">
                   <img
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
-                  <div className="absolute top-4 right-4 bg-[#FFFFFF]/90 backdrop-blur-sm rounded-full p-2.5 text-[#2563EB] shadow-sm group-hover:bg-[#2563EB] group-hover:text-white transition-all">
+                  <div className="absolute top-4 right-4 bg-[#F8FAFC]/90 backdrop-blur-sm rounded-full p-2.5 text-[#2563EB] shadow-sm group-hover:bg-[#2563EB] group-hover:text-white transition-all">
                     <span className="material-symbols-outlined text-lg">arrow_outward</span>
                   </div>
                   {project.featured && (

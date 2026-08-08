@@ -40,7 +40,7 @@ export const ContactView: React.FC = () => {
       </section>
 
       {/* Form Section */}
-      <section className="mb-14 bg-[#F8FAFC] rounded-xl p-6 sm:p-10 ambient-shadow border border-[#E2E8F0]/60">
+      <section className="mb-14 bg-[#FFFFFF] rounded-xl p-6 sm:p-10 ambient-shadow border border-[#E2E8F0]/60">
         {submitted ? (
           <div className="text-center py-8">
             <div className="w-16 h-16 rounded-full bg-[#2563EB]/10 text-[#2563EB] mx-auto flex items-center justify-center mb-4">
@@ -134,7 +134,7 @@ export const ContactView: React.FC = () => {
           <a
             href="mailto:ahmtstia@example.com"
             title="Email ahmtstia"
-            className="w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#FFFFFF] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-90 shadow-sm"
+            className="w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-90 shadow-sm"
           >
             <span className="material-symbols-outlined text-xl">mail</span>
           </a>
@@ -143,7 +143,7 @@ export const ContactView: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn Profile"
-            className="w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#FFFFFF] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-90 shadow-sm"
+            className="w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-90 shadow-sm"
           >
             <span className="material-symbols-outlined text-xl">work</span>
           </a>
@@ -152,7 +152,7 @@ export const ContactView: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub Repositories"
-            className="w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#FFFFFF] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-90 shadow-sm"
+            className="w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-90 shadow-sm"
           >
             <span className="material-symbols-outlined text-xl">code</span>
           </a>
@@ -161,7 +161,7 @@ export const ContactView: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Chat & Socials"
-            className="w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#FFFFFF] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#F8FAFC] transition-all duration-300 active:scale-90 shadow-sm"
+            className="w-12 h-12 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] flex items-center justify-center text-[#475569] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#FFFFFF] transition-all duration-300 active:scale-90 shadow-sm"
           >
             <span className="material-symbols-outlined text-xl">chat</span>
           </a>

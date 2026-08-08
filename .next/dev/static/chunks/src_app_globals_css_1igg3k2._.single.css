@@ -382,7 +382,7 @@
     color: #0f172a;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fff;
+    background-color: #f8fafc;
     font-family: Hanken Grotesk, sans-serif;
   }
 
@@ -1068,18 +1068,18 @@
     background-color: #f8fafc;
   }
 
+  .bg-\[\#F8FAFC\]\/90 {
+    background-color: #f8fafce6;
+    background-color: lab(98.1609% -.419885 -1.20518 / .9);
+  }
+
+  .bg-\[\#F8FAFC\]\/95 {
+    background-color: #f8fafcf2;
+    background-color: lab(98.1609% -.419885 -1.20518 / .95);
+  }
+
   .bg-\[\#FFFFFF\] {
     background-color: #fff;
-  }
-
-  .bg-\[\#FFFFFF\]\/90 {
-    background-color: #ffffffe6;
-    background-color: lab(100% -.0000298023 .0000119209 / .9);
-  }
-
-  .bg-\[\#FFFFFF\]\/95 {
-    background-color: #fffffff2;
-    background-color: lab(100% -.0000298023 .0000119209 / .95);
   }
 
   .bg-black\/30 {
