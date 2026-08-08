@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ContactFormData } from '@/types';
+import { PageWrapper, Reveal, slideInLeft } from '@/components/ui/animations';
 
 export const ContactView: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -26,8 +27,10 @@ export const ContactView: React.FC = () => {
   };
 
   return (
+    <PageWrapper>
     <div className="flex-grow px-4 sm:px-8 mt-6 sm:mt-12 max-w-3xl mx-auto w-full pb-28">
       {/* Header Section */}
+      <Reveal variants={slideInLeft}>
       <section className="mb-10 sm:mb-14">
         <div className="inline-flex items-center gap-2 w-fit mb-3">
           <span className="w-8 h-px bg-brand-accent" />
@@ -42,8 +45,10 @@ export const ContactView: React.FC = () => {
           Baik Anda memiliki proyek spesifik atau sekadar ingin menjajaki kemungkinan, saya siap berkolaborasi. Kirimkan pesan di bawah ini dan saya akan segera membalasnya.
         </p>
       </section>
+      </Reveal>
 
       {/* Form Section */}
+      <Reveal delay={0.1}>
       <section className="mb-14 bg-brand-surface rounded-[24px] p-6 sm:p-10 border border-brand-border/60 shadow-[0_12px_36px_rgba(15,23,42,0.08)] relative overflow-hidden">
         <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand-accent/8 rounded-full blur-2xl pointer-events-none" />
 
@@ -154,8 +159,10 @@ export const ContactView: React.FC = () => {
           </form>
         )}
       </section>
+      </Reveal>
 
       {/* Social Links */}
+      <Reveal delay={0.2}>
       <section className="mb-14 text-center">
         <div className="flex items-center gap-3 mb-8">
           <span className="h-px flex-grow bg-brand-border/60" />
@@ -184,12 +191,16 @@ export const ContactView: React.FC = () => {
           ))}
         </div>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.3}>
       <footer className="text-center pt-4">
         <p className="font-garamond italic text-brand-text-muted/80 text-base sm:text-lg">
           Merancang pengalaman digital dengan sepenuh hati.
         </p>
       </footer>
+      </Reveal>
     </div>
+    </PageWrapper>
   );
 };

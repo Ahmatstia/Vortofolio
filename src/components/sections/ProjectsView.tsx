@@ -2,27 +2,32 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { PROJECTS } from '@/data/portfolio';
 import { ProjectCard } from '@/components/ui/ProjectCard';
+import { PageWrapper, Reveal, fadeUp, staggerContainer, scaleIn } from '@/components/ui/animations';
 
 export const ProjectsView: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<'ALL' | 'WEB' | 'MOBILE' | 'UI'>('ALL');
+  const [activeFilter, setActiveFilter] = useState<'ALL' | 'WEB' | 'MOBILE' | 'UI' | 'AI / ML'>('ALL');
 
   const filteredProjects = PROJECTS.filter((p) => {
     if (activeFilter === 'ALL') return true;
     return p.category === activeFilter;
   });
 
-  const filterCounts = {
+  const filterCounts: Record<string, number> = {
     ALL: PROJECTS.length,
     WEB: PROJECTS.filter((p) => p.category === 'WEB').length,
     MOBILE: PROJECTS.filter((p) => p.category === 'MOBILE').length,
     UI: PROJECTS.filter((p) => p.category === 'UI').length,
+    'AI / ML': PROJECTS.filter((p) => p.category === 'AI / ML').length,
   };
 
   return (
+    <PageWrapper>
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 pt-6 pb-24">
       {/* Page Title & Counter */}
+      <Reveal>
       <section className="pt-2 pb-6">
         <p className="font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold mb-2">
           PORTOFOLIO
@@ -42,15 +47,19 @@ export const ProjectsView: React.FC = () => {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* Filters */}
+      <Reveal>
       <section className="pb-10 overflow-x-auto hide-scrollbar">
         <div className="flex gap-3 whitespace-nowrap min-w-max pb-2">
-          {(['ALL', 'WEB', 'MOBILE', 'UI'] as const).map((filter) => (
-            <button
+          {(['ALL', 'WEB', 'MOBILE', 'UI', 'AI / ML'] as const).map((filter) => (
+            <motion.button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`group flex items-center gap-2 px-5 py-2.5 rounded-full font-hanken text-xs font-bold uppercase tracking-wider transition-all duration-300 active:scale-95 cursor-pointer ${
+              whileTap={{ scale: 0.94 }}
+              whileHover={{ scale: 1.04 }}
+              className={`group flex items-center gap-2 px-5 py-2.5 rounded-full font-hanken text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                 activeFilter === filter
                   ? 'bg-brand-accent text-white shadow-[0_6px_18px_rgba(181,87,59,0.3)]'
                   : 'bg-brand-surface text-brand-text-muted border border-brand-border hover:border-brand-text/20 hover:bg-brand-bg'
@@ -66,27 +75,37 @@ export const ProjectsView: React.FC = () => {
               >
                 {filterCounts[filter]}
               </span>
-            </button>
+            </motion.button>
           ))}
         </div>
       </section>
+      </Reveal>
 
       {/* Project Cards Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 pb-16">
-        {filteredProjects.map((project, index) => {
-          const isOffsetRight = index % 3 === 1;
+      <AnimatePresence mode="wait">
+        <motion.section
+          key={activeFilter}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 pb-16"
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+        >
+          {filteredProjects.map((project, index) => {
+            const isOffsetRight = index % 3 === 1;
 
-          return (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-              variant="detailed"
-              className={isOffsetRight ? 'md:translate-y-6' : ''}
-            />
-          );
-        })}
-      </section>
+            return (
+              <motion.div key={project.id} variants={scaleIn}>
+                <ProjectCard
+                  project={project}
+                  index={index}
+                  variant="detailed"
+                  className={isOffsetRight ? 'md:translate-y-6' : ''}
+                />
+              </motion.div>
+            );
+          })}
+        </motion.section>
+      </AnimatePresence>
 
       {/* Empty state */}
       {filteredProjects.length === 0 && (
@@ -98,5 +117,6 @@ export const ProjectsView: React.FC = () => {
         </div>
       )}
     </div>
+    </PageWrapper>
   );
 };

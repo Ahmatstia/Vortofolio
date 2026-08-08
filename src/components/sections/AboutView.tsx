@@ -2,9 +2,11 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import { ABOUT_IMAGE, EXPERIENCES, SKILLS } from '@/data/portfolio';
 import { CvModal } from '@/components/modals/CvModal';
 import { ProcessModal } from '@/components/modals/ProcessModal';
+import { PageWrapper, Reveal, StaggerList, StaggerItem, slideInLeft, slideInRight } from '@/components/ui/animations';
 
 import profileImg from '../../../assets/img/profile.png';
 
@@ -14,11 +16,12 @@ export const AboutView: React.FC = () => {
   const [isProcessOpen, setIsProcessOpen] = useState(false);
 
   return (
+    <PageWrapper>
     <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-8 sm:pt-16 pb-28">
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-16 sm:mb-20 items-center">
         {/* Text Column */}
-        <div className="col-span-1 md:col-span-7 order-2 md:order-1 flex flex-col justify-center">
+        <Reveal variants={slideInLeft} className="col-span-1 md:col-span-7 order-2 md:order-1 flex flex-col justify-center">
           <div className="inline-flex items-center gap-2 w-fit mb-4">
             <span className="w-8 h-px bg-brand-accent" />
             <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold">
@@ -56,10 +59,10 @@ export const AboutView: React.FC = () => {
               Lihat Proses
             </button>
           </div>
-        </div>
+        </Reveal>
 
         {/* Image Column */}
-        <div className="col-span-1 md:col-span-5 order-1 md:order-2 relative mb-6 md:mb-0">
+        <Reveal variants={slideInRight} className="col-span-1 md:col-span-5 order-1 md:order-2 relative mb-6 md:mb-0">
           <div className="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden shadow-[0_16px_40px_rgba(15,23,42,0.16)] border border-brand-border">
             <img
               src={profileImg.src}
@@ -87,7 +90,7 @@ export const AboutView: React.FC = () => {
 
           <div className="absolute -top-4 -right-4 w-16 h-16 bg-brand-accent/15 rounded-full blur-xl -z-10 pointer-events-none" />
           <div className="absolute top-1/3 -right-3 w-6 h-6 border border-brand-border/70 rounded-full -z-10 pointer-events-none" />
-        </div>
+        </Reveal>
       </section>
 
       <div className="flex items-center gap-3 mb-16 sm:mb-20">
@@ -99,7 +102,7 @@ export const AboutView: React.FC = () => {
       {/* Timeline & Skills Section */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16">
         {/* Experience Timeline */}
-        <div className="col-span-1 md:col-span-7">
+        <Reveal variants={slideInLeft} className="col-span-1 md:col-span-7">
           <h2 className="font-garamond text-3xl sm:text-4xl text-brand-text font-bold mb-10">
             Pengalaman & Pendidikan
           </h2>
@@ -123,10 +126,10 @@ export const AboutView: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* Skills Cloud */}
-        <div className="col-span-1 md:col-span-5 mt-6 md:mt-0">
+        <Reveal variants={slideInRight} className="col-span-1 md:col-span-5 mt-6 md:mt-0">
           <h2 className="font-garamond text-3xl sm:text-4xl text-brand-text font-bold mb-10">
             Keahlian
           </h2>
@@ -175,7 +178,7 @@ export const AboutView: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Modals */}
@@ -189,5 +192,6 @@ export const AboutView: React.FC = () => {
         onClose={() => setIsProcessOpen(false)}
       />
     </div>
+    </PageWrapper>
   );
 };

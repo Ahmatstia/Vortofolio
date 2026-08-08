@@ -3,11 +3,13 @@
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import { HERO_IMAGE, PROJECTS } from '@/data/portfolio';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/ui/ProjectCard';
 import Lottie from 'lottie-react';
 import animationData from '../../../assets/lottie/astronot.json';
+import { PageWrapper, Reveal, StaggerList, StaggerItem, fadeUp, slideInLeft, slideInRight, scaleIn } from '@/components/ui/animations';
 
 const SwipeToNavigate: React.FC = () => {
   const router = useRouter();
@@ -79,6 +81,7 @@ export const HomeView: React.FC = () => {
   const featuredProjects = PROJECTS.filter((p) => p.featured).slice(0, 3);
 
   return (
+    <PageWrapper>
     <div className="flex-grow flex flex-col justify-between px-4 sm:px-10 pt-2 pb-28 sm:pt-6 sm:pb-16 max-w-7xl mx-auto w-full relative">
       {/* Background Watermark */}
       <div className="absolute top-10 sm:top-0 left-1/2 -translate-x-1/2 w-full overflow-hidden flex justify-center pointer-events-none select-none -z-20 opacity-[0.03]">
@@ -91,13 +94,17 @@ export const HomeView: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-[500px] md:min-h-[580px] relative">
 
         {/* Text Column */}
-        <div className="col-span-1 md:col-span-7 flex flex-col gap-5 sm:gap-6 z-10">
-
-          <p className="font-hanken mt-1 text-xs uppercase tracking-widest text-brand-text-muted font-bold">
+        <motion.div
+          className="col-span-1 md:col-span-7 flex flex-col gap-5 sm:gap-6 z-10"
+          initial="hidden"
+          animate="visible"
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } } }}
+        >
+          <motion.p variants={fadeUp} className="font-hanken mt-1 text-xs uppercase tracking-widest text-brand-text-muted font-bold">
             INFORMATICS STUDENT & AI ENTHUSIAST
-          </p>
+          </motion.p>
 
-          <h1 className="font-garamond text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[1.05] tracking-tight">
+          <motion.h1 variants={fadeUp} className="font-garamond text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[1.05] tracking-tight">
             <span className="text-brand-text">ahmtstia_</span><br />
             <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-text-muted-alt italic font-normal mt-1 sm:mt-2">
               Solusi Cerdas
@@ -105,25 +112,30 @@ export const HomeView: React.FC = () => {
             <span className="text-brand-bg relative" style={{ WebkitTextStroke: '1px var(--color-brand-text-muted-alt)' }}>
               Web & Mobile
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-lg leading-relaxed mt-2">
+          <motion.p variants={fadeUp} className="font-hanken text-base sm:text-lg text-brand-text-muted max-w-lg leading-relaxed mt-2">
             Mahasiswa Teknik Informatika yang berfokus pada pengembangan aplikasi Web & Mobile, serta penerapan Deep Learning dan Computer Vision untuk solusi nyata.
-          </p>
+          </motion.p>
 
           {/* Desktop Buttons */}
-          <div className="hidden md:flex flex-row gap-4 mt-4">
+          <motion.div variants={fadeUp} className="hidden md:flex flex-row gap-4 mt-4">
             <Button variant="primary" href="/projects" icon="arrow_forward">
               Lihat Karya Saya
             </Button>
             <Button variant="outline" href="/contact">
               Mari Berdiskusi
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Animation Column */}
-        <div className="col-span-1 md:col-span-5 flex justify-center md:justify-end mt-0 md:mt-0 relative z-10">
+        <motion.div
+          className="col-span-1 md:col-span-5 flex justify-center md:justify-end mt-0 md:mt-0 relative z-10"
+          initial={{ opacity: 0, scale: 0.85, x: 40 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        >
           {/* Ambient pulsing glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-72 sm:h-72 bg-brand-accent/20 rounded-full blur-[80px] animate-pulse -z-20" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-500/10 rounded-full blur-[60px] animate-pulse delay-1000 -z-20" />
@@ -136,20 +148,26 @@ export const HomeView: React.FC = () => {
               className="w-full h-auto drop-shadow-[0_12px_32px_rgba(37,99,235,0.15)] transition-transform duration-700 group-hover:scale-105" 
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Mobile Buttons (below animation) */}
-        <div className="col-span-1 flex md:hidden flex-row gap-3 mt-4 w-full z-10">
+        <motion.div
+          className="col-span-1 flex md:hidden flex-row gap-3 mt-4 w-full z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           <Button variant="primary" href="/projects" className="flex-1 px-2 py-3.5 text-xs sm:text-sm whitespace-nowrap">
             Karya Saya
           </Button>
           <Button variant="outline" href="/contact" className="flex-1 px-2 py-3.5 text-xs sm:text-sm whitespace-nowrap">
             Berdiskusi
           </Button>
-        </div>
+        </motion.div>
       </div>
 
       {/* Tech marquee strip */}
+      <Reveal>
       <div className="mt-16 sm:mt-20 py-4 border-y border-brand-border/40 overflow-hidden relative">
         <div className="flex gap-10 whitespace-nowrap animate-[marquee_24s_linear_infinite] font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold">
           {Array(2).fill(['Next.js', 'TypeScript', 'React Native', 'Flutter', 'Tailwind CSS', 'Node.js', 'Flask', 'Python','Firebase', 'Expo']).flat().map((tech, i) => (
@@ -166,9 +184,11 @@ export const HomeView: React.FC = () => {
           }
         `}</style>
       </div>
+      </Reveal>
 
       {/* Featured Work Teaser Grid */}
       <div className="mt-16 sm:mt-24 pt-12">
+        <Reveal>
         <div className="flex justify-between items-end mb-8">
           <div>
             <p className="font-hanken text-xs uppercase tracking-widest text-brand-text-muted font-bold">
@@ -186,35 +206,45 @@ export const HomeView: React.FC = () => {
             <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </Link>
         </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StaggerList className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {featuredProjects.map((project, idx) => (
-            <ProjectCard 
-              key={project.id}
-              project={project}
-              index={idx}
-              variant="simple"
-              className={idx === 1 ? 'md:mt-6' : ''}
-            />
+            <StaggerItem key={project.id}>
+              <ProjectCard 
+                project={project}
+                index={idx}
+                variant="simple"
+                className={idx === 1 ? 'md:mt-6' : ''}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerList>
       </div>
 
       {/* Scroll Indicator / Swipe to Navigate */}
+      <Reveal>
       <div className="flex justify-center w-full mt-16 md:mt-12 mb-8 md:mb-0">
         <div className="hidden md:flex justify-center w-full">
-          <Link
-            href="/projects"
-            className="text-brand-muted-light hover:text-brand-accent transition-all hover:translate-y-1 cursor-pointer"
-            aria-label="Gulir ke bawah untuk melihat proyek"
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <span className="material-symbols-outlined text-3xl">arrow_downward</span>
-          </Link>
+            <Link
+              href="/projects"
+              className="text-brand-muted-light hover:text-brand-accent transition-colors cursor-pointer"
+              aria-label="Gulir ke bawah untuk melihat proyek"
+            >
+              <span className="material-symbols-outlined text-3xl">arrow_downward</span>
+            </Link>
+          </motion.div>
         </div>
         <div className="flex md:hidden w-full justify-center">
           <SwipeToNavigate />
         </div>
       </div>
+      </Reveal>
     </div>
+    </PageWrapper>
   );
 };
