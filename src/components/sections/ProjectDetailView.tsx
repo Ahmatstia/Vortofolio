@@ -246,7 +246,7 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
           <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold block mb-2">
             RINGKASAN PROYEK
           </span>
-          <h1 className="font-garamond text-3xl sm:text-5xl md:text-6xl text-brand-text font-bold mb-8 leading-tight tracking-tight">
+          <h1 className="font-garamond text-2xl sm:text-3xl md:text-4xl text-brand-text font-bold mb-6 sm:mb-8 leading-tight tracking-tight">
             {project.title}
           </h1>
 
