@@ -8,48 +8,82 @@ export const ABOUT_SPOTIFY_URL = 'https://open.spotify.com/track/6mFkJmJqdDVQ1RE
 
 export const PROJECTS: Project[] = [
   {
-    id: 'cataract-detection-cnn',
-    title: 'Deteksi Katarak & Mata Normal (CNN)',
-    client: 'Tugas Akhir / Skripsi',
-    role: 'AI Researcher & Developer',
-    year: '2024',
-    category: 'AI / ML',
-    tags: ['PYTHON', 'CNN', 'DEEP LEARNING', 'COMPUTER VISION'],
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
+    id: 'pos-system',
+    title: 'POS Mobile (Point of Sale System)',
+    client: 'Personal / Retail Project',
+    role: 'Flutter Mobile Developer',
+    year: '2026',
+    category: 'MOBILE',
+    tags: ['FLUTTER', 'DRIFT (SQLITE)', 'PROVIDER', 'BLUETOOTH PRINT', 'CLEAN UI'],
+    // Thumbnail Utama (Katalog & Kasir)
+    image: '/img/projects/pos/thmb.png', 
+    coverSlides: [
+    "/img/projects/pos/slide1.png",
+    "/img/projects/pos/slide2.png",
+    "/img/projects/pos/slide3.png",
+    "/img/projects/pos/slide4.png",
+    "/img/projects/pos/slide5.png",
+   ],
     gallery: [
-      'https://images.unsplash.com/photo-1576091160550-2173ff9e9e9c?q=80&w=800&auto=format&fit=crop', // landscape
-      'https://images.unsplash.com/photo-1551076805-e18690c5e53b?q=80&w=600&auto=format&fit=crop', // portrait
-      'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=1000&auto=format&fit=crop', // landscape
-      'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=700&auto=format&fit=crop', // portrait
-      'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=900&auto=format&fit=crop', // landscape
-      'https://images.unsplash.com/photo-1614064010834-58a436940a45?q=80&w=600&auto=format&fit=crop' // portrait
+      '/img/projects/pos/4.png',  // Buka Shift Kasir
+      '/img/projects/pos/8.png', // Katalog Produk
+      '/img/projects/pos/10.png',  // Rekonsiliasi Shift & Kas
+      '/img/projects/pos/11.png', // Transaksi Kasir (Cart)
+      '/img/projects/pos/14.png', // Detail Struk & Void Transaksi
+      '/img/projects/pos/16.png', // Backup Data & Setting Thermal Printer
     ],
-    // previewVideo: '/videos/cataract-detection.mp4',  ← upload ke /public/videos/ lalu uncomment
-    shortDescription: 'Sistem klasifikasi citra medis berbasis Convolutional Neural Network untuk mendeteksi katarak dan kondisi mata normal.',
-    fullDescription: 'Penelitian dan pengembangan model Deep Learning menggunakan arsitektur CNN untuk menganalisis citra mata. Sistem mampu membedakan kondisi mata yang mengidap katarak dan mata normal secara akurat untuk membantu proses penapisan medis awal.',
-    techStack: ['Python', 'TensorFlow/Keras', 'OpenCV', 'CNN', 'NumPy'],
+    shortDescription: 'Sistem POS Retail berbasis Flutter dengan manajemen shift kasir, pencetakan Thermal Bluetooth, database Drift, dan fitur ekspor data.',
+    fullDescription: 'LEXA POS adalah sistem Point of Sale mobile profesional untuk bisnis retail. Dibuat menggunakan Flutter dan Drift ORM (SQLite) untuk performa database lokal yang cepat dan offline-first. Dilengkapi fitur verifikasi lisensi perangkat, manajemen shift & laci kasir (kas awal/akhir & selisih), enkripsi PIN keamanan, cetak nota Bluetooth thermal (ESC/POS), fitur Void transaksi, ekspor/impor CSV & PDF, hingga backup & restore database lokal/cloud.',
+    techStack: [
+      'Flutter & Dart',
+      'Drift (Moor) ORM',
+      'SQLite3',
+      'Provider',
+      'Bluetooth Thermal (ESC/POS)',
+      'PDF & Printing',
+      'Crypto (SHA-256/Security)',
+      'Shared Preferences'
+    ],
     highlights: [
-      { title: 'Computer Vision', description: 'Ekstraksi fitur dan pra-pemrosesan citra medis untuk optimasi performa model.', icon: 'visibility' },
-      { title: 'Akurasi Tinggi', description: 'Evaluasi model menggunakan confusion matrix dan metrik klasifikasi untuk keandalan prediksi.', icon: 'analytics' }
+      { 
+        title: 'Offline-First & Modern ORM', 
+        description: 'Penyimpanan data lokal yang efisien, canggih, dan type-safe menggunakan Drift ORM dan SQLite3.', 
+        icon: 'database' 
+      },
+      { 
+        title: 'Shift & Rekonsiliasi Kasir', 
+        description: 'Sistem Buka/Tutup Shift kasir otomatis dengan kalkulasi selisih kas fisik laci dan audit log.', 
+        icon: 'point_of_sale' 
+      },
+      { 
+        title: 'Thermal Printer & Cetak PDF', 
+        description: 'Integrasi langsung ke printer Bluetooth Thermal via protokol ESC/POS serta cetak/berbagi nota format PDF.', 
+        icon: 'print' 
+      },
+      { 
+        title: 'Keamanan PIN & Backup Data', 
+        description: 'Otentikasi PIN terenkripsi, reset PIN multi-user, serta fitur cadangan database (.sql) dan laporan CSV.', 
+        icon: 'security' 
+      }
     ],
     liveUrl: '#',
     featured: true,
   },
   {
     id: 'mymoney-app',
-    title: 'MyMoney — Aplikasi Kelola Keuangan',
+    title: 'MyMoney (Aplikasi Kelola Keuangan)',
     client: 'Personal Project',
     role: 'Mobile Developer',
-    year: '2024',
+    year: '2025',
     category: 'MOBILE',
     tags: ['REACT NATIVE / EXPO', 'FIREBASE', 'TYPESCRIPT'],
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop',
+    image: '/img/projects/blmtersedia.png',
     gallery: [
-      'https://images.unsplash.com/photo-1616077168079-7e09a6a3b2b8?q=80&w=500&auto=format&fit=crop', // portrait
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=900&auto=format&fit=crop', // landscape
-      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=500&auto=format&fit=crop', // portrait
-      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=900&auto=format&fit=crop', // landscape
-      'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=500&auto=format&fit=crop' // portrait
+      '/img/projects/blmtersedia.png',
+      '/img/projects/blmtersedia.png',
+      '/img/projects/blmtersedia.png',
+      '/img/projects/blmtersedia.png',
+      '/img/projects/blmtersedia.png' 
     ],
     // previewVideo: '/videos/mymoney-app.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Aplikasi mobile manajemen keuangan pribadi dengan pencatatan transaksi cerdas dan Firestore.',
@@ -64,34 +98,48 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: 'pos-flutter-app',
-    title: 'Point of Sale (POS) Mobile System',
-    client: 'Personal / Client Project',
-    role: 'Mobile Developer',
-    year: '2023',
-    category: 'MOBILE',
-    tags: ['FLUTTER', 'DART', 'REST API'],
-    image: 'https://images.unsplash.com/photo-1556742049-0a670f4a4591?q=80&w=1200&auto=format&fit=crop',
-    // previewVideo: '/videos/pos-flutter.mp4',  ← upload ke /public/videos/ lalu uncomment
-    shortDescription: 'Aplikasi Kasir / POS berbasis mobile dengan pengelolaan katalog produk dan riwayat transaksi.',
-    fullDescription: 'Sistem aplikasi kasir bergerak yang dibangun menggunakan Flutter. Memudahkan pencatatan penjualan cepat, inventaris barang, serta pencetakan struk belanja transaksi secara efisien.',
-    techStack: ['Flutter', 'Dart', 'SQLite', 'REST API', 'Provider/Bloc'],
+    id: 'deteksi-dini',
+    title: 'Deteksi Dini Katarak & Mata Normal',
+    client: 'Tugas Akhir / Skripsi',
+    role: 'AI Researcher & Developer',
+    year: '2026',
+    category: 'AI / ML',
+    tags: ['PYTHON', 'CNN', 'DEEP LEARNING', 'COMPUTER VISION'],
+    image: '/img/projects/inprogress.png',
+    gallery: [
+      '/img/projects/inprogress.png', 
+      '/img/projects/inprogress.png', 
+      '/img/projects/inprogress.png', 
+      '/img/projects/inprogress.png', 
+      '/img/projects/inprogress.png' 
+    ],
+    // previewVideo: '/videos/cataract-detection.mp4',  ← upload ke /public/videos/ lalu uncomment
+    shortDescription: 'Sistem klasifikasi citra medis berbasis Convolutional Neural Network untuk mendeteksi katarak dan kondisi mata normal.',
+    fullDescription: 'Penelitian dan pengembangan model Deep Learning menggunakan arsitektur CNN untuk menganalisis citra mata. Sistem mampu membedakan kondisi mata yang mengidap katarak dan mata normal secara akurat untuk membantu proses penapisan medis awal.',
+    techStack: ['Python', 'TensorFlow/Keras', 'OpenCV', 'CNN', 'NumPy'],
     highlights: [
-      { title: 'Cross-Platform', description: 'Performa aplikasi yang mulus dan responsif di platform Android & iOS.', icon: 'devices' },
-      { title: 'Pencatatan Penjualan', description: 'Manajemen ketersediaan stok barang dan rekapitulasi penjualan berkala.', icon: 'receipt_long' }
+      { title: 'Computer Vision', description: 'Ekstraksi fitur dan pra-pemrosesan citra medis untuk optimasi performa model.', icon: 'visibility' },
+      { title: 'Akurasi Tinggi', description: 'Evaluasi model menggunakan confusion matrix dan metrik klasifikasi untuk keandalan prediksi.', icon: 'analytics' }
     ],
     liveUrl: '#',
     featured: true,
   },
   {
-    id: 'data-scraping-engine',
+    id: 'data-scraping',
     title: 'Automated Data Scraping Engine',
     client: 'Personal Project',
     role: 'Backend & Data Engineer',
-    year: '2023',
+    year: '2026',
     category: 'WEB',
     tags: ['PYTHON', 'BEAUTIFULSOUP', 'SELENIUM'],
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
+    image: '/img/projects/blmtersedia.png',
+    gallery: [
+      '/img/projects/blmtersedia.png', 
+      '/img/projects/blmtersedia.png', 
+      '/img/projects/blmtersedia.png', 
+      '/img/projects/blmtersedia.png', 
+      '/img/projects/blmtersedia.png' 
+    ],
     // previewVideo: '/videos/data-scraping.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Bot dan skrip otomasi ekstraksi data terstruktur dari berbagai situs web.',
     fullDescription: 'Sistem ekstraksi data otomatis yang dirancang menggunakan Python untuk mengumpulkan, membersihkan, dan menyimpan informasi publik dari situs web tujuan menjadi format terstruktur (JSON/CSV).',

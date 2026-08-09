@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import { Project } from '@/types';
 import { LiveSiteModal } from '@/components/modals/LiveSiteModal';
@@ -12,10 +13,6 @@ interface ProjectDetailViewProps {
 /* ---------------------------------------------------------------------- */
 /* Stacked / Fanned Swipeable Gallery                                     */
 /* ---------------------------------------------------------------------- */
-/* Expects `images` to be an array of exactly 5 urls. If your Project      */
-/* type only has a single `image` field, add a `gallery: string[]` field   */
-/* to your data (see /data/portfolio). Falls back to repeating the single  */
-/* image so nothing breaks in the meantime.                                */
 
 interface StackedGalleryProps {
   images: string[];
@@ -53,7 +50,6 @@ const StackedGallery: React.FC<StackedGalleryProps> = ({ images, alt }) => {
   /* Position of each card relative to the active one, fanned like petals */
   const getCardStyle = (idx: number): React.CSSProperties => {
     let offset = idx - active;
-    // wrap offset to the shortest path around the circle (-2..2 for 5 items)
     if (offset > count / 2) offset -= count;
     if (offset < -count / 2) offset += count;
 
@@ -87,18 +83,19 @@ const StackedGallery: React.FC<StackedGalleryProps> = ({ images, alt }) => {
         {images.map((src, idx) => (
           <div
             key={idx}
-            className="absolute top-1/2 left-1/2 w-[78%] sm:w-[62%] md:w-[54%] aspect-[4/5] rounded-[22px] overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.28)] border-4 border-brand-bg"
+            className="absolute top-1/2 left-1/2 w-[82%] sm:w-[62%] md:w-[48%] lg:w-[40%] max-w-[480px] aspect-[4/5] rounded-[22px] overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.20)] border-4 border-brand-bg bg-[#faf7f2]"
             style={getCardStyle(idx)}
             onClick={() => idx !== active && goTo(idx)}
           >
+            {/* Menggunakan object-contain + bg krem agar poster tidak terpotong di Desktop */}
             <img
               src={src}
               alt={`${alt} — ${idx + 1}`}
               draggable={false}
-              className="w-full h-full object-cover pointer-events-none"
+              className="w-full h-full object-contain pointer-events-none"
             />
             {idx === active && (
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
             )}
           </div>
         ))}
@@ -137,8 +134,6 @@ const StackedGallery: React.FC<StackedGalleryProps> = ({ images, alt }) => {
   );
 };
 
-import { createPortal } from 'react-dom';
-
 /* ---------------------------------------------------------------------- */
 /* Masonry Gallery with Lightbox                                          */
 /* ---------------------------------------------------------------------- */
@@ -151,8 +146,6 @@ const ProjectGallery: React.FC<{ images?: string[] }> = ({ images }) => {
     setMounted(true);
   }, []);
 
-  // If there are 5 or fewer images, they are already shown in the top hero slider.
-  // We'll show the gallery section anyway to display them all at once for closer inspection.
   if (!images || images.length === 0) return null;
 
   return (
@@ -180,14 +173,13 @@ const ProjectGallery: React.FC<{ images?: string[] }> = ({ images }) => {
                 loading="lazy"
                 className={`w-full h-auto object-cover transition-all duration-700 ease-out group-hover:scale-110 ${rotateClass}`} 
               />
-              {/* Interactive overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-accent/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay" />
             </div>
           );
         })}
       </div>
 
-      {/* Lightbox Modal (Portaled to document.body to escape stacking contexts) */}
+      {/* Lightbox Modal */}
       {selectedImg && mounted && createPortal(
         <div 
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-10 cursor-zoom-out"
@@ -225,18 +217,20 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
     mode: 'live'
   });
 
-  // Prefer a `gallery` array on the project (5 images). Fall back to
-  // repeating the single `image` so the layout never breaks.
-  const galleryImages: string[] =
-    (project as any).gallery && (project as any).gallery.length >= 2
+  // 1. Ambil coverSlides khusus untuk StackedGallery Atas.
+  // Jika coverSlides tidak diisi di data, gunakan gallery (maksimal 5 item), atau fallback ke image tunggal.
+  const heroSlides: string[] =
+    (project as any).coverSlides && (project as any).coverSlides.length > 0
+      ? (project as any).coverSlides
+      : (project as any).gallery && (project as any).gallery.length >= 2
       ? (project as any).gallery.slice(0, 5)
       : Array(5).fill(project.image);
 
   return (
     <div className="pb-48 sm:pb-32 w-full">
-      {/* Hero Gallery Section */}
+      {/* Hero Gallery Section (Menampilkan Poster Slide) */}
       <div className="relative w-full bg-brand-slate-100">
-        <StackedGallery images={galleryImages} alt={project.title} />
+        <StackedGallery images={heroSlides} alt={project.title} />
       </div>
 
       {/* Main Content */}
@@ -335,7 +329,7 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
           </div>
         </div>
 
-        {/* Dynamic Masonry Gallery */}
+        {/* Dynamic Masonry Gallery (Menampilkan Seluruh Screenshot di Bawah) */}
         <ProjectGallery images={project.gallery} />
       </main>
 

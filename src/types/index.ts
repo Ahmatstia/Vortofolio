@@ -20,6 +20,7 @@ export interface Project {
   fullDescription: string;
   techStack: string[];
   highlights: ProjectHighlight[];
+  coverSlides?: string[];
   gallery?: string[];
   liveUrl?: string;
   demoVideoUrl?: string; // URL video YouTube, e.g. 'https://www.youtube.com/watch?v=XXXXXXX'
