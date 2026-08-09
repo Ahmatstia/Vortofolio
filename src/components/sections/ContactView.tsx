@@ -50,181 +50,221 @@ export const ContactView: React.FC = () => {
     }
   };
 
+  /* Data media sosial dengan link baru & SVG logo resmi */
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      href: 'https://github.com/Ahmatstia',
+      title: 'GitHub Profile',
+      icon: (
+        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+        </svg>
+      )
+    },
+    {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/ahmat-setiadi-877b04262/',
+      title: 'LinkedIn Profile',
+      icon: (
+        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg>
+      )
+    },
+    {
+      name: 'Instagram',
+      href: 'https://www.instagram.com/lexanova.official?igsh=djNnaXpyZTYzMWZz',
+      title: 'Instagram Profile',
+      icon: (
+        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+      )
+    },
+    {
+      name: 'TikTok',
+      href: 'https://www.tiktok.com/@lexanova_?is_from_webapp=1&sender_device=pc',
+      title: 'TikTok Profile',
+      icon: (
+        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.57-1.33 1.54-1.32 2.54.01 1.08.62 2.07 1.58 2.54.91.46 2.04.42 2.93-.09.85-.5 1.39-1.43 1.41-2.42.04-4.8.01-9.6.01-14.4z" />
+        </svg>
+      )
+    }
+  ];
+
   return (
     <PageWrapper>
-    <div className="flex-grow px-4 sm:px-8 mt-6 sm:mt-12 max-w-3xl mx-auto w-full pb-28">
-      {/* Header Section */}
-      <Reveal variants={slideInLeft}>
-      <section className="mb-10 sm:mb-14">
-        <div className="inline-flex items-center gap-2 w-fit mb-3">
-          <span className="w-8 h-px bg-brand-accent" />
-          <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold">
-            HUBUNGI SAYA
-          </span>
-        </div>
-        <h1 className="font-garamond text-4xl sm:text-6xl text-brand-text font-bold mb-4 tracking-tight">
-          Mari Bangun <span className="italic font-normal text-brand-text-muted-alt">Sesuatu</span>
-        </h1>
-        <p className="font-hanken text-base sm:text-lg text-brand-text-muted leading-relaxed max-w-xl">
-          Baik Anda memiliki proyek spesifik atau sekadar ingin menjajaki kemungkinan, saya siap berkolaborasi. Kirimkan pesan di bawah ini dan saya akan segera membalasnya.
-        </p>
-      </section>
-      </Reveal>
-
-      {/* Form Section */}
-      <Reveal delay={0.1}>
-      <section className="mb-14 bg-brand-surface rounded-[24px] p-6 sm:p-10 border border-brand-border/60 shadow-[0_12px_36px_rgba(15,23,42,0.08)] relative overflow-hidden">
-        <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand-accent/8 rounded-full blur-2xl pointer-events-none" />
-
-        {submitted ? (
-          <div className="text-center py-8 relative z-10">
-            <div className="w-16 h-16 rounded-full bg-brand-accent/10 text-brand-accent mx-auto flex items-center justify-center mb-4">
-              <span className="material-symbols-outlined text-3xl">check_circle</span>
+      <div className="flex-grow px-4 sm:px-8 mt-6 sm:mt-12 max-w-3xl mx-auto w-full pb-28">
+        {/* Header Section */}
+        <Reveal variants={slideInLeft}>
+          <section className="mb-10 sm:mb-14">
+            <div className="inline-flex items-center gap-2 w-fit mb-3">
+              <span className="w-8 h-px bg-brand-accent" />
+              <span className="font-hanken text-xs uppercase tracking-widest text-brand-accent font-bold">
+                HUBUNGI SAYA
+              </span>
             </div>
-            <h3 className="font-garamond text-2xl font-bold text-brand-text mb-2">
-              Pesan Terkirim
-            </h3>
-            <p className="font-hanken text-sm text-brand-text-muted mb-6">
-              Terima kasih telah menghubungi! Saya akan membalas email Anda dalam waktu maksimal 24 jam.
+            <h1 className="font-garamond text-4xl sm:text-6xl text-brand-text font-bold mb-4 tracking-tight">
+              Mari Bangun <span className="italic font-normal text-brand-text-muted-alt">Sesuatu</span>
+            </h1>
+            <p className="font-hanken text-base sm:text-lg text-brand-text-muted leading-relaxed max-w-xl">
+              Baik Anda memiliki proyek spesifik atau sekadar ingin menjajaki kemungkinan, saya siap berkolaborasi. Kirimkan pesan di bawah ini dan saya akan segera membalasnya.
             </p>
-            <button
-              onClick={() => setSubmitted(false)}
-              className="bg-brand-accent text-white font-hanken text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:bg-brand-accent-hover transition-all cursor-pointer"
-            >
-              Kirim Pesan Lagi
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
-            <div className="relative">
-              <label
-                htmlFor="name"
-                className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
-                  focusedField === 'name' || formData.name
-                    ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
-                    : 'top-3 text-base text-brand-text-muted/60'
-                }`}
-              >
-                Nama Anda
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                onFocus={() => setFocusedField('name')}
-                onBlur={() => setFocusedField(null)}
-                required
-                className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none"
-              />
+          </section>
+        </Reveal>
+
+        {/* Form Section */}
+        <Reveal delay={0.1}>
+          <section className="mb-14 bg-brand-surface rounded-[24px] p-6 sm:p-10 border border-brand-border/60 shadow-[0_12px_36px_rgba(15,23,42,0.08)] relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand-accent/8 rounded-full blur-2xl pointer-events-none" />
+
+            {submitted ? (
+              <div className="text-center py-8 relative z-10">
+                <div className="w-16 h-16 rounded-full bg-brand-accent/10 text-brand-accent mx-auto flex items-center justify-center mb-4">
+                  <span className="material-symbols-outlined text-3xl">check_circle</span>
+                </div>
+                <h3 className="font-garamond text-2xl font-bold text-brand-text mb-2">
+                  Pesan Terkirim
+                </h3>
+                <p className="font-hanken text-sm text-brand-text-muted mb-6">
+                  Terima kasih telah menghubungi! Saya akan membalas email Anda dalam waktu maksimal 24 jam.
+                </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="bg-brand-accent text-white font-hanken text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:bg-brand-accent-hover transition-all cursor-pointer"
+                >
+                  Kirim Pesan Lagi
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
+                <div className="relative">
+                  <label
+                    htmlFor="name"
+                    className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
+                      focusedField === 'name' || formData.name
+                        ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
+                        : 'top-3 text-base text-brand-text-muted/60'
+                    }`}
+                  >
+                    Nama Anda
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    onFocus={() => setFocusedField('name')}
+                    onBlur={() => setFocusedField(null)}
+                    required
+                    className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none"
+                  />
+                </div>
+
+                <div className="relative">
+                  <label
+                    htmlFor="email"
+                    className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
+                      focusedField === 'email' || formData.email
+                        ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
+                        : 'top-3 text-base text-brand-text-muted/60'
+                    }`}
+                  >
+                    Email Anda
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onFocus={() => setFocusedField('email')}
+                    onBlur={() => setFocusedField(null)}
+                    required
+                    className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none"
+                  />
+                </div>
+
+                <div className="relative">
+                  <label
+                    htmlFor="message"
+                    className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
+                      focusedField === 'message' || formData.message
+                        ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
+                        : 'top-3 text-base text-brand-text-muted/60'
+                    }`}
+                  >
+                    Bagaimana kita bisa bekerja sama?
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onFocus={() => setFocusedField('message')}
+                    onBlur={() => setFocusedField(null)}
+                    required
+                    className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="group relative w-full overflow-hidden bg-brand-accent text-white font-hanken text-sm font-semibold py-4 rounded-full shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer disabled:opacity-70"
+                >
+                  {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
+                  {!isSubmitting && (
+                    <span className="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:translate-x-1">
+                      send
+                    </span>
+                  )}
+                </button>
+              </form>
+            )}
+          </section>
+        </Reveal>
+
+        {/* Social Links */}
+        <Reveal delay={0.2}>
+          <section className="mb-14 text-center">
+            <div className="flex items-center gap-3 mb-8">
+              <span className="h-px flex-grow bg-brand-border/60" />
+              <p className="font-hanken text-xs text-brand-text-muted uppercase tracking-widest font-bold whitespace-nowrap">
+                ATAU HUBUNGI LANGSUNG
+              </p>
+              <span className="h-px flex-grow bg-brand-border/60" />
             </div>
-
-            <div className="relative">
-              <label
-                htmlFor="email"
-                className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
-                  focusedField === 'email' || formData.email
-                    ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
-                    : 'top-3 text-base text-brand-text-muted/60'
-                }`}
-              >
-                Email Anda
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                onFocus={() => setFocusedField('email')}
-                onBlur={() => setFocusedField(null)}
-                required
-                className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none"
-              />
+            
+            <div className="flex justify-center items-center gap-4 flex-wrap">
+              {socialLinks.map(({ name, href, title, icon }) => (
+                <a
+                  key={name}
+                  href={href}
+                  title={title}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-white hover:bg-brand-accent transition-all duration-300 active:scale-90 shadow-sm hover:shadow-[0_6px_16px_rgba(181,87,59,0.3)]"
+                >
+                  {icon}
+                </a>
+              ))}
             </div>
+          </section>
+        </Reveal>
 
-            <div className="relative">
-              <label
-                htmlFor="message"
-                className={`absolute left-0 transition-all duration-200 font-hanken pointer-events-none ${
-                  focusedField === 'message' || formData.message
-                    ? '-top-4 text-[10px] uppercase tracking-widest font-bold text-brand-accent'
-                    : 'top-3 text-base text-brand-text-muted/60'
-                }`}
-              >
-                Bagaimana kita bisa bekerja sama?
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                onFocus={() => setFocusedField('message')}
-                onBlur={() => setFocusedField(null)}
-                required
-                className="block w-full bg-transparent border-0 border-b-2 border-brand-border text-brand-text font-hanken text-base py-3 px-0 focus:ring-0 focus:border-brand-accent transition-colors duration-300 outline-none resize-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="group relative w-full overflow-hidden bg-brand-accent text-white font-hanken text-sm font-semibold py-4 rounded-full shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer disabled:opacity-70"
-            >
-              {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
-              {!isSubmitting && (
-                <span className="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:translate-x-1">
-                  send
-                </span>
-              )}
-            </button>
-          </form>
-        )}
-      </section>
-      </Reveal>
-
-      {/* Social Links */}
-      <Reveal delay={0.2}>
-      <section className="mb-14 text-center">
-        <div className="flex items-center gap-3 mb-8">
-          <span className="h-px flex-grow bg-brand-border/60" />
-          <p className="font-hanken text-xs text-brand-text-muted uppercase tracking-widest font-bold whitespace-nowrap">
-            ATAU HUBUNGI LANGSUNG
-          </p>
-          <span className="h-px flex-grow bg-brand-border/60" />
-        </div>
-        <div className="flex justify-center gap-4">
-          {[
-            { href: 'mailto:ahmtstia@example.com', icon: 'mail', title: 'Email ahmtstia' },
-            { href: 'https://linkedin.com', icon: 'work', title: 'LinkedIn Profile' },
-            { href: 'https://github.com', icon: 'code', title: 'GitHub Repositories' },
-            { href: 'https://twitter.com', icon: 'chat', title: 'Chat & Socials' },
-          ].map(({ href, icon, title }) => (
-            <a
-              key={icon}
-              href={href}
-              title={title}
-              target={href.startsWith('http') ? '_blank' : undefined}
-              rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="w-12 h-12 rounded-full border border-brand-border bg-brand-bg flex items-center justify-center text-brand-text-muted hover:border-brand-accent hover:text-white hover:bg-brand-accent transition-all duration-300 active:scale-90 shadow-sm hover:shadow-[0_6px_16px_rgba(181,87,59,0.3)]"
-            >
-              <span className="material-symbols-outlined text-xl">{icon}</span>
-            </a>
-          ))}
-        </div>
-      </section>
-      </Reveal>
-
-      <Reveal delay={0.3}>
-      <footer className="text-center pt-4">
-        <p className="font-garamond italic text-brand-text-muted/80 text-base sm:text-lg">
-          Merancang pengalaman digital dengan sepenuh hati.
-        </p>
-      </footer>
-      </Reveal>
-    </div>
+        <Reveal delay={0.3}>
+          <footer className="text-center pt-4">
+            <p className="font-garamond italic text-brand-text-muted/80 text-base sm:text-lg">
+              Merancang pengalaman digital dengan sepenuh hati.
+            </p>
+          </footer>
+        </Reveal>
+      </div>
     </PageWrapper>
   );
 };
