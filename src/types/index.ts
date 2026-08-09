@@ -22,6 +22,7 @@ export interface Project {
   highlights: ProjectHighlight[];
   gallery?: string[];
   liveUrl?: string;
+  demoVideoUrl?: string; // URL video YouTube, e.g. 'https://www.youtube.com/watch?v=XXXXXXX'
   caseStudyUrl?: string;
   featured?: boolean;
 }
