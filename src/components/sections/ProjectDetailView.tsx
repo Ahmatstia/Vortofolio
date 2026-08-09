@@ -234,102 +234,102 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
       </div>
 
       {/* Main Content */}
-<main className="px-4 sm:px-8 max-w-4xl mx-auto mt-6 sm:mt-12 relative z-10">
-        
-        {/* Title Card */}
-        <div className="bg-brand-bg p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-[24px] shadow-[0_8px_30px_rgba(15,23,42,0.1)] mb-8 sm:mb-12 border border-brand-border">
-          <span className="font-hanken text-[10px] sm:text-xs uppercase tracking-widest text-brand-accent font-bold block mb-1 sm:mb-2">
-            RINGKASAN PROYEK
-          </span>
-          <h1 className="font-garamond text-xl sm:text-3xl md:text-4xl text-brand-text font-bold mb-4 sm:mb-8 leading-snug tracking-tight">
-            {project.title}
-          </h1>
-
-          {/* Grid Informasi Klien, Peran, Tahun */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-4 border-t border-brand-border pt-4 sm:pt-6 mb-6 sm:mb-8">
-            {[
-              { label: 'Klien', value: project.client, icon: 'business_center' },
-              { label: 'Peran', value: project.role, icon: 'badge' },
-              { label: 'Tahun', value: project.year, icon: 'calendar_today' },
-            ].map(({ label, value, icon }) => (
-              <div key={label} className="min-w-0">
-                <span className="flex items-center gap-1 font-hanken text-[9px] sm:text-xs uppercase tracking-wider text-brand-text-muted font-bold mb-0.5 sm:mb-1.5 truncate">
-                  <span className="material-symbols-outlined text-[13px] sm:text-sm text-brand-accent/70 shrink-0">{icon}</span>
-                  {label}
+      <main className="px-4 sm:px-8 max-w-4xl mx-auto mt-6 sm:mt-12 relative z-10">
+              
+              {/* Title Card */}
+              <div className="bg-brand-bg p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-[24px] shadow-[0_8px_30px_rgba(15,23,42,0.1)] mb-8 sm:mb-12 border border-brand-border">
+                <span className="font-hanken text-[10px] sm:text-xs uppercase tracking-widest text-brand-accent font-bold block mb-1 sm:mb-2">
+                  RINGKASAN PROYEK
                 </span>
-                <span className="font-hanken text-xs sm:text-base font-semibold text-brand-text block truncate">
-                  {value}
-                </span>
-              </div>
-            ))}
-          </div>
+                <h1 className="font-garamond text-xl sm:text-3xl md:text-4xl text-brand-text font-bold mb-4 sm:mb-8 leading-snug tracking-tight">
+                  {project.title}
+                </h1>
 
-          {/* Action Buttons */}
-          <div className="flex flex-row gap-2.5 sm:gap-3">
-            <button
-              onClick={() => setLiveModal({ isOpen: true, mode: 'live' })}
-              className="flex-1 px-3 py-2.5 md:px-4 md:py-3 rounded-xl bg-brand-accent text-white font-hanken text-xs sm:text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-md active:scale-95 cursor-pointer text-center flex items-center justify-center gap-1.5 sm:gap-2"
-            >
-              Tonton Demo
-            </button>
-            <button
-              onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}
-              className="flex-1 px-3 py-2.5 md:px-4 md:py-3 rounded-xl bg-brand-bg text-brand-text border border-brand-border font-hanken text-xs sm:text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
-            >
-              Studi Kasus
-            </button>
-          </div>
-        </div>
-
-        {/* Deskripsi Ringkas */}
-        <div className="mb-8 sm:mb-16 relative pl-4 sm:pl-6 border-l-2 border-brand-accent/40">
-          <p className="font-hanken text-base sm:text-xl text-brand-text-muted leading-relaxed font-normal">
-            {project.fullDescription}
-          </p>
-        </div>
-
-        {/* Tech Stack */}
-        <div className="mb-8 sm:mb-16">
-          <h3 className="font-hanken text-[11px] sm:text-xs text-brand-text-muted font-bold mb-3 sm:mb-4 uppercase tracking-widest flex items-center gap-2">
-            <span className="w-4 h-px bg-brand-accent" />
-            Teknologi
-          </h3>
-          <div className="flex overflow-x-auto hide-scrollbar space-x-2 sm:space-x-3 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
-            {project.techStack.map((tech) => (
-              <div key={tech} className="flex-none px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-brand-accent/10 border border-brand-accent/20 hover:bg-brand-accent hover:border-brand-accent transition-colors duration-300 cursor-default group">
-                <span className="font-hanken text-xs font-bold text-brand-accent group-hover:text-white transition-colors">{tech}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Sorotan Utama (Key Highlights) */}
-        <div className="mb-12 sm:mb-16">
-          <h3 className="font-hanken text-[11px] sm:text-xs text-brand-text-muted font-bold mb-4 sm:mb-6 uppercase tracking-widest flex items-center gap-2">
-            <span className="w-4 h-px bg-brand-accent" />
-            Sorotan Utama
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            {project.highlights.map((highlight, idx) => (
-              <div key={idx} className="relative bg-brand-surface p-4 sm:p-8 rounded-xl sm:rounded-[20px] border border-brand-border shadow-sm hover:shadow-md transition-all duration-300 group">
-                <span className="absolute top-4 right-5 sm:top-5 sm:right-6 font-garamond text-2xl sm:text-3xl font-bold text-brand-border/70 group-hover:text-brand-accent/20 transition-colors">
-                  {String(idx + 1).padStart(2, '0')}
-                </span>
-                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brand-bg flex items-center justify-center text-brand-accent shadow-sm group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300 shrink-0">
-                    <span className="material-symbols-outlined text-xl sm:text-2xl">{highlight.icon}</span>
-                  </div>
-                  <h4 className="font-garamond text-lg sm:text-2xl font-bold text-brand-text leading-tight pr-6">
-                    {highlight.title}
-                  </h4>
+                {/* Grid Informasi Klien, Peran, Tahun */}
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 border-t border-brand-border pt-4 sm:pt-6 mb-6 sm:mb-8">
+                  {[
+                    { label: 'Klien', value: project.client, icon: 'business_center' },
+                    { label: 'Peran', value: project.role, icon: 'badge' },
+                    { label: 'Tahun', value: project.year, icon: 'calendar_today' },
+                  ].map(({ label, value, icon }) => (
+                    <div key={label} className="min-w-0">
+                      <span className="flex items-center gap-1 font-hanken text-[9px] sm:text-xs uppercase tracking-wider text-brand-text-muted font-bold mb-0.5 sm:mb-1.5 truncate">
+                        <span className="material-symbols-outlined text-[13px] sm:text-sm text-brand-accent/70 shrink-0">{icon}</span>
+                        {label}
+                      </span>
+                      <span className="font-hanken text-xs sm:text-base font-semibold text-brand-text block truncate">
+                        {value}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-                <p className="font-hanken text-xs sm:text-base text-brand-text-muted leading-relaxed">
-                  {highlight.description}
+
+                {/* Action Buttons */}
+                <div className="flex flex-row gap-2.5 sm:gap-3">
+                  <button
+                    onClick={() => setLiveModal({ isOpen: true, mode: 'live' })}
+                    className="flex-1 px-3 py-2.5 md:px-4 md:py-3 rounded-xl bg-brand-accent text-white font-hanken text-xs sm:text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-md active:scale-95 cursor-pointer text-center flex items-center justify-center gap-1.5 sm:gap-2"
+                  >
+                    Tonton Demo
+                  </button>
+                  <button
+                    onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}
+                    className="flex-1 px-3 py-2.5 md:px-4 md:py-3 rounded-xl bg-brand-bg text-brand-text border border-brand-border font-hanken text-xs sm:text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+                  >
+                    Studi Kasus
+                  </button>
+                </div>
+              </div>
+
+              {/* Deskripsi Ringkas */}
+              <div className="mb-8 sm:mb-16 relative pl-4 sm:pl-6 border-l-2 border-brand-accent/40">
+                <p className="font-hanken text-base sm:text-xl text-brand-text-muted leading-relaxed font-normal">
+                  {project.fullDescription}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
+
+              {/* Tech Stack */}
+              <div className="mb-8 sm:mb-16">
+                <h3 className="font-hanken text-[11px] sm:text-xs text-brand-text-muted font-bold mb-3 sm:mb-4 uppercase tracking-widest flex items-center gap-2">
+                  <span className="w-4 h-px bg-brand-accent" />
+                  Teknologi
+                </h3>
+                <div className="flex overflow-x-auto hide-scrollbar space-x-2 sm:space-x-3 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+                  {project.techStack.map((tech) => (
+                    <div key={tech} className="flex-none px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-brand-accent/10 border border-brand-accent/20 hover:bg-brand-accent hover:border-brand-accent transition-colors duration-300 cursor-default group">
+                      <span className="font-hanken text-xs font-bold text-brand-accent group-hover:text-white transition-colors">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sorotan Utama (Key Highlights) */}
+              <div className="mb-12 sm:mb-16">
+                <h3 className="font-hanken text-[11px] sm:text-xs text-brand-text-muted font-bold mb-4 sm:mb-6 uppercase tracking-widest flex items-center gap-2">
+                  <span className="w-4 h-px bg-brand-accent" />
+                  Sorotan Utama
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  {project.highlights.map((highlight, idx) => (
+                    <div key={idx} className="relative bg-brand-surface p-4 sm:p-8 rounded-xl sm:rounded-[20px] border border-brand-border shadow-sm hover:shadow-md transition-all duration-300 group">
+                      <span className="absolute top-4 right-5 sm:top-5 sm:right-6 font-garamond text-2xl sm:text-3xl font-bold text-brand-border/70 group-hover:text-brand-accent/20 transition-colors">
+                        {String(idx + 1).padStart(2, '0')}
+                      </span>
+                      <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brand-bg flex items-center justify-center text-brand-accent shadow-sm group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300 shrink-0">
+                          <span className="material-symbols-outlined text-xl sm:text-2xl">{highlight.icon}</span>
+                        </div>
+                        <h4 className="font-garamond text-lg sm:text-2xl font-bold text-brand-text leading-tight pr-6">
+                          {highlight.title}
+                        </h4>
+                      </div>
+                      <p className="font-hanken text-xs sm:text-base text-brand-text-muted leading-relaxed">
+                        {highlight.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
         {/* Dynamic Masonry Gallery (Menampilkan Seluruh Screenshot di Bawah) */}
         <ProjectGallery images={project.gallery} />
