@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Project } from '@/types';
 import { LiveSiteModal } from '@/components/modals/LiveSiteModal';
@@ -137,12 +137,19 @@ const StackedGallery: React.FC<StackedGalleryProps> = ({ images, alt }) => {
   );
 };
 
+import { createPortal } from 'react-dom';
+
 /* ---------------------------------------------------------------------- */
 /* Masonry Gallery with Lightbox                                          */
 /* ---------------------------------------------------------------------- */
 
 const ProjectGallery: React.FC<{ images?: string[] }> = ({ images }) => {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // If there are 5 or fewer images, they are already shown in the top hero slider.
   // We'll show the gallery section anyway to display them all at once for closer inspection.
@@ -180,10 +187,10 @@ const ProjectGallery: React.FC<{ images?: string[] }> = ({ images }) => {
         })}
       </div>
 
-      {/* Lightbox Modal */}
-      {selectedImg && (
+      {/* Lightbox Modal (Portaled to document.body to escape stacking contexts) */}
+      {selectedImg && mounted && createPortal(
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-10 cursor-zoom-out"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-10 cursor-zoom-out"
           onClick={() => setSelectedImg(null)}
         >
           <img 
@@ -197,7 +204,8 @@ const ProjectGallery: React.FC<{ images?: string[] }> = ({ images }) => {
           >
             <span className="material-symbols-outlined block text-2xl">close</span>
           </button>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
@@ -242,22 +250,41 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
             {project.title}
           </h1>
 
-          <div className="grid grid-cols-3 gap-4 border-t border-brand-border pt-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 border-t border-brand-border pt-6 mb-8">
             {[
               { label: 'Klien', value: project.client, icon: 'business_center' },
               { label: 'Peran', value: project.role, icon: 'badge' },
               { label: 'Tahun', value: project.year, icon: 'calendar_today' },
             ].map(({ label, value, icon }) => (
               <div key={label}>
-                <span className="flex items-center gap-1.5 font-hanken text-[11px] sm:text-xs uppercase tracking-wider text-brand-text-muted font-bold mb-1.5">
-                  <span className="material-symbols-outlined text-sm text-brand-accent/70">{icon}</span>
+                <span className="flex items-center gap-1 sm:gap-1.5 font-hanken text-[10px] sm:text-xs uppercase tracking-wider text-brand-text-muted font-bold mb-1 sm:mb-1.5">
+                  <span className="material-symbols-outlined text-[14px] sm:text-sm text-brand-accent/70">{icon}</span>
                   {label}
                 </span>
-                <span className="font-hanken text-sm sm:text-base font-semibold text-brand-text">
+                <span className="font-hanken text-xs sm:text-base font-semibold text-brand-text">
                   {value}
                 </span>
               </div>
             ))}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-row gap-3">
+            <button
+              onClick={() => setLiveModal({ isOpen: true, mode: 'live' })}
+              className="group flex-1 px-4 py-3.5 rounded-full bg-brand-accent text-white font-hanken text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] active:scale-95 cursor-pointer text-center flex items-center justify-center gap-2"
+            >
+              Kunjungi Situs
+              <span className="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">
+                arrow_outward
+              </span>
+            </button>
+            <button
+              onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}
+              className="flex-1 px-4 py-3.5 rounded-full bg-brand-bg text-brand-text border border-brand-border font-hanken text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+            >
+              Lihat Studi Kasus
+            </button>
           </div>
         </div>
 
@@ -314,28 +341,6 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
         {/* Dynamic Masonry Gallery */}
         <ProjectGallery images={project.gallery} />
       </main>
-
-      {/* Sticky Bottom CTA Bar — lifted above the mobile bottom nav bar
-          (adjust the bottom-[76px] value to match your navbar's actual height) */}
-      <div className="fixed bottom-[76px] sm:bottom-0 left-0 w-full bg-brand-bg/95 backdrop-blur-lg border-t border-brand-border px-4 sm:px-8 py-4 z-40 shadow-[0_-8px_28px_rgba(15,23,42,0.1)]">
-        <div className="max-w-4xl mx-auto flex flex-row gap-2 sm:gap-4 justify-center sm:justify-end items-center">
-          <button
-            onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}
-            className="flex-1 sm:flex-none px-3 sm:px-8 py-3 sm:py-3.5 rounded-full bg-brand-bg text-brand-text border border-brand-border font-hanken text-[11px] sm:text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
-          >
-            Lihat Studi Kasus
-          </button>
-          <button
-            onClick={() => setLiveModal({ isOpen: true, mode: 'live' })}
-            className="group flex-1 sm:flex-none px-3 sm:px-8 py-3 sm:py-3.5 rounded-full bg-brand-accent text-white font-hanken text-[11px] sm:text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] active:scale-95 cursor-pointer text-center flex items-center justify-center gap-1 sm:gap-2"
-          >
-            Kunjungi Situs
-            <span className="material-symbols-outlined text-[16px] sm:text-lg transition-transform duration-300 group-hover:translate-x-1">
-              arrow_outward
-            </span>
-          </button>
-        </div>
-      </div>
 
       <LiveSiteModal
         isOpen={liveModal.isOpen}
