@@ -263,18 +263,18 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-row gap-3">
+          <div className="flex flex-row gap-2.5 sm:gap-3">
             <button
               onClick={() => setLiveModal({ isOpen: true, mode: 'live' })}
-              className="group flex-1 px-4 py-3.5 rounded-full bg-brand-accent text-white font-hanken text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] active:scale-95 cursor-pointer text-center flex items-center justify-center gap-2"
+              className="flex-1 px-3 py-2.5 md:px-4 md:py-3 rounded-xl bg-brand-accent text-white font-hanken text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-md hover:shadow-lg active:scale-95 cursor-pointer text-center flex items-center justify-center gap-2"
             >
               Tonton Demo
             </button>
             <button
               onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}
-              className="flex-1 px-4 py-3.5 rounded-full bg-brand-bg text-brand-text border border-brand-border font-hanken text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+              className="flex-1 px-3 py-2.5 md:px-4 md:py-3 rounded-xl bg-brand-bg text-brand-text border border-brand-border font-hanken text-sm font-semibold hover:bg-brand-surface hover:border-brand-text/20 transition-all shadow-sm active:scale-95 cursor-pointer text-center"
             >
-              Lihat Studi Kasus
+              Studi Kasus
             </button>
           </div>
         </div>
