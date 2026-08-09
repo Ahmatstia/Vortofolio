@@ -229,12 +229,14 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
                 <span className="absolute top-5 right-6 font-garamond text-3xl font-bold text-brand-border/70 group-hover:text-brand-accent/20 transition-colors">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
-                <div className="w-12 h-12 rounded-full bg-brand-bg flex items-center justify-center mb-5 text-brand-accent shadow-sm group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300">
-                  <span className="material-symbols-outlined text-2xl">{highlight.icon}</span>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-brand-bg flex items-center justify-center text-brand-accent shadow-sm group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300 shrink-0">
+                    <span className="material-symbols-outlined text-2xl">{highlight.icon}</span>
+                  </div>
+                  <h4 className="font-garamond text-2xl font-bold text-brand-text leading-tight">
+                    {highlight.title}
+                  </h4>
                 </div>
-                <h4 className="font-garamond text-2xl font-bold text-brand-text mb-2">
-                  {highlight.title}
-                </h4>
                 <p className="font-hanken text-sm sm:text-base text-brand-text-muted leading-relaxed">
                   {highlight.description}
                 </p>

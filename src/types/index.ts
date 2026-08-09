@@ -15,6 +15,7 @@ export interface Project {
   category: 'WEB' | 'MOBILE' | 'UI' | 'AI / ML' ;
   tags: string[];
   image: string;
+  previewVideo?: string; // path ke /public, e.g. '/videos/project-name.mp4'
   shortDescription: string;
   fullDescription: string;
   techStack: string[];

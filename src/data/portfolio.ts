@@ -14,6 +14,7 @@ export const PROJECTS: Project[] = [
     category: 'AI / ML',
     tags: ['PYTHON', 'CNN', 'DEEP LEARNING', 'COMPUTER VISION'],
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
+    // previewVideo: '/videos/cataract-detection.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Sistem klasifikasi citra medis berbasis Convolutional Neural Network untuk mendeteksi katarak dan kondisi mata normal.',
     fullDescription: 'Penelitian dan pengembangan model Deep Learning menggunakan arsitektur CNN untuk menganalisis citra mata. Sistem mampu membedakan kondisi mata yang mengidap katarak dan mata normal secara akurat untuk membantu proses penapisan medis awal.',
     techStack: ['Python', 'TensorFlow/Keras', 'OpenCV', 'CNN', 'NumPy'],
@@ -33,6 +34,7 @@ export const PROJECTS: Project[] = [
     category: 'MOBILE',
     tags: ['REACT NATIVE / EXPO', 'FIREBASE', 'TYPESCRIPT'],
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop',
+    // previewVideo: '/videos/mymoney-app.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Aplikasi mobile manajemen keuangan pribadi dengan pencatatan transaksi cerdas dan Firestore.',
     fullDescription: 'Aplikasi mobile yang dirancang untuk membantu pengguna mengelola pemasukan dan pengeluaran harian. Menggunakan Cloud Firestore sebagai database terintegrasi secara real-time.',
     techStack: ['React Native', 'Expo', 'Firebase Firestore', 'TypeScript', 'Tailwind'],
@@ -52,6 +54,7 @@ export const PROJECTS: Project[] = [
     category: 'MOBILE',
     tags: ['FLUTTER', 'DART', 'REST API'],
     image: 'https://images.unsplash.com/photo-1556742049-0a670f4a4591?q=80&w=1200&auto=format&fit=crop',
+    // previewVideo: '/videos/pos-flutter.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Aplikasi Kasir / POS berbasis mobile dengan pengelolaan katalog produk dan riwayat transaksi.',
     fullDescription: 'Sistem aplikasi kasir bergerak yang dibangun menggunakan Flutter. Memudahkan pencatatan penjualan cepat, inventaris barang, serta pencetakan struk belanja transaksi secara efisien.',
     techStack: ['Flutter', 'Dart', 'SQLite', 'REST API', 'Provider/Bloc'],
@@ -71,6 +74,7 @@ export const PROJECTS: Project[] = [
     category: 'WEB',
     tags: ['PYTHON', 'BEAUTIFULSOUP', 'SELENIUM'],
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
+    // previewVideo: '/videos/data-scraping.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Bot dan skrip otomasi ekstraksi data terstruktur dari berbagai situs web.',
     fullDescription: 'Sistem ekstraksi data otomatis yang dirancang menggunakan Python untuk mengumpulkan, membersihkan, dan menyimpan informasi publik dari situs web tujuan menjadi format terstruktur (JSON/CSV).',
     techStack: ['Python', 'BeautifulSoup', 'Selenium', 'Pandas'],
