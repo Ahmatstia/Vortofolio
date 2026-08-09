@@ -14,6 +14,14 @@ export const PROJECTS: Project[] = [
     category: 'AI / ML',
     tags: ['PYTHON', 'CNN', 'DEEP LEARNING', 'COMPUTER VISION'],
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1576091160550-2173ff9e9e9c?q=80&w=800&auto=format&fit=crop', // landscape
+      'https://images.unsplash.com/photo-1551076805-e18690c5e53b?q=80&w=600&auto=format&fit=crop', // portrait
+      'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=1000&auto=format&fit=crop', // landscape
+      'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=700&auto=format&fit=crop', // portrait
+      'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=900&auto=format&fit=crop', // landscape
+      'https://images.unsplash.com/photo-1614064010834-58a436940a45?q=80&w=600&auto=format&fit=crop' // portrait
+    ],
     // previewVideo: '/videos/cataract-detection.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Sistem klasifikasi citra medis berbasis Convolutional Neural Network untuk mendeteksi katarak dan kondisi mata normal.',
     fullDescription: 'Penelitian dan pengembangan model Deep Learning menggunakan arsitektur CNN untuk menganalisis citra mata. Sistem mampu membedakan kondisi mata yang mengidap katarak dan mata normal secara akurat untuk membantu proses penapisan medis awal.',
@@ -34,6 +42,13 @@ export const PROJECTS: Project[] = [
     category: 'MOBILE',
     tags: ['REACT NATIVE / EXPO', 'FIREBASE', 'TYPESCRIPT'],
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1616077168079-7e09a6a3b2b8?q=80&w=500&auto=format&fit=crop', // portrait
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=900&auto=format&fit=crop', // landscape
+      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=500&auto=format&fit=crop', // portrait
+      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=900&auto=format&fit=crop', // landscape
+      'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=500&auto=format&fit=crop' // portrait
+    ],
     // previewVideo: '/videos/mymoney-app.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Aplikasi mobile manajemen keuangan pribadi dengan pencatatan transaksi cerdas dan Firestore.',
     fullDescription: 'Aplikasi mobile yang dirancang untuk membantu pengguna mengelola pemasukan dan pengeluaran harian. Menggunakan Cloud Firestore sebagai database terintegrasi secara real-time.',

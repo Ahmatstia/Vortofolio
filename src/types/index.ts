@@ -20,6 +20,7 @@ export interface Project {
   fullDescription: string;
   techStack: string[];
   highlights: ProjectHighlight[];
+  gallery?: string[];
   liveUrl?: string;
   caseStudyUrl?: string;
   featured?: boolean;

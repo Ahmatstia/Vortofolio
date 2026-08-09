@@ -138,6 +138,72 @@ const StackedGallery: React.FC<StackedGalleryProps> = ({ images, alt }) => {
 };
 
 /* ---------------------------------------------------------------------- */
+/* Masonry Gallery with Lightbox                                          */
+/* ---------------------------------------------------------------------- */
+
+const ProjectGallery: React.FC<{ images?: string[] }> = ({ images }) => {
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+
+  // If there are 5 or fewer images, they are already shown in the top hero slider.
+  // We'll show the gallery section anyway to display them all at once for closer inspection.
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div className="mb-20">
+      <h3 className="font-hanken text-xs text-brand-text-muted font-bold mb-8 uppercase tracking-widest flex items-center gap-2">
+        <span className="w-4 h-px bg-brand-accent" />
+        Galeri & Tangkapan Layar
+      </h3>
+      
+      {/* 2 Columns on mobile, 3 on tablet, 4 on desktop */}
+      <div className="columns-2 sm:columns-3 lg:columns-4 gap-3 sm:gap-5 space-y-3 sm:space-y-5">
+        {images.map((src, idx) => {
+          const isOdd = idx % 2 !== 0;
+          const rotateClass = isOdd ? 'group-hover:rotate-2' : 'group-hover:-rotate-2';
+
+          return (
+            <div 
+              key={idx} 
+              className="break-inside-avoid relative overflow-hidden rounded-xl bg-brand-surface border border-brand-border/40 cursor-zoom-in group shadow-sm hover:shadow-xl transition-all duration-500 hover:z-10"
+              onClick={() => setSelectedImg(src)}
+            >
+              <img 
+                src={src} 
+                alt={`Gallery ${idx + 1}`} 
+                loading="lazy"
+                className={`w-full h-auto object-cover transition-all duration-700 ease-out group-hover:scale-110 ${rotateClass}`} 
+              />
+              {/* Interactive overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-brand-accent/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay" />
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Lightbox Modal */}
+      {selectedImg && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-10 cursor-zoom-out"
+          onClick={() => setSelectedImg(null)}
+        >
+          <img 
+            src={selectedImg} 
+            alt="Enlarged view" 
+            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-in zoom-in duration-200" 
+          />
+          <button 
+            className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full backdrop-blur-md transition-all cursor-pointer"
+            onClick={(e) => { e.stopPropagation(); setSelectedImg(null); }}
+          >
+            <span className="material-symbols-outlined block text-2xl">close</span>
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+/* ---------------------------------------------------------------------- */
 /* Project Detail View                                                    */
 /* ---------------------------------------------------------------------- */
 
@@ -244,6 +310,9 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
             ))}
           </div>
         </div>
+
+        {/* Dynamic Masonry Gallery */}
+        <ProjectGallery images={project.gallery} />
       </main>
 
       {/* Sticky Bottom CTA Bar — lifted above the mobile bottom nav bar

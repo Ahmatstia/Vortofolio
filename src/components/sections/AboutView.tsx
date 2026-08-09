@@ -83,7 +83,7 @@ export const AboutView: React.FC = () => {
                 Teknik Informatika
               </p>
               <p className="font-hanken text-xs font-semibold text-brand-text mt-1">
-                Peminatan Sistem Cerdas
+                Ahmat Setiadi
               </p>
             </div>
           </div>
