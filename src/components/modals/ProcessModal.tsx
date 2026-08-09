@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 interface ProcessModalProps {
   isOpen: boolean;
@@ -6,7 +7,13 @@ interface ProcessModalProps {
 }
 
 export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!isOpen || !mounted) return null;
 
   const steps = [
     {
@@ -31,8 +38,8 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
     }
   ];
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+  return createPortal(
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
       <div className="bg-brand-bg w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 border border-brand-border shadow-[0_12px_40px_rgba(15,23,42,0.2)] relative">
         <button
           onClick={onClose}
@@ -76,6 +83,7 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose }) =
           Tutup Ringkasan
         </button>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

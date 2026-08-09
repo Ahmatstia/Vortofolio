@@ -23,6 +23,7 @@ export interface Project {
   gallery?: string[];
   liveUrl?: string;
   demoVideoUrl?: string; // URL video YouTube, e.g. 'https://www.youtube.com/watch?v=XXXXXXX'
+  spotifyUrl?: string; // Link track Spotify, e.g. 'https://open.spotify.com/track/...'
   caseStudyUrl?: string;
   featured?: boolean;
 }

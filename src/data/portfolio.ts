@@ -4,6 +4,8 @@ export const HERO_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuA
 
 export const ABOUT_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuCPbfNXevURvOJpyMKwBAOpYdk24jpV55HFHjEutVvvZ_FjiUKWkT1mMb59qFTTTd5Yzp__xjGslgQRPHHM3lFSsv3V7QMEbHD8LBQgce8jkuaMzmrFTpwIPqciD3hO1_lV6pEGgp0ldaZwKFP70GZvt9sYqldunGvLKbNzemdCC2ZKnEIc6xV-975jH9rRNQNgzgAoKFWxpdadapW4HHL-DeC4AcTG3-wr8NCQ_xY6-q4p-9hV9J3YAA';
 
+export const ABOUT_SPOTIFY_URL = 'https://open.spotify.com/track/6mFkJmJqdDVQ1REhVfGgd1?si=e353f36f7b7848e4';
+
 export const PROJECTS: Project[] = [
   {
     id: 'cataract-detection-cnn',
@@ -58,6 +60,7 @@ export const PROJECTS: Project[] = [
       { title: 'Visualisasi Keuangan', description: 'Ringkasan alokasi dana dan grafik pengeluaran harian/bulanan yang intuitif.', icon: 'pie_chart' }
     ],
     liveUrl: '#',
+    spotifyUrl: 'https://open.spotify.com/track/6mFkJmJqdDVQ1REhVfGgd1?si=e353f36f7b7848e4',
     featured: true,
   },
   {

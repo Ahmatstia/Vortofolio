@@ -3,12 +3,19 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { ABOUT_IMAGE, EXPERIENCES, SKILLS } from '@/data/portfolio';
+import { ABOUT_IMAGE, ABOUT_SPOTIFY_URL, EXPERIENCES, SKILLS } from '@/data/portfolio';
 import { CvModal } from '@/components/modals/CvModal';
 import { ProcessModal } from '@/components/modals/ProcessModal';
 import { PageWrapper, Reveal, StaggerList, StaggerItem, slideInLeft, slideInRight } from '@/components/ui/animations';
 
 import profileImg from '../../../assets/img/profile.png';
+
+/** Extracts Spotify Track ID and returns embed URL */
+function getSpotifyEmbedUrl(url: string): string | null {
+  const match = url.match(/track\/([a-zA-Z0-9]+)/);
+  if (match) return `https://open.spotify.com/embed/track/${match[1]}?utm_source=generator&theme=0`;
+  return null;
+}
 
 export const AboutView: React.FC = () => {
   const router = useRouter();
@@ -29,7 +36,7 @@ export const AboutView: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-garamond text-4xl sm:text-6xl lg:text-7xl text-brand-text font-bold mb-6 leading-[1.05] tracking-tight">
+          <h1 className="font-garamond text-4xl sm:text-4xl lg:text-5xl text-brand-text font-bold mb-6 leading-[1.05] tracking-tight">
             Sosok<br />
             <span className="italic font-normal text-brand-text-muted-alt">di Balik Kode</span>
           </h1>
@@ -43,7 +50,7 @@ export const AboutView: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mb-10">
             <button
               onClick={() => setIsCvOpen(true)}
               className="group relative overflow-hidden bg-brand-accent text-white font-hanken text-sm font-semibold px-7 py-3.5 rounded-full transition-all active:scale-95 cursor-pointer shadow-[0_4px_16px_rgba(181,87,59,0.25)] hover:shadow-[0_8px_24px_rgba(181,87,59,0.35)] flex items-center gap-2"
@@ -59,6 +66,28 @@ export const AboutView: React.FC = () => {
               Lihat Proses
             </button>
           </div>
+
+          {/* Spotify Vibe Player (Compact) */}
+          {ABOUT_SPOTIFY_URL && getSpotifyEmbedUrl(ABOUT_SPOTIFY_URL) && (
+            <div className="animate-fade-in w-full max-w-[400px]">
+              <span className="font-hanken text-[10px] uppercase tracking-widest text-brand-text-muted font-bold block mb-3 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                Sekarang Diputar
+              </span>
+              <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/50 bg-brand-surface h-[80px]">
+                <iframe 
+                  src={getSpotifyEmbedUrl(ABOUT_SPOTIFY_URL)!} 
+                  width="100%" 
+                  height="80" 
+                  frameBorder="0" 
+                  allowFullScreen={false}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                  className="rounded-2xl"
+                ></iframe>
+              </div>
+            </div>
+          )}
         </Reveal>
 
         {/* Image Column */}
