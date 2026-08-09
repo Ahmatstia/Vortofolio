@@ -274,10 +274,7 @@ export const ProjectDetailView: React.FC<ProjectDetailViewProps> = ({ project })
               onClick={() => setLiveModal({ isOpen: true, mode: 'live' })}
               className="group flex-1 px-4 py-3.5 rounded-full bg-brand-accent text-white font-hanken text-sm font-semibold hover:bg-brand-accent-hover transition-all shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)] active:scale-95 cursor-pointer text-center flex items-center justify-center gap-2"
             >
-              Kunjungi Situs
-              <span className="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">
-                arrow_outward
-              </span>
+              Tonton Demo
             </button>
             <button
               onClick={() => setLiveModal({ isOpen: true, mode: 'casestudy' })}

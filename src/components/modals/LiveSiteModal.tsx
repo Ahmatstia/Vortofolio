@@ -94,22 +94,26 @@ export const LiveSiteModal: React.FC<LiveSiteModalProps> = ({
                       <h3 className="font-garamond text-xl font-bold text-brand-text mb-1">
                         Video Belum Tersedia
                       </h3>
-                      <p className="font-hanken text-xs text-brand-text-muted mb-4">
-                        Demo video sedang disiapkan. Sementara itu, kunjungi situs langsungnya.
+                      <p className="font-hanken text-xs text-brand-text-muted m-0">
+                        Demo video sedang disiapkan.
                       </p>
-                      {project.liveUrl && project.liveUrl !== '#' && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 bg-brand-accent text-white font-hanken text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full hover:bg-brand-accent-hover transition-all"
-                        >
-                          Buka Aplikasi
-                          <span className="material-symbols-outlined text-sm">open_in_new</span>
-                        </a>
-                      )}
                     </div>
                   </div>
+                </div>
+              )}
+
+              {/* Action Button to Actual Live Site */}
+              {project.liveUrl && project.liveUrl !== '#' && (
+                <div className="flex justify-center mt-4">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-brand-accent text-white font-hanken text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full hover:bg-brand-accent-hover transition-all shadow-[0_6px_20px_rgba(181,87,59,0.3)] hover:shadow-[0_10px_28px_rgba(181,87,59,0.4)]"
+                  >
+                    Buka Aplikasi Langsung
+                    <span className="material-symbols-outlined text-sm">open_in_new</span>
+                  </a>
                 </div>
               )}
 
