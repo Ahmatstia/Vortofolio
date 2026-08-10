@@ -2,7 +2,7 @@
 
 > **Mahasiswa Teknik Informatika** · Peminatan Sistem Cerdas (AI) · Web & Mobile Developer
 
-🔗 **[Kunjungi Live Website → vortofolio.vercel.app](https://ahmtstia.vercel.app/)**
+🔗 **[Kunjungi Live Website → ahmtstia.vercel.app](https://ahmtstia.vercel.app/)**
 
 ---
 
