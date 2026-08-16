@@ -20,19 +20,12 @@ export const ContactView: React.FC = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
         },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          subject: `Pesan baru dari Portofolio - ${formData.name}`,
-        })
+        body: JSON.stringify(formData),
       });
 
       const result = await response.json();
@@ -40,7 +33,7 @@ export const ContactView: React.FC = () => {
         setSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
       } else {
-        alert('Terjadi kesalahan, silakan coba lagi atau hubungi langsung via email.');
+        alert(result.message || 'Terjadi kesalahan, silakan coba lagi atau hubungi langsung via email.');
       }
     } catch (error) {
       console.error(error);
