@@ -77,13 +77,13 @@ export const PROJECTS: Project[] = [
     year: '2025',
     category: 'MOBILE',
     tags: ['REACT NATIVE / EXPO', 'FIREBASE', 'TYPESCRIPT'],
-    image: '/img/projects/blmtersedia.png',
+    image: '/img/projects/mymoney/baner.png',
     gallery: [
-      '/img/projects/blmtersedia.png',
-      '/img/projects/blmtersedia.png',
-      '/img/projects/blmtersedia.png',
-      '/img/projects/blmtersedia.png',
-      '/img/projects/blmtersedia.png' 
+      '/img/projects/mymoney/1.png',
+      '/img/projects/mymoney/2.png',
+      '/img/projects/mymoney/3.png',
+      '/img/projects/mymoney/4.png',
+      '/img/projects/mymoney/5.png' 
     ],
     // previewVideo: '/videos/mymoney-app.mp4',  ← upload ke /public/videos/ lalu uncomment
     shortDescription: 'Aplikasi mobile manajemen keuangan pribadi dengan pencatatan transaksi cerdas dan Firestore.',
